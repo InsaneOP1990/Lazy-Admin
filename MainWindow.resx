@@ -131,4 +131,1052 @@ Once you have the Scripter Role you can press "F3" on your keyboard and see a * 
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="Tab_BankRichTextBox.Text" xml:space="preserve">
+    <value>SI BANK COMMANDS
+
+s!techadm give 100 &lt;discordID&gt;
+
+This command is for depositing tech directly to a players bank. They must read through tech-drop-info to set it up and use tech-drop to claim. If you botch a number and give more than the intended amount, simply run the command with - before the number. 
+
+s!techadm give -100 &lt;discordID&gt;
+
+KOTH REWARDS
+
+Example ~giveitem TwistedGrim Component Tech8x 10000 true
+North's Example:&lt;sec&gt; giveitem "&lt;playername&gt;" Component Tech8x 20000 true
+
+In-Game Admin
+Occasionally there are instances where a staff member needs to go in-game and use admin powers. 
+These times are not super common but it does happen. This should not be used by staff-in-training, or junior staff unless instructed otherwise. 
+
+
+To turn on the admin abilities, get your steamid and type:
+
+
+tL admin setrank &lt;steamid&gt; 4 //Helping with ticket #1234
+
+
+
+
+You should always include a reason for using admin abilities.
+
+Immediately after finishing in-game, type:
+
+
+tL admin setrank &lt;steamid&gt; 1</value>
+  </data>
+  <data name="Tab_AleRichTextBox.Text" xml:space="preserve">
+    <value>Fixing bugged ships when they; cannot be stopped moving, rotating or accelerating
+The command wont work of there are active connections to connectors or landing gears, or if there are Players in a cockpit, cryopod or any other block players can sit on.
+
+!fixship
+
+Similar to !fixship &lt;shipname&gt; but it is better with handling naming conflicts as it takes the grid the players is looking at.
+
+&lt;sec&gt; fixship "&lt;GridName&gt;"
+
+"!fixship" Stops the grid, cuts and pastes is back. Every player can use this command. But only on grids he has the majority of ownership on.
+
+!fixshipmod  -  Same as !fixship but that it has no check for ownership or cooldowns and can only be performed by moderator and above. 
+
+&lt;sec&gt; fixshipmod "&lt;GridName&gt;"  -  Same as !fixship &lt;shipname&gt; but that it has no check for ownership and can only be performed by moderator and above.Very useful for fixing ownership and grid issues or pastes
+
+!freebuild - Increases all limits for the user to be able to paste limit exceeding grids. Run again to disable
+
+--!transfer "&lt;PlayerName&gt;" - Transfers all PCU and block ownership of the grid you are looking at over to the player.--
+
+&lt;sec&gt; transfer "&lt;PlayerName&gt;" "&lt;GridName&gt;" -  Transfers all PCU and block ownership of the named grid to the player.
+
+&lt;sec&gt; transferpcu "&lt;PlayerName&gt;" - Transfers only PCU of the grid you are looking at over to the player.
+
+&lt;sec&gt; transferpcu "&lt;PlayerName&gt;" "&lt;GridName&gt;" - Transfers only PCU of the named grid to the player.
+
+&lt;sec&gt; transferowner "&lt;PlayerName&gt;" - Transfers only block ownership of the grid you are looking at over to the player.
+
+&lt;sec&gt; transferowner "&lt;PlayerName&gt;" "&lt;GridName&gt;"  -  Transfers only block ownership of the named grid to the player. </value>
+  </data>
+  <data name="Tab_NexusRichTextBox.Text" xml:space="preserve">
+    <value>NEXUS DISCORD COMMANDS
+
+/nexus getserverid [NameOrSteamID]
+/nexus version
+/nexus onlineservers
+/nexus uptime 
+
+Moves Player to Different Sector
+/nexus setserverid [NameOrSteamID] [ServerId]
+* Commonly used to send player to Lobby
+
+(follow is faction chat command)
+/factionchat link [onetimecode]
+
+Nexus Specific Admin Commands
+!nexus factionchat breaklink [FactionTag] (removes any connected servers for this faction)
+!nexus factionchat addwhitelist [FactionTag] (adds a faction tag to the whitelist)
+!nexus factionchat removewhitelist [FactionTag] (Removes faction tag from whitelist)
+
+New Log retrieving Commands:
+/nexus log [serverID] [LogName] [DateInput: MM/DD/YY]
+
+Examples:
+/nexus log 20 keen 02/23 
+/nexus log 20 torch 02/23
+/nexus log 20 ownerships 02/23
+/nexus log 20 deleted 02/23
+/nexus log 20 blocklimiter 02/23
+Date format is month/day. This is for US date format.
+
+FULL LIST OF SECTORS &amp; IDS FOR LOGS
+
+ID    Prefix   Port     Sector
+1     tL       27016    Lobby
+2     gS       27002    Deep Space
+10    aS       27010    Avalon Space
+11    aDV      27011    Dover Planet
+12    aS1      27012    Dover Space
+13    aS2      27013    IK006 Space
+14    aS       27014    Pelmuth Space
+15    aI       27015    IK006 Planet
+17    aPL      27017    Pelmuth Planet
+20    dS       27020    Deadworlds Space
+21    dP       27021    Deadworlds Planet
+22    dK       27022    KOTH
+23    cK       27023    Crypt
+39    eV       27039    Event
+40    rI       27040    Roach Inner
+41    rO       27041    Roach Outer
+50    tR       27050    Transit
+51    wS       27051    Waterloo Space
+52    wP       27052    Waterloo Planet 
+ 
+Useful for determining possible causes for server crash, gathering context/information regarding ticket issues (such as PVP raids/PVP grid restores), and more! </value>
+  </data>
+  <data name="Tab_HangarRichTextBox.Text" xml:space="preserve">
+    <value>Player Commands: 
+(can be shortened to just !h)
+!hangar save - (Attempts to save grid you are looking at)
+
+!hangar load - [Name or ID number] (Attempts to load specified grid)
+
+!hangar list - (Lists all active ships and their pcu values that are in your hangar)
+
+!hangar remove - [Name or ID number] Remove grid from your hangar. Enter 0 to delete all grids
+
+!hangar info - [Name or ID number] lists information about the grid
+
+!hanger help - Shows help
+
+Admin Commands: 
+(can be shortened to just !hm)
+!hangarmod save (Saves grid you are looking at to owners hangar. Ignores Checks)
+
+!hangarmod save [GridName] - (Saves grid you are looking at to owners hangar. Ignores Checks)
+
+!hangarmod load [PlayerName or ID] [Grid Name or Number] - (Loads grid in from players hangar and ignores limits)
+
+!hangarmod list [PlayerName or ID] - (Lists grids under specified players' hangar)
+
+!hangarmod info [PlayerName or ID] - [Grid Name or Number] (Provides info of the grid)
+
+!hangarmod sync [PlayerName or ID] - will refresh a player's hangar with was is on disk!hangarmod info [PlayerName or ID] 
+[Grid Name or Number] (Provides info of the grid)
+
+!hangarmod syncall - will refresh a player's hangar with what is on disk
+
+GRID BACKUP PLUGIN
+This plugin is one of the most used that we have at our disposal.
+
+!gridbackup list "playername" - will give a list of all grid backups for the player on the server (note the number of the grid in the list)
+
+!gridbackup restore &lt;player&gt; &lt;gridnumber&gt; &lt;backupnumber&gt; true false
+
+</value>
+  </data>
+  <data name="Tab_BlocksRichTextBox.Text" xml:space="preserve">
+    <value>BLOCKLIMIT PLUGIN
+
+Best Plugin, couldn't achieve what we do without it, because players be crazy!!
+
+&lt;sec&gt; blocklimit update -Updates the limits (useful if limits are changed while server is running).
+ This command must be inputt twice to trigger, and comes with a min cooldown.
+
+
+
+&lt;sec&gt; blocklimit enable value - Enable/disable the plugin. Replace value with true to enable and false to disable.
+
+
+
+&lt;sec&gt; blocklimit reload - This command is best used if you make changes to the limit settings to reload the plugin without having to restart the server.
+
+
+
+&lt;sec&gt; blocklimit violations - This is a moderator command to list current limit violations on the server.
+
+
+
+&lt;sec&gt; blocklimit update &lt;PlayerName&gt; Updates limits for the listed player. Replace value with player's name, Id, or steamId.
+
+
+
+&lt;sec&gt; blocklimit update &lt;GridName&gt; -  Updates limits for the listed grid. Replace value with grid's name or Id.
+
+
+
+&lt;sec&gt; blocklimit gridlimit &lt;GridName&gt; -  Lists provided grid's current limits. Replace value with grid's name or Id.
+
+
+
+&lt;sec&gt; blocklimit playerlimit value - Lists provided player's limits. Replace value with player's name, Id, or SteamId
+
+&lt;sec&gt; blocklimit annoy - Runs the annoy method and would trigger message to any player who is over the limit
+
+
+
+&lt;sec&gt; blocklimit punish value - Will trigger the punishment and return an integer value of how many blocks were punished.
+
+The below commands will ignore block limit. 
+
+
+&lt;sec&gt; forcetransfer &lt;PlayerName&gt; - Transfers all PCU and block ownership of the grid you are looking at over to the player ignoring ownership.
+
+
+
+&lt;sec&gt; forcetransfer &lt;PlayerName&gt; &lt;GridName&gt;  -  Transfers all PCU and block ownership of the named grid to the player ignoring limits.
+
+
+
+&lt;sec&gt; forcetransferpcu &lt;PlayerName&gt;  -  Transfers only PCU of the grid you are looking at over to the player ignoring limits.
+
+
+
+&lt;sec&gt; forcetransferpcu &lt;PlayerName&gt; &lt;GridName&gt;  -  Transfers only PCU of the named grid to the player ignoring limits.
+
+
+When pasting some grids it may be possible they get some deformations or damage. 
+To get rid of them easily there is also
+
+Unfinished blocks will not be fixed unless they are deformed or damaged. So blocks that are left on grid stage on purpose will not be changed.
+
+
+
+&lt;sec&gt; repair - Repairs all damaged and deformed blocks of the grid you are looking at.
+
+&lt;sec&gt; repair &lt;GridName&gt; - Repairs all damaged and deformed blocks of the given grid.
+
+The below commands a mod should not need to use but is useful for pulling data from the server.
+
+
+
+&lt;sec&gt; listblocks all  -  Lists all blocks the world has.
+
+
+
+&lt;sec&gt; listblocks all -pcu  -  Lists all blocks and also outputs the total pcu
+
+
+
+&lt;sec&gt; listblocks limited  -  similar to "&lt;sec&gt; listblocks all" but shows only blocks that have block limits.
+
+
+
+&lt;sec&gt; listblocks limited -pcu  -  similar to "&lt;sec&gt; listblocks all -pcu" but shows only blocks that have block limits.
+
+
+
+&lt;sec&gt; findblock &lt;blockpairname&gt; [-player=&lt;PlayerName&gt;] [-faction=&lt;FactionTag&gt;] [-groupby=&lt;player|faction&gt;]
+Shows which Faction or Player owns a specific block.
+
+
+You can filter the results by adding -faction=XYZ or -player=Playername.
+
+ If the player name contains spaces you need to set the whole expression in "". Example: &lt;sec&gt; listblocks all -pcu "-player=My Player".
+
+Also sorting is possible with -orderby=blocks|name|pcu</value>
+  </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>NPC GRID PURGING
+Specific commands for cleaning current NPC factions
+
+&lt;sec&gt; cleanup delete ownedby nobody   = cleans up most floating grids / pieces|
+
+&lt;sec&gt; cleanup delete ownedby "Emptiness"       = VOID npcs
+
+&lt;sec&gt; cleanup delete ownedby "Geraldine Schultz"      = GIRR npcs
+
+&lt;sec&gt; cleanup delete ownedby "Triton"        = PRTH npcs
+
+&lt;sec&gt; cleanup delete ownedby "Ace Gold"   = GKNT npcs
+
+&lt;sec&gt; cleanup delete ownedby "Haxor Black" = ECHO npcs
+
+&lt;sec&gt; cleanup delete ownedby "Manny" = BASS npcs 
+
+&lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
+
+&lt;sec&gt; fix physics 2 
+&lt;sec&gt; fix physics 2 3 
+
+Use with EXTREME caution as the damage done with these commands are not easily fixed
+
+&lt;sec&gt; voxels reset all - Resets all voxel maps.
+
+&lt;sec&gt; voxels reset planets - Resets all planets.
+
+&lt;sec&gt; voxels reset planet &lt;String planetName&gt; - Resets the planet with a given name.
+
+&lt;sec&gt; voxels reset area &lt;Single Radius&gt; - Resets voxel damange in specified radius from player
+
+&lt;sec&gt; voxels reset gps &lt;Single X&gt; &lt;Single Y&gt; &lt;Single Z&gt; &lt;Single Radius&gt; - Resets voxel damange in specified radius from given point
+
+&lt;sec&gt; voxels cleanup asteroids [Boolean deleteStorage] - Resets all asteroids that don't have a grid or player nearby.
+
+&lt;sec&gt; voxels cleanup distant [Double distance] [Boolean deleteStorage] - Resets all asteroids that don't have a grid or player inside the specified radius.
+
+&lt;sec&gt; identity clean &lt;Int32 days&gt; -Remove identities that have not logged on in X days.
+
+&lt;sec&gt; identity purge &lt;Int32 days&gt; -Remove identities AND the grids they own if they have not logged on in X days.
+
+&lt;sec&gt; identity clear &lt;String playername&gt; - Clear identity of specific player
+
+&lt;sec&gt; rep wipe [Boolean removePlayerToFaction] [Boolean removeFactionToFaction] - Resets the reputation on the server
+
+
+NPC GRID PURGING
+Specific commands for cleaning current NPC factions
+
+&lt;sec&gt; cleanup delete ownedby nobody   = cleans up most floating grids / pieces|
+
+&lt;sec&gt; cleanup delete ownedby "Emptiness"       = VOID npcs
+
+&lt;sec&gt; cleanup delete ownedby "Geraldine Schultz"      = GIRR npcs
+
+&lt;sec&gt; cleanup delete ownedby "Triton"        = PRTH npcs
+
+&lt;sec&gt; cleanup delete ownedby "Ace Gold"   = GKNT npcs
+
+&lt;sec&gt; cleanup delete ownedby "Haxor Black" = ECHO npcs
+
+&lt;sec&gt; cleanup delete ownedby "Manny" = BASS npcs 
+
+&lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
+
+&lt;sec&gt; fix physics 2 
+&lt;sec&gt; fix physics 2 3 </value>
+  </data>
+  <data name="Tab_CleanRichTextBox.Text" xml:space="preserve">
+    <value>NPC GRID PURGING
+Specific commands for cleaning current NPC factions
+
+&lt;sec&gt; cleanup delete ownedby nobody   = cleans up most floating grids / pieces|
+
+&lt;sec&gt; cleanup delete ownedby "Emptiness"       = VOID npcs
+
+&lt;sec&gt; cleanup delete ownedby "Geraldine Schultz"      = GIRR npcs
+
+&lt;sec&gt; cleanup delete ownedby "Triton"        = PRTH npcs
+
+&lt;sec&gt; cleanup delete ownedby "Ace Gold"   = GKNT npcs
+
+&lt;sec&gt; cleanup delete ownedby "Haxor Black" = ECHO npcs
+
+&lt;sec&gt; cleanup delete ownedby "Manny" = BASS npcs 
+
+&lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
+
+&lt;sec&gt; fix physics 2 
+&lt;sec&gt; fix physics 2 3 
+
+Use with EXTREME caution as the damage done with these commands are not easily fixed
+
+&lt;sec&gt; voxels reset all - Resets all voxel maps.
+
+&lt;sec&gt; voxels reset planets - Resets all planets.
+
+&lt;sec&gt; voxels reset planet &lt;String planetName&gt; - Resets the planet with a given name.
+
+&lt;sec&gt; voxels reset area &lt;Single Radius&gt; - Resets voxel damange in specified radius from player
+
+&lt;sec&gt; voxels reset gps &lt;Single X&gt; &lt;Single Y&gt; &lt;Single Z&gt; &lt;Single Radius&gt; - Resets voxel damange in specified radius from given point
+
+&lt;sec&gt; voxels cleanup asteroids [Boolean deleteStorage] - Resets all asteroids that don't have a grid or player nearby.
+
+&lt;sec&gt; voxels cleanup distant [Double distance] [Boolean deleteStorage] - Resets all asteroids that don't have a grid or player inside the specified radius.
+
+&lt;sec&gt; identity clean &lt;Int32 days&gt; -Remove identities that have not logged on in X days.
+
+&lt;sec&gt; identity purge &lt;Int32 days&gt; -Remove identities AND the grids they own if they have not logged on in X days.
+
+&lt;sec&gt; identity clear &lt;String playername&gt; - Clear identity of specific player
+
+&lt;sec&gt; rep wipe [Boolean removePlayerToFaction] [Boolean removeFactionToFaction] - Resets the reputation on the server
+
+
+NPC GRID PURGING
+Specific commands for cleaning current NPC factions
+
+&lt;sec&gt; cleanup delete ownedby nobody   = cleans up most floating grids / pieces|
+
+&lt;sec&gt; cleanup delete ownedby "Emptiness"       = VOID npcs
+
+&lt;sec&gt; cleanup delete ownedby "Geraldine Schultz"      = GIRR npcs
+
+&lt;sec&gt; cleanup delete ownedby "Triton"        = PRTH npcs
+
+&lt;sec&gt; cleanup delete ownedby "Ace Gold"   = GKNT npcs
+
+&lt;sec&gt; cleanup delete ownedby "Haxor Black" = ECHO npcs
+
+&lt;sec&gt; cleanup delete ownedby "Manny" = BASS npcs 
+
+&lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
+
+&lt;sec&gt; fix physics 2 
+&lt;sec&gt; fix physics 2 3 </value>
+  </data>
+  <data name="Tab_GridsRichTextBox.Text" xml:space="preserve">
+    <value>GRID OWNERSHIP
+A grid needs to be own 51% by the player trying to hangar said grid for it to work
+
+&lt;sec&gt; checkowner  -  Lists the owners and amount of blocks they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkowner "&lt;Gridname&gt;"  -  Lists the owners and amount of blocks they own in descending order of the grid with the given name.
+
+&lt;sec&gt; checkauthor  -  Lists the authors and amount of PCU they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkauthor "&lt;Gridname&gt;"  -  Lists the authors and amount of PCU they own in descending order of the grid with the given name.
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;"  -  Lists all grids the player has block ownership on
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has block ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -position  -  Lists all grids the player has block ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;"  -  Lists all grids the player has PCU ownership on
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has PCU ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -position  -  Lists all grids the player has PCU ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgrids [-player="&lt;PlayerName&gt;"] [-faction=&lt;FactionTag&gt;] [-orderby=&lt;pcu|name|blocks|faction|owner&gt;]  -  Lists all Grids and allows for filtering by player or faction and custom sorting.
+
+LOCATING GRIDS
+A misc. set of commands that could be potentially helpful for finding a players "lost" grid if in-game
+
+name:
+   Finds grids with a matching name. Accepts regex format.
+blockslessthan:
+   Finds grids with less than the given number of blocks.
+pcugreaterthan:
+   Finds grids with more than the given number of PCU.
+pculessthan:
+   Finds grids with less than the given number of PCU.
+hasownertype:
+   Finds grids with the specified owner type (npc | player | nobody).
+blocksgreaterthan:
+   Finds grids with more than the given number of blocks.
+haspower (nopower):
+   Finds grids with, or without power.
+insideplanet:
+   Finds grids that are trapped inside planets.
+playerdistancelessthan (playerdistancegreaterthan):
+   Finds grids that are further than the given distance from players.
+centerdistancelessthan (centerdistancegreaterthan):
+   Finds grids that are further than the given distance from center.
+ownedby:
+   Finds grids owned by the given player. Can specify player name, IdentityId, 'nobody', or 'pirates'.
+hastype (notype):
+   Finds grids containing blocks of the given type.
+hassubtype (nosubtype):
+   Finds grids containing blocks of the given subtype.
+haspilot (Finds grids with pilots)</value>
+  </data>
+  <data name="Tab_SlimeRichTextBox.Text" xml:space="preserve">
+    <value>GRID OWNERSHIP
+A grid needs to be own 51% by the player trying to hangar said grid for it to work
+
+&lt;sec&gt; checkowner  -  Lists the owners and amount of blocks they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkowner "&lt;Gridname&gt;"  -  Lists the owners and amount of blocks they own in descending order of the grid with the given name.
+
+&lt;sec&gt; checkauthor  -  Lists the authors and amount of PCU they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkauthor "&lt;Gridname&gt;"  -  Lists the authors and amount of PCU they own in descending order of the grid with the given name.
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;"  -  Lists all grids the player has block ownership on
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has block ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -position  -  Lists all grids the player has block ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;"  -  Lists all grids the player has PCU ownership on
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has PCU ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -position  -  Lists all grids the player has PCU ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgrids [-player="&lt;PlayerName&gt;"] [-faction=&lt;FactionTag&gt;] [-orderby=&lt;pcu|name|blocks|faction|owner&gt;]  -  Lists all Grids and allows for filtering by player or faction and custom sorting.
+
+LOCATING GRIDS
+A misc. set of commands that could be potentially helpful for finding a players "lost" grid if in-game
+
+name:
+   Finds grids with a matching name. Accepts regex format.
+blockslessthan:
+   Finds grids with less than the given number of blocks.
+pcugreaterthan:
+   Finds grids with more than the given number of PCU.
+pculessthan:
+   Finds grids with less than the given number of PCU.
+hasownertype:
+   Finds grids with the specified owner type (npc | player | nobody).
+blocksgreaterthan:
+   Finds grids with more than the given number of blocks.
+haspower (nopower):
+   Finds grids with, or without power.
+insideplanet:
+   Finds grids that are trapped inside planets.
+playerdistancelessthan (playerdistancegreaterthan):
+   Finds grids that are further than the given distance from players.
+centerdistancelessthan (centerdistancegreaterthan):
+   Finds grids that are further than the given distance from center.
+ownedby:
+   Finds grids owned by the given player. Can specify player name, IdentityId, 'nobody', or 'pirates'.
+hastype (notype):
+   Finds grids containing blocks of the given type.
+hassubtype (nosubtype):
+   Finds grids containing blocks of the given subtype.
+haspilot (Finds grids with pilots)</value>
+  </data>
+  <data name="Tab_MiscRichTextBox.Text" xml:space="preserve">
+    <value>CLEANUP BY FACTION TAG
+
+!cleanup delete ownedby &lt;FACTIONTAG&gt; playerdistancegreaterthan 5000
+
+Deletes NPC ships that are further then 5km from players. Replace &lt;FACTIONTAG&gt; with a faction tag, like SPRT
+
+EMPTY GRID INVENTORY!
+
+!cleargrid
+
+Empties all inventories in the grid you look at (useful when pasting grid from workshop) 
+
+CONVERTS GRID
+
+!admin makestation - Convert the ship and connected grid you are looking at to station
+!admin makeship - Convert the station and connected grid you are looking at to ship
+
+Makes converting easy for admins
+
+HELP WITH CYRO / GAME CRASHING
+
+~entities eject "ingamename"
+~entities kill "ingamename"
+
+
+ADDITIONAL ENTITIES COMMANDS
+
+entities refresh
+entities stop
+entities delete
+entities kill
+entities find
+entities poweroff
+entities poweron
+
+REMOVES FACTION FROM SERVER
+
+!faction remove &lt;String tag&gt;</value>
+  </data>
+  <data name="Tab_DiscordRichTextBox2.Text" xml:space="preserve">
+    <value>SI BANK COMMANDS
+
+s!techadm give 100 &lt;discordID&gt;
+
+This command is for depositing tech directly to a players bank. They must read through tech-drop-info to set it up and use tech-drop to claim. If you botch a number and give more than the intended amount, simply run the command with - before the number. 
+
+s!techadm give -100 &lt;discordID&gt;
+
+KOTH REWARDS
+
+Example ~giveitem TwistedGrim Component Tech8x 10000 true
+North's Example:&lt;sec&gt; giveitem &lt;playername&gt; Component Tech8x 20000 true</value>
+  </data>
+  <data name="Tab_BankRichTextBox2.Text" xml:space="preserve">
+    <value>SI BANK COMMANDS
+
+s!techadm give 100 &lt;discordID&gt;
+
+This command is for depositing tech directly to a players bank. They must read through tech-drop-info to set it up and use tech-drop to claim. If you botch a number and give more than the intended amount, simply run the command with - before the number. 
+
+s!techadm give -100 &lt;discordID&gt;
+
+KOTH REWARDS
+
+Example ~giveitem TwistedGrim Component Tech8x 10000 true
+North's Example:&lt;sec&gt; giveitem "&lt;playername&gt;" Component Tech8x 20000 true
+
+In-Game Admin
+Occasionally there are instances where a staff member needs to go in-game and use admin powers. 
+These times are not super common but it does happen. This should not be used by staff-in-training, or junior staff unless instructed otherwise. 
+
+
+To turn on the admin abilities, get your steamid and type:
+
+
+tL admin setrank &lt;steamid&gt; 4 //Helping with ticket #1234
+
+
+
+
+You should always include a reason for using admin abilities.
+
+Immediately after finishing in-game, type:
+
+
+tL admin setrank &lt;steamid&gt; 1</value>
+  </data>
+  <data name="Tab_AleRichTextBox2.Text" xml:space="preserve">
+    <value>Fixing bugged ships when they; cannot be stopped moving, rotating or accelerating
+The command wont work of there are active connections to connectors or landing gears, or if there are Players in a cockpit, cryopod or any other block players can sit on.
+
+!fixship
+
+Similar to !fixship &lt;shipname&gt; but it is better with handling naming conflicts as it takes the grid the players is looking at.
+
+&lt;sec&gt; fixship "&lt;GridName&gt;"
+
+"!fixship" Stops the grid, cuts and pastes is back. Every player can use this command. But only on grids he has the majority of ownership on.
+
+!fixshipmod  -  Same as !fixship but that it has no check for ownership or cooldowns and can only be performed by moderator and above. 
+
+&lt;sec&gt; fixshipmod "&lt;GridName&gt;"  -  Same as !fixship &lt;shipname&gt; but that it has no check for ownership and can only be performed by moderator and above.Very useful for fixing ownership and grid issues or pastes
+
+!freebuild - Increases all limits for the user to be able to paste limit exceeding grids. Run again to disable
+
+--!transfer "&lt;PlayerName&gt;" - Transfers all PCU and block ownership of the grid you are looking at over to the player.--
+
+&lt;sec&gt; transfer "&lt;PlayerName&gt;" "&lt;GridName&gt;" -  Transfers all PCU and block ownership of the named grid to the player.
+
+&lt;sec&gt; transferpcu "&lt;PlayerName&gt;" - Transfers only PCU of the grid you are looking at over to the player.
+
+&lt;sec&gt; transferpcu "&lt;PlayerName&gt;" "&lt;GridName&gt;" - Transfers only PCU of the named grid to the player.
+
+&lt;sec&gt; transferowner "&lt;PlayerName&gt;" - Transfers only block ownership of the grid you are looking at over to the player.
+
+&lt;sec&gt; transferowner "&lt;PlayerName&gt;" "&lt;GridName&gt;"  -  Transfers only block ownership of the named grid to the player. </value>
+  </data>
+  <data name="Tab_BlocksRichTextBox2.Text" xml:space="preserve">
+    <value>BLOCKLIMIT PLUGIN
+
+Best Plugin, couldn't achieve what we do without it, because players be crazy!!
+
+&lt;sec&gt; blocklimit update -Updates the limits (useful if limits are changed while server is running).
+ This command must be inputt twice to trigger, and comes with a min cooldown.
+
+
+
+&lt;sec&gt; blocklimit enable value - Enable/disable the plugin. Replace value with true to enable and false to disable.
+
+
+
+&lt;sec&gt; blocklimit reload - This command is best used if you make changes to the limit settings to reload the plugin without having to restart the server.
+
+
+
+&lt;sec&gt; blocklimit violations - This is a moderator command to list current limit violations on the server.
+
+
+
+&lt;sec&gt; blocklimit update &lt;PlayerName&gt; Updates limits for the listed player. Replace value with player's name, Id, or steamId.
+
+
+
+&lt;sec&gt; blocklimit update &lt;GridName&gt; -  Updates limits for the listed grid. Replace value with grid's name or Id.
+
+
+
+&lt;sec&gt; blocklimit gridlimit &lt;GridName&gt; -  Lists provided grid's current limits. Replace value with grid's name or Id.
+
+
+
+&lt;sec&gt; blocklimit playerlimit value - Lists provided player's limits. Replace value with player's name, Id, or SteamId
+
+&lt;sec&gt; blocklimit annoy - Runs the annoy method and would trigger message to any player who is over the limit
+
+
+
+&lt;sec&gt; blocklimit punish value - Will trigger the punishment and return an integer value of how many blocks were punished.
+
+The below commands will ignore block limit. 
+
+
+&lt;sec&gt; forcetransfer &lt;PlayerName&gt; - Transfers all PCU and block ownership of the grid you are looking at over to the player ignoring ownership.
+
+
+
+&lt;sec&gt; forcetransfer &lt;PlayerName&gt; &lt;GridName&gt;  -  Transfers all PCU and block ownership of the named grid to the player ignoring limits.
+
+
+
+&lt;sec&gt; forcetransferpcu &lt;PlayerName&gt;  -  Transfers only PCU of the grid you are looking at over to the player ignoring limits.
+
+
+
+&lt;sec&gt; forcetransferpcu &lt;PlayerName&gt; &lt;GridName&gt;  -  Transfers only PCU of the named grid to the player ignoring limits.
+
+
+When pasting some grids it may be possible they get some deformations or damage. 
+To get rid of them easily there is also
+
+Unfinished blocks will not be fixed unless they are deformed or damaged. So blocks that are left on grid stage on purpose will not be changed.
+
+
+
+&lt;sec&gt; repair - Repairs all damaged and deformed blocks of the grid you are looking at.
+
+&lt;sec&gt; repair &lt;GridName&gt; - Repairs all damaged and deformed blocks of the given grid.
+
+The below commands a mod should not need to use but is useful for pulling data from the server.
+
+
+
+&lt;sec&gt; listblocks all  -  Lists all blocks the world has.
+
+
+
+&lt;sec&gt; listblocks all -pcu  -  Lists all blocks and also outputs the total pcu
+
+
+
+&lt;sec&gt; listblocks limited  -  similar to "&lt;sec&gt; listblocks all" but shows only blocks that have block limits.
+
+
+
+&lt;sec&gt; listblocks limited -pcu  -  similar to "&lt;sec&gt; listblocks all -pcu" but shows only blocks that have block limits.
+
+
+
+&lt;sec&gt; findblock &lt;blockpairname&gt; [-player=&lt;PlayerName&gt;] [-faction=&lt;FactionTag&gt;] [-groupby=&lt;player|faction&gt;]
+Shows which Faction or Player owns a specific block.
+
+
+You can filter the results by adding -faction=XYZ or -player=Playername.
+
+ If the player name contains spaces you need to set the whole expression in "". Example: &lt;sec&gt; listblocks all -pcu "-player=My Player".
+
+Also sorting is possible with -orderby=blocks|name|pcu</value>
+  </data>
+  <data name="Tab_CleanRichTextBox2.Text" xml:space="preserve">
+    <value>NPC GRID PURGING
+Specific commands for cleaning current NPC factions
+
+&lt;sec&gt; cleanup delete ownedby nobody   = cleans up most floating grids / pieces|
+
+&lt;sec&gt; cleanup delete ownedby "Emptiness"       = VOID npcs
+
+&lt;sec&gt; cleanup delete ownedby "Geraldine Schultz"      = GIRR npcs
+
+&lt;sec&gt; cleanup delete ownedby "Triton"        = PRTH npcs
+
+&lt;sec&gt; cleanup delete ownedby "Ace Gold"   = GKNT npcs
+
+&lt;sec&gt; cleanup delete ownedby "Haxor Black" = ECHO npcs
+
+&lt;sec&gt; cleanup delete ownedby "Manny" = BASS npcs 
+
+&lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
+
+&lt;sec&gt; fix physics 2 
+&lt;sec&gt; fix physics 2 3 
+
+Use with EXTREME caution as the damage done with these commands are not easily fixed
+
+&lt;sec&gt; voxels reset all - Resets all voxel maps.
+
+&lt;sec&gt; voxels reset planets - Resets all planets.
+
+&lt;sec&gt; voxels reset planet &lt;String planetName&gt; - Resets the planet with a given name.
+
+&lt;sec&gt; voxels reset area &lt;Single Radius&gt; - Resets voxel damange in specified radius from player
+
+&lt;sec&gt; voxels reset gps &lt;Single X&gt; &lt;Single Y&gt; &lt;Single Z&gt; &lt;Single Radius&gt; - Resets voxel damange in specified radius from given point
+
+&lt;sec&gt; voxels cleanup asteroids [Boolean deleteStorage] - Resets all asteroids that don't have a grid or player nearby.
+
+&lt;sec&gt; voxels cleanup distant [Double distance] [Boolean deleteStorage] - Resets all asteroids that don't have a grid or player inside the specified radius.
+
+&lt;sec&gt; identity clean &lt;Int32 days&gt; -Remove identities that have not logged on in X days.
+
+&lt;sec&gt; identity purge &lt;Int32 days&gt; -Remove identities AND the grids they own if they have not logged on in X days.
+
+&lt;sec&gt; identity clear &lt;String playername&gt; - Clear identity of specific player
+
+&lt;sec&gt; rep wipe [Boolean removePlayerToFaction] [Boolean removeFactionToFaction] - Resets the reputation on the server
+
+
+NPC GRID PURGING
+Specific commands for cleaning current NPC factions
+
+&lt;sec&gt; cleanup delete ownedby nobody   = cleans up most floating grids / pieces|
+
+&lt;sec&gt; cleanup delete ownedby "Emptiness"       = VOID npcs
+
+&lt;sec&gt; cleanup delete ownedby "Geraldine Schultz"      = GIRR npcs
+
+&lt;sec&gt; cleanup delete ownedby "Triton"        = PRTH npcs
+
+&lt;sec&gt; cleanup delete ownedby "Ace Gold"   = GKNT npcs
+
+&lt;sec&gt; cleanup delete ownedby "Haxor Black" = ECHO npcs
+
+&lt;sec&gt; cleanup delete ownedby "Manny" = BASS npcs 
+
+&lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
+
+&lt;sec&gt; fix physics 2 
+&lt;sec&gt; fix physics 2 3 </value>
+  </data>
+  <data name="Tab_SlimeRichTextBox2.Text" xml:space="preserve">
+    <value>GRID OWNERSHIP
+A grid needs to be own 51% by the player trying to hangar said grid for it to work
+
+&lt;sec&gt; checkowner  -  Lists the owners and amount of blocks they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkowner "&lt;Gridname&gt;"  -  Lists the owners and amount of blocks they own in descending order of the grid with the given name.
+
+&lt;sec&gt; checkauthor  -  Lists the authors and amount of PCU they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkauthor "&lt;Gridname&gt;"  -  Lists the authors and amount of PCU they own in descending order of the grid with the given name.
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;"  -  Lists all grids the player has block ownership on
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has block ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -position  -  Lists all grids the player has block ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;"  -  Lists all grids the player has PCU ownership on
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has PCU ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -position  -  Lists all grids the player has PCU ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgrids [-player="&lt;PlayerName&gt;"] [-faction=&lt;FactionTag&gt;] [-orderby=&lt;pcu|name|blocks|faction|owner&gt;]  -  Lists all Grids and allows for filtering by player or faction and custom sorting.
+
+LOCATING GRIDS
+A misc. set of commands that could be potentially helpful for finding a players "lost" grid if in-game
+
+name:
+   Finds grids with a matching name. Accepts regex format.
+blockslessthan:
+   Finds grids with less than the given number of blocks.
+pcugreaterthan:
+   Finds grids with more than the given number of PCU.
+pculessthan:
+   Finds grids with less than the given number of PCU.
+hasownertype:
+   Finds grids with the specified owner type (npc | player | nobody).
+blocksgreaterthan:
+   Finds grids with more than the given number of blocks.
+haspower (nopower):
+   Finds grids with, or without power.
+insideplanet:
+   Finds grids that are trapped inside planets.
+playerdistancelessthan (playerdistancegreaterthan):
+   Finds grids that are further than the given distance from players.
+centerdistancelessthan (centerdistancegreaterthan):
+   Finds grids that are further than the given distance from center.
+ownedby:
+   Finds grids owned by the given player. Can specify player name, IdentityId, 'nobody', or 'pirates'.
+hastype (notype):
+   Finds grids containing blocks of the given type.
+hassubtype (nosubtype):
+   Finds grids containing blocks of the given subtype.
+haspilot (Finds grids with pilots)</value>
+  </data>
+  <data name="Tab_GridsRichTextBox2.Text" xml:space="preserve">
+    <value>GRID OWNERSHIP
+A grid needs to be own 51% by the player trying to hangar said grid for it to work
+
+&lt;sec&gt; checkowner  -  Lists the owners and amount of blocks they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkowner "&lt;Gridname&gt;"  -  Lists the owners and amount of blocks they own in descending order of the grid with the given name.
+
+&lt;sec&gt; checkauthor  -  Lists the authors and amount of PCU they own in descending order of the grid you are looking at.
+
+&lt;sec&gt; checkauthor "&lt;Gridname&gt;"  -  Lists the authors and amount of PCU they own in descending order of the grid with the given name.
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;"  -  Lists all grids the player has block ownership on
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has block ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsowner "&lt;PlayerName&gt;" -position  -  Lists all grids the player has block ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;"  -  Lists all grids the player has PCU ownership on
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -gps  -  Lists all grids the player has PCU ownership on and adds gps to executing player
+
+&lt;sec&gt; listgridsauthor "&lt;PlayerName&gt;" -position  -  Lists all grids the player has PCU ownership also shows GPS in the window can be combined with -gps
+
+&lt;sec&gt; listgrids [-player="&lt;PlayerName&gt;"] [-faction=&lt;FactionTag&gt;] [-orderby=&lt;pcu|name|blocks|faction|owner&gt;]  -  Lists all Grids and allows for filtering by player or faction and custom sorting.
+
+LOCATING GRIDS
+A misc. set of commands that could be potentially helpful for finding a players "lost" grid if in-game
+
+name:
+   Finds grids with a matching name. Accepts regex format.
+blockslessthan:
+   Finds grids with less than the given number of blocks.
+pcugreaterthan:
+   Finds grids with more than the given number of PCU.
+pculessthan:
+   Finds grids with less than the given number of PCU.
+hasownertype:
+   Finds grids with the specified owner type (npc | player | nobody).
+blocksgreaterthan:
+   Finds grids with more than the given number of blocks.
+haspower (nopower):
+   Finds grids with, or without power.
+insideplanet:
+   Finds grids that are trapped inside planets.
+playerdistancelessthan (playerdistancegreaterthan):
+   Finds grids that are further than the given distance from players.
+centerdistancelessthan (centerdistancegreaterthan):
+   Finds grids that are further than the given distance from center.
+ownedby:
+   Finds grids owned by the given player. Can specify player name, IdentityId, 'nobody', or 'pirates'.
+hastype (notype):
+   Finds grids containing blocks of the given type.
+hassubtype (nosubtype):
+   Finds grids containing blocks of the given subtype.
+haspilot (Finds grids with pilots)</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
 </root>
