@@ -312,7 +312,7 @@ Partial Class MainWindow
         Me.ListGrid_PVE_NameButton.Name = "ListGrid_PVE_NameButton"
         Me.ListGrid_PVE_NameButton.Size = New System.Drawing.Size(95, 23)
         Me.ListGrid_PVE_NameButton.TabIndex = 23
-        Me.ListGrid_PVE_NameButton.Text = "Copy W/Name"
+        Me.ListGrid_PVE_NameButton.Text = "Copy"
         Me.ListGrid_PVE_NameButton.UseVisualStyleBackColor = True
         '
         'ListGrid_PVE_NameTextBox
@@ -405,7 +405,7 @@ Partial Class MainWindow
         Me.ListGridBackupNameButton.Name = "ListGridBackupNameButton"
         Me.ListGridBackupNameButton.Size = New System.Drawing.Size(95, 23)
         Me.ListGridBackupNameButton.TabIndex = 59
-        Me.ListGridBackupNameButton.Text = "Copy W/Name"
+        Me.ListGridBackupNameButton.Text = "Copy"
         Me.ListGridBackupNameButton.UseVisualStyleBackColor = True
         '
         'ListGridBackupNameTextBox
@@ -560,7 +560,7 @@ Partial Class MainWindow
         Me.GridRestoreNameButton.Name = "GridRestoreNameButton"
         Me.GridRestoreNameButton.Size = New System.Drawing.Size(95, 23)
         Me.GridRestoreNameButton.TabIndex = 83
-        Me.GridRestoreNameButton.Text = "Copy W/Name"
+        Me.GridRestoreNameButton.Text = "Copy"
         Me.GridRestoreNameButton.UseVisualStyleBackColor = True
         '
         'GridRestoreNameTextBox
@@ -1171,7 +1171,8 @@ Partial Class MainWindow
         Me.Tab_DiscordRichTextBox2.Name = "Tab_DiscordRichTextBox2"
         Me.Tab_DiscordRichTextBox2.Size = New System.Drawing.Size(15, 17)
         Me.Tab_DiscordRichTextBox2.TabIndex = 1
-        Me.Tab_DiscordRichTextBox2.Text = resources.GetString("Tab_DiscordRichTextBox2.Text")
+        Me.Tab_DiscordRichTextBox2.Text = "MUTING ON DISCORD" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & ".mute <discordID> 1h Reason" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "The time is adjustable. (5m, 3h e" &
+    "tc.) The bot will log the mute in infractions. "
         Me.Tab_DiscordRichTextBox2.Visible = False
         '
         'Tab_BankRichTextBox2

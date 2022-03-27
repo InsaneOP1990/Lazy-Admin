@@ -687,20 +687,6 @@ REMOVES FACTION FROM SERVER
 
 !faction remove &lt;String tag&gt;</value>
   </data>
-  <data name="Tab_DiscordRichTextBox2.Text" xml:space="preserve">
-    <value>SI BANK COMMANDS
-
-s!techadm give 100 &lt;discordID&gt;
-
-This command is for depositing tech directly to a players bank. They must read through tech-drop-info to set it up and use tech-drop to claim. If you botch a number and give more than the intended amount, simply run the command with - before the number. 
-
-s!techadm give -100 &lt;discordID&gt;
-
-KOTH REWARDS
-
-Example ~giveitem TwistedGrim Component Tech8x 10000 true
-North's Example:&lt;sec&gt; giveitem &lt;playername&gt; Component Tech8x 20000 true</value>
-  </data>
   <data name="Tab_BankRichTextBox2.Text" xml:space="preserve">
     <value>SI BANK COMMANDS
 
