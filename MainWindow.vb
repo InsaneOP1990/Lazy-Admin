@@ -507,6 +507,9 @@
             End If
         End If
 
+        If SteamID_Texbox.TextLength > 0 Then
+            SetAdminTextBox.Text = "tL admin setrank " & SteamID_Texbox.Text & " 1"
+        End If
 
     End Sub
 
@@ -743,5 +746,9 @@
 
     Private Sub Tab_NexusRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_NexusRichTextBox.MouseLeave
         Update_Button.PerformClick()
+    End Sub
+
+    Private Sub SetAdminTextBox_TextChanged(sender As Object, e As EventArgs) Handles SetAdminTextBox.TextChanged
+
     End Sub
 End Class

@@ -163,7 +163,11 @@ You should always include a reason for using admin abilities.
 Immediately after finishing in-game, type:
 
 
-tL admin setrank &lt;steamid&gt; 1</value>
+tL admin setrank &lt;steamid&gt; 1
+
+
+
+</value>
   </data>
   <data name="Tab_AleRichTextBox.Text" xml:space="preserve">
     <value>Fixing bugged ships when they; cannot be stopped moving, rotating or accelerating
@@ -719,7 +723,11 @@ You should always include a reason for using admin abilities.
 Immediately after finishing in-game, type:
 
 
-tL admin setrank &lt;steamid&gt; 1</value>
+tL admin setrank &lt;steamid&gt; 1
+
+
+
+</value>
   </data>
   <data name="Tab_AleRichTextBox2.Text" xml:space="preserve">
     <value>Fixing bugged ships when they; cannot be stopped moving, rotating or accelerating

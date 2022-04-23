@@ -140,6 +140,9 @@ Partial Class MainWindow
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.WarningLabel = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.SetAdminTextBox = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -804,6 +807,9 @@ Partial Class MainWindow
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.Button5)
+        Me.TabPage1.Controls.Add(Me.Label25)
+        Me.TabPage1.Controls.Add(Me.SetAdminTextBox)
         Me.TabPage1.Controls.Add(Me.Scriptertext_Button)
         Me.TabPage1.Controls.Add(Me.GiveScripterButton)
         Me.TabPage1.Controls.Add(Me.GetSteamID_Label)
@@ -1280,6 +1286,32 @@ Partial Class MainWindow
         Me.WarningLabel.TabIndex = 121
         Me.WarningLabel.Text = "Warning: Sector (ALL) Senior Staff / Admin Only"
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(233, 157)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 115
+        Me.Button5.Text = "Copy"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(-2, 135)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(81, 13)
+        Me.Label25.TabIndex = 113
+        Me.Label25.Text = "Admin SetRank"
+        '
+        'SetAdminTextBox
+        '
+        Me.SetAdminTextBox.BackColor = System.Drawing.Color.Silver
+        Me.SetAdminTextBox.Location = New System.Drawing.Point(4, 157)
+        Me.SetAdminTextBox.Name = "SetAdminTextBox"
+        Me.SetAdminTextBox.Size = New System.Drawing.Size(223, 20)
+        Me.SetAdminTextBox.TabIndex = 114
+        '
         'MainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1473,4 +1505,7 @@ Partial Class MainWindow
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents WarningLabel As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Label25 As Label
+    Friend WithEvents SetAdminTextBox As TextBox
 End Class
