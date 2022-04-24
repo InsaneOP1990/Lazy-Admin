@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Scripter_Text_RichTextBox.Text" xml:space="preserve">
-    <value>Scripting access on our servers is a privilege granted to anyone that asks under the condition that you use it responsibly. If the scripts you run prove to be exploitative or taxing on server resources and you are not immediately responsive to requests for adjustments that privilege will be revoked.
-
-We are running a server plugin which limits the amount of resources that scripts can use to .4ms per run with higher allowance for initial startup, it will cause programmable blocks to turn off or become damaged if their processing requirements are too high but this should not affect the bulk of the quality of life scripts you can find and run unless they are configured improperly. Programmable blocks that overheat will need to be recompiled in the PB control panel.  If you agree to this type agree.
-
-If scripts you are running repeatedly overheat causing them to turn off, become damaged or otherwise misbehave please seek assistance in our script-chat channel on the Discord.
-
-Once you are done reading please let us know to gain scripting access through the programmable block. 
-
-Once you have the Scripter Role you can press "F3" on your keyboard and see a * next to your in game name.</value>
-  </data>
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -395,7 +384,13 @@ You can filter the results by adding -faction=XYZ or -player=Playername.
 
  If the player name contains spaces you need to set the whole expression in "". Example: &lt;sec&gt; listblocks all -pcu "-player=My Player".
 
-Also sorting is possible with -orderby=blocks|name|pcu</value>
+Also sorting is possible with -orderby=blocks|name|pcu
+
+
+
+
+
+</value>
   </data>
   <data name="RichTextBox1.Text" xml:space="preserve">
     <value>NPC GRID PURGING
@@ -535,7 +530,10 @@ Specific commands for cleaning current NPC factions
 &lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
 
 &lt;sec&gt; fix physics 2 
-&lt;sec&gt; fix physics 2 3 </value>
+&lt;sec&gt; fix physics 2 3 
+
+
+</value>
   </data>
   <data name="Tab_GridsRichTextBox.Text" xml:space="preserve">
     <value>GRID OWNERSHIP
@@ -592,7 +590,10 @@ hastype (notype):
    Finds grids containing blocks of the given type.
 hassubtype (nosubtype):
    Finds grids containing blocks of the given subtype.
-haspilot (Finds grids with pilots)</value>
+haspilot (Finds grids with pilots)
+
+
+</value>
   </data>
   <data name="Tab_SlimeRichTextBox.Text" xml:space="preserve">
     <value>GRID OWNERSHIP
@@ -649,7 +650,12 @@ hastype (notype):
    Finds grids containing blocks of the given type.
 hassubtype (nosubtype):
    Finds grids containing blocks of the given subtype.
-haspilot (Finds grids with pilots)</value>
+haspilot (Finds grids with pilots)
+
+
+
+
+</value>
   </data>
   <data name="Tab_MiscRichTextBox.Text" xml:space="preserve">
     <value>CLEANUP BY FACTION TAG
@@ -689,7 +695,415 @@ entities poweron
 
 REMOVES FACTION FROM SERVER
 
-!faction remove &lt;String tag&gt;</value>
+!faction remove &lt;String tag&gt;
+
+
+ 
+ 
+ 
+ 
+--------------------------Available commands:--------------------------
+&lt;sec&gt; whatsmyip [UInt64 steamId]
+
+&lt;sec&gt; help
+Displays help for a command
+
+&lt;sec&gt; longhelp
+Get verbose help. Will send a long message in a dialog window.
+
+&lt;sec&gt; ver
+Shows the running Torch version.
+
+&lt;sec&gt; plugins
+Lists the currently loaded plugins.
+
+&lt;sec&gt; stop [Boolean save] [Int32 countdownSeconds]
+Stops the server.
+
+&lt;sec&gt; stop cancel
+Cancel a pending stop.
+
+&lt;sec&gt; restart [Int32 countdownSeconds] [Boolean save]
+Restarts the server.
+
+&lt;sec&gt; restart cancel
+Cancel a pending restart.
+
+&lt;sec&gt; notify &lt;String message&gt; [Int32 disappearTimeMs] [String font]
+Shows a message as a notification in the middle of all players' screens.
+
+&lt;sec&gt; save
+Saves the game.
+
+&lt;sec&gt; uptime
+Check how long the server has been online.
+
+&lt;sec&gt; fix gps
+Helps you, if your gpses, are not shown
+
+&lt;sec&gt; fix static
+
+&lt;sec&gt; fix safezone
+Removes safezones, that are assigned to blocks, but that blocks haven't found
+
+&lt;sec&gt; fix physics &lt;Int32 fixmode&gt; [Int32 tostatic] [Int32 UPDATES_TO_TRACE]
+help text
+
+&lt;sec&gt; fix physics2 find Searching for clanging grids.
+Not fixing them
+
+&lt;sec&gt; fix physics2
+fix toStationAndSmall Searching for clanging grids. Converting to station even small ships
+
+&lt;sec&gt; fix physics2
+fix toStationLargeOnly Searching for clanging grids. Converting to station large only
+
+&lt;sec&gt; damage &lt;String like&gt; &lt;Single integrityDamage&gt; [Single minIntegrity] [Boolean fatOnly]
+(OBSOLETE) Damage block by integrity, if FatOnly - only functional blocks but it is MUCH FASTER
+
+&lt;sec&gt; damage-blocks &lt;String like&gt; &lt;Single absoluteDamage&gt; [Single minIntegrity] [Boolean fatOnly] [String except] [Single percentDamage] [Boolean enabledOnly]
+See: (&lt;sec&gt; damage). like &amp; excepet - newFormat: */*Armor* *Battery*/*Tier2* percentDamage in [0-1]
+
+&lt;sec&gt; damage-blocks-if-no-other &lt;String likeFirst&gt; &lt;String likeSecond&gt; &lt;Single integrityDamage&gt; [Single minIntegrity] [Boolean fatOnly] [Boolean enabledOnly]
+ 
+ 
+ 
+ 
+--------------------------Lists grids matching the given conditions--------------------------
+
+&lt;sec&gt; cleanup delete
+Delete grids matching the given conditions
+
+&lt;sec&gt; cleanup delete floatingobjects
+deletes floating objects
+
+&lt;sec&gt; cleanup help
+Lists all cleanup conditions.
+
+&lt;sec&gt; !convert
+static small Convert to static all small ships
+
+&lt;sec&gt; !convert dynamic small
+Convert all small ships to dynamic
+
+&lt;sec&gt; freeze [Double distance] [Int32 howMany]
+Freeze grids x distance from players. Use Distance=0 for default distance. Use howMany=0 to freeze all in one moment. When howMany &gt; 0, it wont be concealed more than that value
+
+&lt;sec&gt; freeze on Enable freezer.
+
+&lt;sec&gt; freeze production &lt;Boolean enable&gt;
+Enable production freeze or not
+
+&lt;sec&gt; freeze off
+Disable freezer.
+
+&lt;sec&gt; freeze auto on
+Enable freezer.
+
+&lt;sec&gt; freeze auto off
+Disable freezer.
+
+&lt;sec&gt; unfreeze [Int32 howMany]
+Unfreeze grids. If you don't want make a huge freeze, use small amount (howMany=10) in cycle
+
+&lt;sec&gt; grace toggle
+Toggle Global AutoRemove State
+
+&lt;sec&gt; grace add "&lt;PlayerName&gt;"
+Grant a player extended leave
+
+&lt;sec&gt; grace add persist "&lt;PlayerName&gt;"
+Grant a player extended leave. Player will not be affected by AutoRemove
+
+&lt;sec&gt; grace remove "&lt;PlayerName&gt;"
+Revoke a players extended leave
+
+&lt;sec&gt; grace list
+List players on leave
+
+&lt;sec&gt; blocklimit enable [Boolean enable]
+enable/disable blocklimit plugin
+
+&lt;sec&gt; blocklimit update
+updates limits
+
+&lt;sec&gt; blocklimit update grid "&lt;Gridname&gt;"
+updates limits
+
+&lt;sec&gt; blocklimit update player "&lt;PlayerName&gt;"
+updates limits
+
+&lt;sec&gt; blocklimit update faction [String factionTag]
+updates limits
+
+&lt;sec&gt; blocklimit update mylimit
+
+&lt;sec&gt; blocklimit reload
+Reloads current BlockLimiter.cfg and apply any changes to current session
+
+&lt;sec&gt; blocklimit rematch ids
+Attempts to rematch owner/builtby Ids
+
+&lt;sec&gt; blocklimit violations
+gets the list of violations per limit
+
+&lt;sec&gt; blocklimit playerlimit &lt;String name&gt;
+gets the current limits of targeted player
+
+&lt;sec&gt; blocklimit gridlimit "&lt;Gridname&gt;"
+gets the current limits of specified grid
+
+&lt;sec&gt; blocklimit factionlimit &lt;String factionTag&gt;
+gets the current limits of specified faction
+
+&lt;sec&gt; blocklimit annoy
+Runs the annoyance message
+
+&lt;sec&gt; blocklimit punish
+runs punishment
+
+&lt;sec&gt; blocklimit mylimit
+list current player status
+
+&lt;sec&gt; blocklimit 
+limits gets list of limits and there settings
+
+&lt;sec&gt; blocklimit pairnames
+gets the list of all pair names possible
+
+&lt;sec&gt; blocklimit definitions
+gets the list of all blocks definitions currently in game
+ 
+ 
+Damage block found by likeSecond ONLY if there is no blocks found by likeFirst, if FatOnly - only functional blocks but it is MUCH FASTER : Example &lt;sec&gt; damage-blocks-if-no-other "*/*Beacon*" "*/*Battery*" 300000 -1 true - destroyes
+&lt;sec&gt; economy-form Damage block by integrity, if FatOnly - only functional blocks but it is MUCH FASTER
+&lt;sec&gt; economy-calculate Damage block by integrity, if FatOnly - only functional blocks but it is MUCH FASTER
+
+&lt;sec&gt; show active-players [Int32 maxHours]
+Show players, that visited server more than X hours
+
+&lt;sec&gt; show item-stacks [Int32 maxOkItems]
+Find big amount of item stacks in inventories.
+
+&lt;sec&gt; show scripts
+Exports all scripts into files
+
+&lt;sec&gt; show active-physics
+Find active working grids
+
+&lt;sec&gt; show stats
+Find big amount of grids in one place.
+
+&lt;sec&gt; show blocks &lt;String like&gt; [Int32 radius]
+Shows blocks by criterias
+
+&lt;sec&gt; show oblocks &lt;String like&gt; [Int32 radius]
+Shows blocks by criterias
+
+&lt;sec&gt; show wblocks &lt;String like&gt; [Int32 radius]
+Shows blocks by criterias
+
+&lt;sec&gt; show 
+Shows all players
+
+&lt;sec&gt; show nests [Int32 minimumSubparts] [Int32 radius]
+Find big amount of grids in one place.
+
+&lt;sec&gt; show nests-for-players [Int32 minimumSubparts] [Int32 radius] [String gpsName] [String gpsDescription] [Int32 GpstimeOut] Grids
+
+&lt;sec&gt; show can-be-frozen
+Shows all players
+
+&lt;sec&gt; show frozen
+Shows all players
+
+&lt;sec&gt; show not-frozen
+Shows all players
+
+&lt;sec&gt; cleanup nobuiltby
+Destroy every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby-info
+Count every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby2
+Destroy every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby3
+Destroy every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby3-info
+Count every block, that dont have built by
+
+&lt;sec&gt; cleanup notify [String format]
+Notifies players that grid will be deleted
+
+&lt;sec&gt; cleanup item-stacks [Int32 maxOkItems] [String typeToDelete]
+Find big amount of item stacks in inventories. Removes PhysicalGunObject by default
+
+&lt;sec&gt; cleanup scan
+Find grids matching the given conditions
+
+&lt;sec&gt; cleanup list
+
+ 
+ 
+--------------------------Lists all the grids saved in your hangar--------------------------
+&lt;sec&gt; h load "&lt;Gridname&gt;" [Boolean LoadNearPlayer]
+Loads the specified grid by index number
+
+&lt;sec&gt; h remove "&lt;Gridname&gt;"
+removes the grid from your hangar
+&lt;sec&gt; h info [String ID]
+Provides some info of the current grid in your hangar
+
+&lt;sec&gt; hangarmod save [String GridName]
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; hangarmod list "&lt;PlayerName&gt;"
+Lists all grids of given player
+
+&lt;sec&gt; hangarmod load "&lt;PlayerName&gt;" &lt;Int32 ID&gt; [Boolean FromSavePos]
+loads selected grid from a users hangar
+
+&lt;sec&gt; hangarmod remove "&lt;PlayerName&gt;" &lt;Int32 ID&gt;
+removes the grid from the players hangar
+
+&lt;sec&gt; hangarmod sync "&lt;PlayerName&gt;"
+Re-scans the folder for added or removed grids
+
+&lt;sec&gt; hangarmod syncall
+Re-scans all folders for added or removed grids
+
+&lt;sec&gt; hangarmod autohangar
+Runs Autohangar
+
+&lt;sec&gt; hangarmod autohanger-override &lt;String[] overrides&gt;
+Runs Autohanger with override values (staticgrids, largegrids, smallgrids, hangerLargest, saveAll)
+
+&lt;sec&gt; hangarmod enable &lt;Boolean SetPluginEnable&gt;
+Enables Hangar
+
+&lt;sec&gt; hangarmod saveall
+Saves All grids on server into hangar
+
+&lt;sec&gt; hm save [String GridName]
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; hm list "&lt;PlayerName&gt;"
+Lists all grids of given player
+
+&lt;sec&gt; hm load "&lt;PlayerName&gt;" &lt;Int32 ID&gt; [Boolean FromSavePos]
+loads selected grid from a users hangar
+
+&lt;sec&gt; hm remove "&lt;PlayerName&gt;" &lt;Int32 ID&gt;
+removes the grid from the players hangar
+
+&lt;sec&gt; hm sync "&lt;PlayerName&gt;"
+Re-scans the folder for added or removed grids
+
+&lt;sec&gt; hm syncall
+Re-scans all folders for added or removed grids
+
+&lt;sec&gt; hm autohangar
+Runs Autohangar
+
+&lt;sec&gt; hm autohanger-override &lt;String[] overrides&gt;
+Runs Autohanger with override values (staticgrids, largegrids, smallgrids, hangerLargest, saveAll)
+
+&lt;sec&gt; hm enable &lt;Boolean SetPluginEnable&gt;
+Enables Hangar
+
+&lt;sec&gt; hm saveall
+Saves All grids on server into hangar
+
+&lt;sec&gt; hangar sell &lt;Int32 ID&gt; &lt;Int64 price&gt; &lt;String description&gt;
+Sells the grid
+
+&lt;sec&gt; hangar marketlist
+Lists all grids for sale
+
+&lt;sec&gt; hangar save
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; hangar list
+Lists all the grids saved in your hangar
+
+&lt;sec&gt; hangar load "&lt;Gridname&gt;" [Boolean LoadNearPlayer]
+Loads the specified grid by index number
+
+&lt;sec&gt; hangar remove "&lt;Gridname&gt;"
+removes the grid from your hangar
+
+&lt;sec&gt; hangar info [String ID]
+Provides some info of the current grid in your hangar
+
+&lt;sec&gt; h sell &lt;Int32 ID&gt; &lt;Int64 price&gt; &lt;String description&gt;
+Sells the grid
+
+&lt;sec&gt; h marketlist
+Lists all grids for sale
+
+&lt;sec&gt; h save
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; h list
+
+
+
+&lt;sec&gt; nexus ptoggle
+Toggles Packet Tracing
+
+!nexus getsectors [Boolean AddGps]
+Lists all sectors in the current world
+ 
+ 
+
+&lt;sec&gt; conceal [Double distance]
+Conceal grids x distance from players.
+
+&lt;sec&gt; conceal on
+Enable concealment.
+
+&lt;sec&gt; conceal off
+Disable concealment.
+
+&lt;sec&gt; reveal [Double distance]
+Reveal all grids within the given distance
+
+&lt;sec&gt; reveal all
+Reveal all grids
+
+
+
+
+
+&lt;sec&gt; pve challenge player "&lt;PlayerName&gt;"
+Issues a challenge to a specified player. Use player name.
+
+&lt;sec&gt; pve challenge faction &lt;String factionNameOrTag&gt;
+Issues a challenge to a specified faction. Use faction tag
+
+&lt;sec&gt; pve accept challenge
+Accepts all current challenge or specified player name or faction tag at the end of command
+
+&lt;sec&gt; pve accept submission
+Accepts specified or all submissions. Add player name or faction tag at the end of command to specify
+
+&lt;sec&gt; pve submit faction &lt;String factionNameOrTag&gt;
+Initiates submission by requesting to submit to all or specified faction tag or player name
+
+&lt;sec&gt; pve submit player "&lt;PlayerName&gt;"
+Issues submissions to a specified player or faction
+
+ 
+ 
+ 
+
+
+
+
+</value>
   </data>
   <data name="Tab_BankRichTextBox2.Text" xml:space="preserve">
     <value>SI BANK COMMANDS
@@ -757,7 +1171,10 @@ Similar to !fixship &lt;shipname&gt; but it is better with handling naming confl
 
 &lt;sec&gt; transferowner "&lt;PlayerName&gt;" - Transfers only block ownership of the grid you are looking at over to the player.
 
-&lt;sec&gt; transferowner "&lt;PlayerName&gt;" "&lt;GridName&gt;"  -  Transfers only block ownership of the named grid to the player. </value>
+&lt;sec&gt; transferowner "&lt;PlayerName&gt;" "&lt;GridName&gt;"  -  Transfers only block ownership of the named grid to the player. 
+
+
+</value>
   </data>
   <data name="Tab_BlocksRichTextBox2.Text" xml:space="preserve">
     <value>BLOCKLIMIT PLUGIN
@@ -858,7 +1275,15 @@ You can filter the results by adding -faction=XYZ or -player=Playername.
 
  If the player name contains spaces you need to set the whole expression in "". Example: &lt;sec&gt; listblocks all -pcu "-player=My Player".
 
-Also sorting is possible with -orderby=blocks|name|pcu</value>
+Also sorting is possible with -orderby=blocks|name|pcu
+
+
+
+
+
+
+
+</value>
   </data>
   <data name="Tab_CleanRichTextBox2.Text" xml:space="preserve">
     <value>NPC GRID PURGING
@@ -928,7 +1353,12 @@ Specific commands for cleaning current NPC factions
 &lt;sec&gt; cleanup delete ownedby "Space Pirates" = SPRT npcs
 
 &lt;sec&gt; fix physics 2 
-&lt;sec&gt; fix physics 2 3 </value>
+&lt;sec&gt; fix physics 2 3 
+
+
+
+
+</value>
   </data>
   <data name="Tab_SlimeRichTextBox2.Text" xml:space="preserve">
     <value>GRID OWNERSHIP
@@ -985,7 +1415,12 @@ hastype (notype):
    Finds grids containing blocks of the given type.
 hassubtype (nosubtype):
    Finds grids containing blocks of the given subtype.
-haspilot (Finds grids with pilots)</value>
+haspilot (Finds grids with pilots)
+
+
+
+
+</value>
   </data>
   <data name="Tab_GridsRichTextBox2.Text" xml:space="preserve">
     <value>GRID OWNERSHIP
@@ -1042,10 +1477,477 @@ hastype (notype):
    Finds grids containing blocks of the given type.
 hassubtype (nosubtype):
    Finds grids containing blocks of the given subtype.
-haspilot (Finds grids with pilots)</value>
+haspilot (Finds grids with pilots)
+
+
+
+
+
+
+</value>
   </data>
+  <data name="Tab_MiscRichTextBox2.Text" xml:space="preserve">
+    <value>CLEANUP BY FACTION TAG
+
+!cleanup delete ownedby &lt;FACTIONTAG&gt; playerdistancegreaterthan 5000
+
+Deletes NPC ships that are further then 5km from players. Replace &lt;FACTIONTAG&gt; with a faction tag, like SPRT
+
+EMPTY GRID INVENTORY!
+
+!cleargrid
+
+Empties all inventories in the grid you look at (useful when pasting grid from workshop) 
+
+CONVERTS GRID
+
+!admin makestation - Convert the ship and connected grid you are looking at to station
+!admin makeship - Convert the station and connected grid you are looking at to ship
+
+Makes converting easy for admins
+
+HELP WITH CYRO / GAME CRASHING
+
+~entities eject "ingamename"
+~entities kill "ingamename"
+
+
+ADDITIONAL ENTITIES COMMANDS
+
+entities refresh
+entities stop
+entities delete
+entities kill
+entities find
+entities poweroff
+entities poweron
+
+REMOVES FACTION FROM SERVER
+
+!faction remove &lt;String tag&gt;
+
+
+ 
+ 
+ 
+ 
+--------------------------Available commands:--------------------------
+&lt;sec&gt; whatsmyip [UInt64 steamId]
+
+&lt;sec&gt; help
+Displays help for a command
+
+&lt;sec&gt; longhelp
+Get verbose help. Will send a long message in a dialog window.
+
+&lt;sec&gt; ver
+Shows the running Torch version.
+
+&lt;sec&gt; plugins
+Lists the currently loaded plugins.
+
+&lt;sec&gt; stop [Boolean save] [Int32 countdownSeconds]
+Stops the server.
+
+&lt;sec&gt; stop cancel
+Cancel a pending stop.
+
+&lt;sec&gt; restart [Int32 countdownSeconds] [Boolean save]
+Restarts the server.
+
+&lt;sec&gt; restart cancel
+Cancel a pending restart.
+
+&lt;sec&gt; notify &lt;String message&gt; [Int32 disappearTimeMs] [String font]
+Shows a message as a notification in the middle of all players' screens.
+
+&lt;sec&gt; save
+Saves the game.
+
+&lt;sec&gt; uptime
+Check how long the server has been online.
+
+&lt;sec&gt; fix gps
+Helps you, if your gpses, are not shown
+
+&lt;sec&gt; fix static
+
+&lt;sec&gt; fix safezone
+Removes safezones, that are assigned to blocks, but that blocks haven't found
+
+&lt;sec&gt; fix physics &lt;Int32 fixmode&gt; [Int32 tostatic] [Int32 UPDATES_TO_TRACE]
+help text
+
+&lt;sec&gt; fix physics2 find Searching for clanging grids.
+Not fixing them
+
+&lt;sec&gt; fix physics2
+fix toStationAndSmall Searching for clanging grids. Converting to station even small ships
+
+&lt;sec&gt; fix physics2
+fix toStationLargeOnly Searching for clanging grids. Converting to station large only
+
+&lt;sec&gt; damage &lt;String like&gt; &lt;Single integrityDamage&gt; [Single minIntegrity] [Boolean fatOnly]
+(OBSOLETE) Damage block by integrity, if FatOnly - only functional blocks but it is MUCH FASTER
+
+&lt;sec&gt; damage-blocks &lt;String like&gt; &lt;Single absoluteDamage&gt; [Single minIntegrity] [Boolean fatOnly] [String except] [Single percentDamage] [Boolean enabledOnly]
+See: (&lt;sec&gt; damage). like &amp; excepet - newFormat: */*Armor* *Battery*/*Tier2* percentDamage in [0-1]
+
+&lt;sec&gt; damage-blocks-if-no-other &lt;String likeFirst&gt; &lt;String likeSecond&gt; &lt;Single integrityDamage&gt; [Single minIntegrity] [Boolean fatOnly] [Boolean enabledOnly]
+ 
+ 
+ 
+ 
+--------------------------Lists grids matching the given conditions--------------------------
+
+&lt;sec&gt; cleanup delete
+Delete grids matching the given conditions
+
+&lt;sec&gt; cleanup delete floatingobjects
+deletes floating objects
+
+&lt;sec&gt; cleanup help
+Lists all cleanup conditions.
+
+&lt;sec&gt; !convert
+static small Convert to static all small ships
+
+&lt;sec&gt; !convert dynamic small
+Convert all small ships to dynamic
+
+&lt;sec&gt; freeze [Double distance] [Int32 howMany]
+Freeze grids x distance from players. Use Distance=0 for default distance. Use howMany=0 to freeze all in one moment. When howMany &gt; 0, it wont be concealed more than that value
+
+&lt;sec&gt; freeze on Enable freezer.
+
+&lt;sec&gt; freeze production &lt;Boolean enable&gt;
+Enable production freeze or not
+
+&lt;sec&gt; freeze off
+Disable freezer.
+
+&lt;sec&gt; freeze auto on
+Enable freezer.
+
+&lt;sec&gt; freeze auto off
+Disable freezer.
+
+&lt;sec&gt; unfreeze [Int32 howMany]
+Unfreeze grids. If you don't want make a huge freeze, use small amount (howMany=10) in cycle
+
+&lt;sec&gt; grace toggle
+Toggle Global AutoRemove State
+
+&lt;sec&gt; grace add "&lt;PlayerName&gt;"
+Grant a player extended leave
+
+&lt;sec&gt; grace add persist "&lt;PlayerName&gt;"
+Grant a player extended leave. Player will not be affected by AutoRemove
+
+&lt;sec&gt; grace remove "&lt;PlayerName&gt;"
+Revoke a players extended leave
+
+&lt;sec&gt; grace list
+List players on leave
+
+&lt;sec&gt; blocklimit enable [Boolean enable]
+enable/disable blocklimit plugin
+
+&lt;sec&gt; blocklimit update
+updates limits
+
+&lt;sec&gt; blocklimit update grid "&lt;Gridname&gt;"
+updates limits
+
+&lt;sec&gt; blocklimit update player "&lt;PlayerName&gt;"
+updates limits
+
+&lt;sec&gt; blocklimit update faction [String factionTag]
+updates limits
+
+&lt;sec&gt; blocklimit update mylimit
+
+&lt;sec&gt; blocklimit reload
+Reloads current BlockLimiter.cfg and apply any changes to current session
+
+&lt;sec&gt; blocklimit rematch ids
+Attempts to rematch owner/builtby Ids
+
+&lt;sec&gt; blocklimit violations
+gets the list of violations per limit
+
+&lt;sec&gt; blocklimit playerlimit &lt;String name&gt;
+gets the current limits of targeted player
+
+&lt;sec&gt; blocklimit gridlimit "&lt;Gridname&gt;"
+gets the current limits of specified grid
+
+&lt;sec&gt; blocklimit factionlimit &lt;String factionTag&gt;
+gets the current limits of specified faction
+
+&lt;sec&gt; blocklimit annoy
+Runs the annoyance message
+
+&lt;sec&gt; blocklimit punish
+runs punishment
+
+&lt;sec&gt; blocklimit mylimit
+list current player status
+
+&lt;sec&gt; blocklimit 
+limits gets list of limits and there settings
+
+&lt;sec&gt; blocklimit pairnames
+gets the list of all pair names possible
+
+&lt;sec&gt; blocklimit definitions
+gets the list of all blocks definitions currently in game
+ 
+ 
+Damage block found by likeSecond ONLY if there is no blocks found by likeFirst, if FatOnly - only functional blocks but it is MUCH FASTER : Example &lt;sec&gt; damage-blocks-if-no-other "*/*Beacon*" "*/*Battery*" 300000 -1 true - destroyes
+&lt;sec&gt; economy-form Damage block by integrity, if FatOnly - only functional blocks but it is MUCH FASTER
+&lt;sec&gt; economy-calculate Damage block by integrity, if FatOnly - only functional blocks but it is MUCH FASTER
+
+&lt;sec&gt; show active-players [Int32 maxHours]
+Show players, that visited server more than X hours
+
+&lt;sec&gt; show item-stacks [Int32 maxOkItems]
+Find big amount of item stacks in inventories.
+
+&lt;sec&gt; show scripts
+Exports all scripts into files
+
+&lt;sec&gt; show active-physics
+Find active working grids
+
+&lt;sec&gt; show stats
+Find big amount of grids in one place.
+
+&lt;sec&gt; show blocks &lt;String like&gt; [Int32 radius]
+Shows blocks by criterias
+
+&lt;sec&gt; show oblocks &lt;String like&gt; [Int32 radius]
+Shows blocks by criterias
+
+&lt;sec&gt; show wblocks &lt;String like&gt; [Int32 radius]
+Shows blocks by criterias
+
+&lt;sec&gt; show 
+Shows all players
+
+&lt;sec&gt; show nests [Int32 minimumSubparts] [Int32 radius]
+Find big amount of grids in one place.
+
+&lt;sec&gt; show nests-for-players [Int32 minimumSubparts] [Int32 radius] [String gpsName] [String gpsDescription] [Int32 GpstimeOut] Grids
+
+&lt;sec&gt; show can-be-frozen
+Shows all players
+
+&lt;sec&gt; show frozen
+Shows all players
+
+&lt;sec&gt; show not-frozen
+Shows all players
+
+&lt;sec&gt; cleanup nobuiltby
+Destroy every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby-info
+Count every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby2
+Destroy every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby3
+Destroy every block, that dont have built by
+
+&lt;sec&gt; cleanup nobuiltby3-info
+Count every block, that dont have built by
+
+&lt;sec&gt; cleanup notify [String format]
+Notifies players that grid will be deleted
+
+&lt;sec&gt; cleanup item-stacks [Int32 maxOkItems] [String typeToDelete]
+Find big amount of item stacks in inventories. Removes PhysicalGunObject by default
+
+&lt;sec&gt; cleanup scan
+Find grids matching the given conditions
+
+&lt;sec&gt; cleanup list
+
+ 
+ 
+--------------------------Lists all the grids saved in your hangar--------------------------
+&lt;sec&gt; h load "&lt;Gridname&gt;" [Boolean LoadNearPlayer]
+Loads the specified grid by index number
+
+&lt;sec&gt; h remove "&lt;Gridname&gt;"
+removes the grid from your hangar
+&lt;sec&gt; h info [String ID]
+Provides some info of the current grid in your hangar
+
+&lt;sec&gt; hangarmod save [String GridName]
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; hangarmod list "&lt;PlayerName&gt;"
+Lists all grids of given player
+
+&lt;sec&gt; hangarmod load "&lt;PlayerName&gt;" &lt;Int32 ID&gt; [Boolean FromSavePos]
+loads selected grid from a users hangar
+
+&lt;sec&gt; hangarmod remove "&lt;PlayerName&gt;" &lt;Int32 ID&gt;
+removes the grid from the players hangar
+
+&lt;sec&gt; hangarmod sync "&lt;PlayerName&gt;"
+Re-scans the folder for added or removed grids
+
+&lt;sec&gt; hangarmod syncall
+Re-scans all folders for added or removed grids
+
+&lt;sec&gt; hangarmod autohangar
+Runs Autohangar
+
+&lt;sec&gt; hangarmod autohanger-override &lt;String[] overrides&gt;
+Runs Autohanger with override values (staticgrids, largegrids, smallgrids, hangerLargest, saveAll)
+
+&lt;sec&gt; hangarmod enable &lt;Boolean SetPluginEnable&gt;
+Enables Hangar
+
+&lt;sec&gt; hangarmod saveall
+Saves All grids on server into hangar
+
+&lt;sec&gt; hm save [String GridName]
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; hm list "&lt;PlayerName&gt;"
+Lists all grids of given player
+
+&lt;sec&gt; hm load "&lt;PlayerName&gt;" &lt;Int32 ID&gt; [Boolean FromSavePos]
+loads selected grid from a users hangar
+
+&lt;sec&gt; hm remove "&lt;PlayerName&gt;" &lt;Int32 ID&gt;
+removes the grid from the players hangar
+
+&lt;sec&gt; hm sync "&lt;PlayerName&gt;"
+Re-scans the folder for added or removed grids
+
+&lt;sec&gt; hm syncall
+Re-scans all folders for added or removed grids
+
+&lt;sec&gt; hm autohangar
+Runs Autohangar
+
+&lt;sec&gt; hm autohanger-override &lt;String[] overrides&gt;
+Runs Autohanger with override values (staticgrids, largegrids, smallgrids, hangerLargest, saveAll)
+
+&lt;sec&gt; hm enable &lt;Boolean SetPluginEnable&gt;
+Enables Hangar
+
+&lt;sec&gt; hm saveall
+Saves All grids on server into hangar
+
+&lt;sec&gt; hangar sell &lt;Int32 ID&gt; &lt;Int64 price&gt; &lt;String description&gt;
+Sells the grid
+
+&lt;sec&gt; hangar marketlist
+Lists all grids for sale
+
+&lt;sec&gt; hangar save
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; hangar list
+Lists all the grids saved in your hangar
+
+&lt;sec&gt; hangar load "&lt;Gridname&gt;" [Boolean LoadNearPlayer]
+Loads the specified grid by index number
+
+&lt;sec&gt; hangar remove "&lt;Gridname&gt;"
+removes the grid from your hangar
+
+&lt;sec&gt; hangar info [String ID]
+Provides some info of the current grid in your hangar
+
+&lt;sec&gt; h sell &lt;Int32 ID&gt; &lt;Int64 price&gt; &lt;String description&gt;
+Sells the grid
+
+&lt;sec&gt; h marketlist
+Lists all grids for sale
+
+&lt;sec&gt; h save
+Saves the grid you are looking at to hangar
+
+&lt;sec&gt; h list
+
+
+
+&lt;sec&gt; nexus ptoggle
+Toggles Packet Tracing
+
+!nexus getsectors [Boolean AddGps]
+Lists all sectors in the current world
+ 
+ 
+
+&lt;sec&gt; conceal [Double distance]
+Conceal grids x distance from players.
+
+&lt;sec&gt; conceal on
+Enable concealment.
+
+&lt;sec&gt; conceal off
+Disable concealment.
+
+&lt;sec&gt; reveal [Double distance]
+Reveal all grids within the given distance
+
+&lt;sec&gt; reveal all
+Reveal all grids
+
+
+
+
+
+&lt;sec&gt; pve challenge player "&lt;PlayerName&gt;"
+Issues a challenge to a specified player. Use player name.
+
+&lt;sec&gt; pve challenge faction &lt;String factionNameOrTag&gt;
+Issues a challenge to a specified faction. Use faction tag
+
+&lt;sec&gt; pve accept challenge
+Accepts all current challenge or specified player name or faction tag at the end of command
+
+&lt;sec&gt; pve accept submission
+Accepts specified or all submissions. Add player name or faction tag at the end of command to specify
+
+&lt;sec&gt; pve submit faction &lt;String factionNameOrTag&gt;
+Initiates submission by requesting to submit to all or specified faction tag or player name
+
+&lt;sec&gt; pve submit player "&lt;PlayerName&gt;"
+Issues submissions to a specified player or faction
+
+ 
+ 
+ 
+
+
+
+
+</value>
+  </data>
+  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>106, 17</value>
+  </metadata>
+  <metadata name="ContextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>263, 17</value>
+  </metadata>
+  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>420, 17</value>
+  </metadata>
+  <metadata name="Timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>535, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>59</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

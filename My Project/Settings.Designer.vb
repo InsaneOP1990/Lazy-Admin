@@ -221,6 +221,31 @@ Namespace My
                 Me("logserver") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Scripting access on our servers is a privilege granted to anyone that asks under "& _ 
+            "the condition that you use it responsibly. If the scripts you run prove to be ex"& _ 
+            "ploitative or taxing on server resources and you are not immediately responsive "& _ 
+            "to requests for adjustments that privilege will be revoked."&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"We are running a "& _ 
+            "server plugin which limits the amount of resources that scripts can use to .4ms "& _ 
+            "per run with higher allowance for initial startup, it will cause programmable bl"& _ 
+            "ocks to turn off or become damaged if their processing requirements are too high"& _ 
+            " but this should not affect the bulk of the quality of life scripts you can find"& _ 
+            " and run unless they are configured improperly. Programmable blocks that overhea"& _ 
+            "t will need to be recompiled in the PB control panel.  If you agree to this type"& _ 
+            " banana."&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"If scripts you are running repeatedly overheat causing them to turn "& _ 
+            "off, become damaged or otherwise misbehave please seek assistance in our script-"& _ 
+            "chat channel on the Discord."&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Once you are done reading please let us know to "& _ 
+            "gain scripting access through the programmable block. ")>  _
+        Public Property ScripterText() As String
+            Get
+                Return CType(Me("ScripterText"),String)
+            End Get
+            Set
+                Me("ScripterText") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

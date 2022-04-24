@@ -30,6 +30,10 @@
             WarningLabel.Visible = False
         End If
 
+
+
+
+
         'Settings updates
         My.Settings.ListGrid = ListGridBackupComboBox.Text
         My.Settings.RestoreNumone = RestoreNumoneComboBox.Text
@@ -121,7 +125,7 @@
                 Tab_SlimeRichTextBox.Text = newSlime3
             End If
 
-            'Gridss tab
+            'Grids tab
             Dim olddGridss As String = Tab_GridsRichTextBox2.Text
 
             If olddGridss.Contains("<Gridname>") Then
@@ -144,6 +148,20 @@
             Tab_GridsRichTextBox.Text = Tab_GridsRichTextBox2.Text
         End If
 
+        'Misc tab
+        Dim olddMisc As String = Tab_MiscRichTextBox2.Text
+
+        If olddMisc.Contains("<Gridname>") Then
+            Dim newMisc1 As String
+            newMisc1 = olddMisc.Replace("<Gridname>", Grid_NameText.Text)
+            Dim newMisc2 As String
+            newMisc2 = newMisc1.Replace("<sec>", My.Settings.Sector)
+            Dim newMisc3 As String
+            newMisc3 = newMisc2.Replace("<PlayerName>", Player_NameText.Text)
+
+            Tab_MiscRichTextBox.Text = newMisc3
+        End If
+
         'If steam check box empty then uncheck
         If SteamID_Texbox.TextLength = 0 Then
             SteamCheckBox.Checked = False
@@ -151,8 +169,7 @@
 
         'get sector
         If Sector_ComboBox.Text = "" Then
-            My.Settings.Sector = ""
-            MsgBox("pick a sector", vbExclamation, "Warning")
+            Clear_Button.PerformClick()
         Else
             If Sector_ComboBox.Text = "ALL - All servers except the lobby. Senior Staff / Admin Only" Then
                 My.Settings.Sector = "ALL"
@@ -410,6 +427,11 @@
             End If
         End If
 
+        'hangar saveall
+        If HangarComboBox.Text = "saveall" Then
+            HangarNameTextBox.Text = My.Settings.Sector & " hm saveall"
+        End If
+
 
         'Player Entities eject
         If SteamCheckBox.Checked = True Then
@@ -474,6 +496,149 @@
                 GridEnameTextBox.Text = My.Settings.Sector & " " & "entities poweron" & " " & Chr(34) & Grid_NameText.Text & Chr(34)
             End If
         End If
+        'Grid Entities checkauthor
+        If GridEComboBox.Text = "checkauthor" Then
+            If Grid_NameText.TextLength > 0 Then
+                GridEnameTextBox.Text = My.Settings.Sector & " " & "checkauthor" & " " & Chr(34) & Grid_NameText.Text & Chr(34)
+            End If
+        End If
+        'Grid Entities admin makeship
+        If GridEComboBox.Text = "admin makeship" Then
+            If Grid_NameText.TextLength > 0 Then
+                GridEnameTextBox.Text = My.Settings.Sector & " " & "admin makeship" & " " & Chr(34) & Grid_NameText.Text & Chr(34)
+            End If
+        End If
+        'Grid Entities admin makestation
+        If GridEComboBox.Text = "admin makestation" Then
+            If Grid_NameText.TextLength > 0 Then
+                GridEnameTextBox.Text = My.Settings.Sector & " " & "admin makestation" & " " & Chr(34) & Grid_NameText.Text & Chr(34)
+            End If
+        End If
+        'Grid Entities fixshipmod
+        If GridEComboBox.Text = "fixshipmod" Then
+            If Grid_NameText.TextLength > 0 Then
+                GridEnameTextBox.Text = My.Settings.Sector & " " & "fixshipmod" & " " & Chr(34) & Grid_NameText.Text & Chr(34)
+            End If
+        End If
+
+
+
+        'Common command - MovePlayer
+        If CommonComboBox.Text = "Move Player" Then
+            If Player_NameText.TextLength > 0 Then
+                CommonTextBox.Text = "/nexus setserverid " & Chr(34) & Player_NameText.Text & Chr(34) & " " & My.Settings.logserver
+            End If
+        End If
+
+        'Common command - whatsmyip
+        If CommonComboBox.Text = "whatsmyip" Then
+            If SteamID_Texbox.TextLength > 0 Then
+                CommonTextBox.Text = My.Settings.Sector & " whatsmyip " & SteamID_Texbox.Text
+            End If
+        End If
+
+        'Common command - help
+        If CommonComboBox.Text = "help" Then
+            CommonTextBox.Text = My.Settings.Sector & " help"
+        End If
+
+        'Common command - longhelp
+        If CommonComboBox.Text = "longhelp" Then
+            CommonTextBox.Text = My.Settings.Sector & " longhelp"
+        End If
+
+        'Common command - ver
+        If CommonComboBox.Text = "ver" Then
+            CommonTextBox.Text = My.Settings.Sector & " ver"
+        End If
+
+        'Common command - plugins
+        If CommonComboBox.Text = "plugins" Then
+            CommonTextBox.Text = My.Settings.Sector & " plugins"
+        End If
+
+        'Common command - onlineservers
+        If CommonComboBox.Text = "onlineservers" Then
+            CommonTextBox.Text = "/nexus onlineservers"
+        End If
+
+        'Common command - uptime
+        If CommonComboBox.Text = "uptime" Then
+            CommonTextBox.Text = My.Settings.Sector & " uptime"
+        End If
+
+        'Common command - fix physics 1 1
+        If CommonComboBox.Text = "fix physics 1 1" Then
+            CommonTextBox.Text = My.Settings.Sector & " fix physics 1 1"
+        End If
+        'Common command - fix physics 2
+        If CommonComboBox.Text = "fix physics 2" Then
+            CommonTextBox.Text = My.Settings.Sector & " fix physics 2"
+        End If
+        'Common command - fix physics 2 3
+        If CommonComboBox.Text = "fix physics 2 3" Then
+            CommonTextBox.Text = My.Settings.Sector & " fix physics 2 3"
+        End If
+
+
+        'Common command - profile grids
+        If CommonComboBox.Text = "profile grids" Then
+            CommonTextBox.Text = My.Settings.Sector & " profile grids"
+        End If
+        'Common command - admin playerlist
+        If CommonComboBox.Text = "admin playerlist" Then
+            CommonTextBox.Text = My.Settings.Sector & " admin playerlist"
+        End If
+        'Common command - admin mute
+        If CommonComboBox.Text = "admin mute" Then
+            If Player_NameText.TextLength > 0 Then
+                CommonTextBox.Text = My.Settings.Sector & " admin mute " & Player_NameText.Text
+            End If
+        End If
+
+
+        'Common command - Cleanup nobody
+        If CommonComboBox.Text = "Cleanup nobody" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby nobody"
+        End If
+        'Common command - Cleanup Void NPC
+        If CommonComboBox.Text = "Cleanup Void NPC" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby " & Chr(34) & "Emptiness" & Chr(34)
+        End If
+        'Common command - Cleanup GiRR NPC
+        If CommonComboBox.Text = "Cleanup GiRR NPC" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby " & Chr(34) & "Geraldine Schultz" & Chr(34)
+        End If
+        'Common command - Cleanup PRTH NPC
+        If CommonComboBox.Text = "Cleanup PRTH NPC" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby " & Chr(34) & "Triton" & Chr(34)
+        End If
+        'Common command - CCleanup GKNT NPC
+        If CommonComboBox.Text = "Cleanup GKNT NPC" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby " & Chr(34) & "Ace Gold" & Chr(34)
+        End If
+        'Common command - Cleanup ECHO NPC
+        If CommonComboBox.Text = "Cleanup ECHO NPC" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby " & Chr(34) & "Haxor Black" & Chr(34)
+        End If
+        'Common command -Cleanup Bass NPC
+        If CommonComboBox.Text = "Cleanup Bass NPC" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby " & Chr(34) & "Manny" & Chr(34)
+        End If
+        'Common command - Cleanup Pirates
+        If CommonComboBox.Text = "Cleanup Pirates" Then
+            CommonTextBox.Text = My.Settings.Sector & " cleanup delete ownedby " & Chr(34) & "Space Pirates" & Chr(34)
+        End If
+
+
+
+
+        'Common command - giveitem
+        If Player_NameText.TextLength > 0 Then
+            GiveItem_TextBox.Text = My.Settings.Sector & " giveitem " & Chr(34) & Player_NameText.Text & Chr(34) & " Component " & Component_ComboBox.Text & " " & ComponentAmount_TextBox.Text & " true"
+        End If
+
+
 
         'Logs
         If My.Settings.logserver = "!!ERROR!!!" Then
@@ -509,7 +674,53 @@
 
         If SteamID_Texbox.TextLength > 0 Then
             SetAdminTextBox.Text = "tL admin setrank " & SteamID_Texbox.Text & " 1"
+
+
         End If
+
+        'uh center textcent
+        Tab_DiscordRichTextBox.SelectionStart = 0
+        Tab_DiscordRichTextBox.SelectionLength = Len(Tab_DiscordRichTextBox.Text)
+        Tab_DiscordRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_BankRichTextBox.SelectionStart = 0
+        Tab_BankRichTextBox.SelectionLength = Len(Tab_BankRichTextBox.Text)
+        Tab_BankRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_AleRichTextBox.SelectionStart = 0
+        Tab_AleRichTextBox.SelectionLength = Len(Tab_AleRichTextBox.Text)
+        Tab_AleRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_NexusRichTextBox.SelectionStart = 0
+        Tab_NexusRichTextBox.SelectionLength = Len(Tab_NexusRichTextBox.Text)
+        Tab_NexusRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_HangarRichTextBox.SelectionStart = 0
+        Tab_HangarRichTextBox.SelectionLength = Len(Tab_HangarRichTextBox.Text)
+        Tab_HangarRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_BlocksRichTextBox.SelectionStart = 0
+        Tab_BlocksRichTextBox.SelectionLength = Len(Tab_BlocksRichTextBox.Text)
+        Tab_BlocksRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_CleanRichTextBox.SelectionStart = 0
+        Tab_CleanRichTextBox.SelectionLength = Len(Tab_CleanRichTextBox.Text)
+        Tab_CleanRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_GridsRichTextBox.SelectionStart = 0
+        Tab_GridsRichTextBox.SelectionLength = Len(Tab_GridsRichTextBox.Text)
+        Tab_GridsRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_SlimeRichTextBox.SelectionStart = 0
+        Tab_SlimeRichTextBox.SelectionLength = Len(Tab_SlimeRichTextBox.Text)
+        Tab_SlimeRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+        Tab_MiscRichTextBox.SelectionStart = 0
+        Tab_MiscRichTextBox.SelectionLength = Len(Tab_MiscRichTextBox.Text)
+        Tab_MiscRichTextBox.SelectionAlignment = HorizontalAlignment.Center
+
+
+
 
     End Sub
 
@@ -533,7 +744,7 @@
     End Sub
 
     Private Sub Scriptertext_Button_Click(sender As Object, e As EventArgs) Handles Scriptertext_Button.Click
-        If Scripter_Text_RichTextBox.TextLength > 0 Then Clipboard.SetText(Scripter_Text_RichTextBox.Text)
+        Clipboard.SetText(My.Settings.ScripterText)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles GiveScripterButton.Click
@@ -673,6 +884,8 @@
     End Sub
 
     Private Sub Tab_DiscordRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_DiscordRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -681,6 +894,8 @@
     End Sub
 
     Private Sub Tab_BankRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_BankRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -689,6 +904,8 @@
     End Sub
 
     Private Sub Tab_AleRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_AleRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -697,6 +914,8 @@
     End Sub
 
     Private Sub Tab_HangarRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_HangarRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -705,6 +924,8 @@
     End Sub
 
     Private Sub Tab_BlocksRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_BlocksRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -713,6 +934,8 @@
     End Sub
 
     Private Sub Tab_CleanRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_CleanRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -721,6 +944,8 @@
     End Sub
 
     Private Sub Tab_GridsRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_GridsRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -729,6 +954,8 @@
     End Sub
 
     Private Sub Tab_SlimeRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_SlimeRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -737,6 +964,8 @@
     End Sub
 
     Private Sub Tab_MiscRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_MiscRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
@@ -745,10 +974,65 @@
     End Sub
 
     Private Sub Tab_NexusRichTextBox_MouseLeave(sender As Object, e As EventArgs) Handles Tab_NexusRichTextBox.MouseLeave
+        Pause(1000)
+        Sector_ComboBox.Select()
         Update_Button.PerformClick()
     End Sub
 
     Private Sub SetAdminTextBox_TextChanged(sender As Object, e As EventArgs) Handles SetAdminTextBox.TextChanged
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        If SetAdminTextBox.TextLength > 0 Then Clipboard.SetText(SetAdminTextBox.Text)
+    End Sub
+
+    Private Sub AboutMeToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles AboutMeToolStripMenuItem2.Click
+        AboutBox1.Show()
+    End Sub
+
+    Private Sub Common_copyButton_Click(sender As Object, e As EventArgs) Handles Common_copyButton.Click
+        If CommonTextBox.TextLength > 0 Then Clipboard.SetText(CommonTextBox.Text)
+    End Sub
+
+    Private Sub GiveItem_CopyButton_Click(sender As Object, e As EventArgs) Handles GiveItem_CopyButton.Click
+        If GiveItem_TextBox.TextLength > 0 Then Clipboard.SetText(GiveItem_TextBox.Text)
+    End Sub
+
+    Private Sub WeaponsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WeaponsToolStripMenuItem.Click
+        Weapon_limit_Window.Show()
+    End Sub
+
+    Private Sub ProductionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductionToolStripMenuItem.Click
+        Production_LimitWindow.Show()
+    End Sub
+
+    Private Sub Label24_Click(sender As Object, e As EventArgs) Handles Label24.Click
+
+    End Sub
+
+    Private Sub ScripterTextToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScripterTextToolStripMenuItem.Click
+        Scripter_Text.Show()
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+
+    End Sub
+    Sub Pause(ByVal milliseconds As Long)
+        If milliseconds <= 0 Then Return
+        Dim sw As New Stopwatch()
+        sw.Start()
+        Dim i As Long = 0
+        Do
+            If i Mod 50000 = 0 Then ' Check the timer every 50,000th iteration
+                sw.Stop()
+                If sw.ElapsedMilliseconds >= milliseconds Then
+                    Exit Do
+                Else
+                    sw.Start()
+                End If
+            End If
+            i += 1
+        Loop
     End Sub
 End Class

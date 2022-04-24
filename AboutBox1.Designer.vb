@@ -15,7 +15,6 @@ Partial Class AboutBox1
     End Sub
 
     Friend WithEvents TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
     Friend WithEvents LabelProductName As System.Windows.Forms.Label
     Friend WithEvents LabelVersion As System.Windows.Forms.Label
     Friend WithEvents LabelCompanyName As System.Windows.Forms.Label
@@ -33,7 +32,6 @@ Partial Class AboutBox1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutBox1))
         Me.TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.LabelProductName = New System.Windows.Forms.Label()
         Me.LabelVersion = New System.Windows.Forms.Label()
         Me.LabelCopyright = New System.Windows.Forms.Label()
@@ -41,15 +39,13 @@ Partial Class AboutBox1
         Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.OKButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel.SuspendLayout()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel
         '
         Me.TableLayoutPanel.ColumnCount = 2
-        Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.0!))
-        Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.0!))
-        Me.TableLayoutPanel.Controls.Add(Me.LogoPictureBox, 0, 0)
+        Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.272727!))
+        Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 97.72727!))
         Me.TableLayoutPanel.Controls.Add(Me.LabelProductName, 1, 0)
         Me.TableLayoutPanel.Controls.Add(Me.LabelVersion, 1, 1)
         Me.TableLayoutPanel.Controls.Add(Me.LabelCopyright, 1, 2)
@@ -69,38 +65,26 @@ Partial Class AboutBox1
         Me.TableLayoutPanel.Size = New System.Drawing.Size(396, 258)
         Me.TableLayoutPanel.TabIndex = 0
         '
-        'LogoPictureBox
-        '
-        Me.LogoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
-        Me.LogoPictureBox.Location = New System.Drawing.Point(3, 3)
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.TableLayoutPanel.SetRowSpan(Me.LogoPictureBox, 6)
-        Me.LogoPictureBox.Size = New System.Drawing.Size(124, 252)
-        Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.LogoPictureBox.TabIndex = 0
-        Me.LogoPictureBox.TabStop = False
-        '
         'LabelProductName
         '
         Me.LabelProductName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelProductName.Location = New System.Drawing.Point(136, 0)
+        Me.LabelProductName.Location = New System.Drawing.Point(14, 0)
         Me.LabelProductName.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
         Me.LabelProductName.MaximumSize = New System.Drawing.Size(0, 17)
         Me.LabelProductName.Name = "LabelProductName"
-        Me.LabelProductName.Size = New System.Drawing.Size(257, 17)
+        Me.LabelProductName.Size = New System.Drawing.Size(379, 17)
         Me.LabelProductName.TabIndex = 0
-        Me.LabelProductName.Text = "Product Name"
+        Me.LabelProductName.Text = "Product Name: SI Command"
         Me.LabelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelVersion
         '
         Me.LabelVersion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelVersion.Location = New System.Drawing.Point(136, 25)
+        Me.LabelVersion.Location = New System.Drawing.Point(14, 25)
         Me.LabelVersion.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
         Me.LabelVersion.MaximumSize = New System.Drawing.Size(0, 17)
         Me.LabelVersion.Name = "LabelVersion"
-        Me.LabelVersion.Size = New System.Drawing.Size(257, 17)
+        Me.LabelVersion.Size = New System.Drawing.Size(379, 17)
         Me.LabelVersion.TabIndex = 0
         Me.LabelVersion.Text = "Version"
         Me.LabelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -108,37 +92,37 @@ Partial Class AboutBox1
         'LabelCopyright
         '
         Me.LabelCopyright.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelCopyright.Location = New System.Drawing.Point(136, 50)
+        Me.LabelCopyright.Location = New System.Drawing.Point(14, 50)
         Me.LabelCopyright.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
         Me.LabelCopyright.MaximumSize = New System.Drawing.Size(0, 17)
         Me.LabelCopyright.Name = "LabelCopyright"
-        Me.LabelCopyright.Size = New System.Drawing.Size(257, 17)
+        Me.LabelCopyright.Size = New System.Drawing.Size(379, 17)
         Me.LabelCopyright.TabIndex = 0
-        Me.LabelCopyright.Text = "Copyright"
+        Me.LabelCopyright.Text = "Copyright: 2022"
         Me.LabelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelCompanyName
         '
         Me.LabelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelCompanyName.Location = New System.Drawing.Point(136, 75)
+        Me.LabelCompanyName.Location = New System.Drawing.Point(14, 75)
         Me.LabelCompanyName.Margin = New System.Windows.Forms.Padding(6, 0, 3, 0)
         Me.LabelCompanyName.MaximumSize = New System.Drawing.Size(0, 17)
         Me.LabelCompanyName.Name = "LabelCompanyName"
-        Me.LabelCompanyName.Size = New System.Drawing.Size(257, 17)
+        Me.LabelCompanyName.Size = New System.Drawing.Size(379, 17)
         Me.LabelCompanyName.TabIndex = 0
-        Me.LabelCompanyName.Text = "Company Name"
+        Me.LabelCompanyName.Text = "Company Name: Run-Insane Innovations"
         Me.LabelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextBoxDescription
         '
         Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxDescription.Location = New System.Drawing.Point(136, 103)
+        Me.TextBoxDescription.Location = New System.Drawing.Point(14, 103)
         Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
         Me.TextBoxDescription.Multiline = True
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(257, 123)
+        Me.TextBoxDescription.Size = New System.Drawing.Size(379, 123)
         Me.TextBoxDescription.TabIndex = 0
         Me.TextBoxDescription.TabStop = False
         Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
@@ -170,7 +154,6 @@ Partial Class AboutBox1
         Me.Text = "AboutBox1"
         Me.TableLayoutPanel.ResumeLayout(False)
         Me.TableLayoutPanel.PerformLayout()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

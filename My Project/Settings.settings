@@ -44,5 +44,14 @@
     <Setting Name="logserver" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="ScripterText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Scripting access on our servers is a privilege granted to anyone that asks under the condition that you use it responsibly. If the scripts you run prove to be exploitative or taxing on server resources and you are not immediately responsive to requests for adjustments that privilege will be revoked.
+
+We are running a server plugin which limits the amount of resources that scripts can use to .4ms per run with higher allowance for initial startup, it will cause programmable blocks to turn off or become damaged if their processing requirements are too high but this should not affect the bulk of the quality of life scripts you can find and run unless they are configured improperly. Programmable blocks that overheat will need to be recompiled in the PB control panel.  If you agree to this type banana.
+
+If scripts you are running repeatedly overheat causing them to turn off, become damaged or otherwise misbehave please seek assistance in our script-chat channel on the Discord.
+
+Once you are done reading please let us know to gain scripting access through the programmable block. </Value>
+    </Setting>
   </Settings>
 </SettingsFile>
