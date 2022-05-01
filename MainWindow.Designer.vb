@@ -163,6 +163,7 @@ Partial Class MainWindow
         Me.WeaponsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScripterTextToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SectorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -262,14 +263,12 @@ Partial Class MainWindow
         Me.Sector_ComboBox.DropDownHeight = 470
         Me.Sector_ComboBox.FormattingEnabled = True
         Me.Sector_ComboBox.IntegralHeight = False
-        Me.Sector_ComboBox.Items.AddRange(New Object() {"ALL - All servers except the lobby. Senior Staff / Admin Only", "---------------------------------", "PVE - Any server that is Avalon (Planets Space KotH's)", "PVP - Any server that is Dead Worlds (Planets Space KotH's)", "NPC - Both Roach servers", "---------------------------------", "tL - The Lobby server - Lobby Sector.", "---------------------------------", "gS - Deep Space / General Sector or the everywhere else.", "aS - Avalon Space Sector", "aS1 -Avalon Space Inner 1 Dover Space", "aS2 - Avalon Space Inner 2 IK006 Space", "aS3 - Avalon Space Inner 3 Pelmuth Space", "wS - Waterloo Space Sector", "", "aDV - Avalon Dover Planet Sector", "aIK  - Avalon IK006 Planet Sector", "aPL - Avalon Pelmuth Planet Sector", "wP - Waterloo Planet Sector", "---------------------------------", "dS - Dead Worlds Space Sector", "dP - Dead Worlds Planets Sector", "", "dK - Dead Worlds Space KotH Sector", "cK - Crypt KotH Sector", "---------------------------------", "rI - Roach Inner Sector", "rO - Roach Outter Sector", "---------------------------------", "tR - Transit Server between Roach and Avalon / DW ", "---------------------------------", "sL - Special Lobby bot for scripting use and other powers. (Dont put a space afte" &
-                "r the prefix here)", "tK - The Space KotH Bot used by scripts to reset KotH", "tC - The Crypt KotH Bot used by scripts to reset KotH", "tS - Transit Server for use with Tech Bot "})
         Me.Sector_ComboBox.Location = New System.Drawing.Point(669, 119)
         Me.Sector_ComboBox.MaxDropDownItems = 21
         Me.Sector_ComboBox.Name = "Sector_ComboBox"
         Me.Sector_ComboBox.Size = New System.Drawing.Size(307, 21)
         Me.Sector_ComboBox.TabIndex = 3
-        Me.Sector_ComboBox.Text = "tL - The Lobby server - Lobby Sector."
+        Me.Sector_ComboBox.Text = "tL - 1 - The Lobby server - Lobby Sector"
         '
         'Sector_Label
         '
@@ -819,7 +818,7 @@ Partial Class MainWindow
         '
         'Timer1
         '
-        Me.Timer1.Interval = 1000
+        Me.Timer1.Interval = 500
         '
         'SteamCheckBox
         '
@@ -1470,7 +1469,7 @@ Partial Class MainWindow
         Me.WarningLabel.AutoSize = True
         Me.WarningLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WarningLabel.ForeColor = System.Drawing.Color.Red
-        Me.WarningLabel.Location = New System.Drawing.Point(756, 97)
+        Me.WarningLabel.Location = New System.Drawing.Point(770, 97)
         Me.WarningLabel.Name = "WarningLabel"
         Me.WarningLabel.Size = New System.Drawing.Size(394, 20)
         Me.WarningLabel.TabIndex = 121
@@ -1512,7 +1511,7 @@ Partial Class MainWindow
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LimitsToolStripMenuItem, Me.ScripterTextToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LimitsToolStripMenuItem, Me.ScripterTextToolStripMenuItem, Me.SectorToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1205, 24)
@@ -1549,6 +1548,12 @@ Partial Class MainWindow
         Me.ScripterTextToolStripMenuItem.Name = "ScripterTextToolStripMenuItem"
         Me.ScripterTextToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
         Me.ScripterTextToolStripMenuItem.Text = "Scripter Text"
+        '
+        'SectorToolStripMenuItem
+        '
+        Me.SectorToolStripMenuItem.Name = "SectorToolStripMenuItem"
+        Me.SectorToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.SectorToolStripMenuItem.Text = "Sector"
         '
         'Panel1
         '
@@ -1797,4 +1802,5 @@ Partial Class MainWindow
     Friend WithEvents ScripterTextToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label30 As Label
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents SectorToolStripMenuItem As ToolStripMenuItem
 End Class

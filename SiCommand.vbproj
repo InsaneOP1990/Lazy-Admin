@@ -27,7 +27,7 @@
     <MapFileExtensions>false</MapFileExtensions>
     <PublisherName>Insane-innovations</PublisherName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -121,6 +121,17 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sector.Designer.vb">
+      <DependentUpon>Sector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sector.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Scripter_Text.Designer.vb">
       <DependentUpon>Scripter_Text.vb</DependentUpon>
     </Compile>
@@ -158,11 +169,6 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -172,6 +178,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sector.resx">
+      <DependentUpon>Sector.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production_LimitWindow.resx">
       <DependentUpon>Production_LimitWindow.vb</DependentUpon>
@@ -187,9 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -221,8 +230,8 @@
   <ItemGroup>
     <Content Include="coding.ico" />
     <Content Include="Eula Licences.txt" />
-    <None Include="SI Production Blocks.png" />
-    <None Include="SI Weapon Limits.png" />
+    <None Include="Resources\Si weapon Limits_Dark.png" />
+    <None Include="Resources\Si Production_Dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

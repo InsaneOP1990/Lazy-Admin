@@ -39,7 +39,7 @@ Partial Class Production_LimitWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.SiCommand.My.Resources.Resources.SI_Production_Blocks
+        Me.BackgroundImage = Global.SiCommand.My.Resources.Resources.Si_Production_Dark
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1205, 668)
         Me.Controls.Add(Me.Button1)

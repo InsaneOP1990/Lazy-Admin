@@ -246,6 +246,47 @@ Namespace My
                 Me("ScripterText") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ALL - - - All servers except the lobby. Senior Staff / Admin Only,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"-------------"& _ 
+            "--------------------,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"PVE - - - Any server that is Avalon (Planets Space KotH's"& _ 
+            "),"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"PVP - - - Any server that is Dead Worlds (Planets Space KotH's),"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"NPC - - - "& _ 
+            "Both Roach servers,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"---------------------------------,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"tL - 1 - The Lobby serv"& _ 
+            "er - Lobby Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"---------------------------------,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"gS - 2 - Deep Space / Ge"& _ 
+            "neral Sector or the everywhere else,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"aS - 10 - Avalon Space Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"aS1 -12 - "& _ 
+            "Avalon Space Inner 1 Dover Space,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"aS2 - 13 - Avalon Space Inner 2 IK006 Space,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"aS3 - 14 - Avalon Space Inner 3 Pelmuth Space,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"wS - 51 - Waterloo Space Sector"& _ 
+            ","&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&","&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"aDV - 11 - Avalon Dover Planet Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"aIK  - 15 - Avalon IK006 Planet Se"& _ 
+            "ctor,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"aPL - 17 - Avalon Pelmuth Planet Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"wP - 52 - Waterloo Planet Secto"& _ 
+            "r,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"---------------------------------,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"dS - 20 - Dead Worlds Space Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"dP "& _ 
+            "- 21 - Dead Worlds Planets Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&","&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"dK - 22 - Dead Worlds Space KotH Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"cK - 23 - Crypt KotH Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"---------------------------------,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"rI - 40 - Roa"& _ 
+            "ch Inner Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"rO - 41 - Roach Outter Sector,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"------------------------------"& _ 
+            "---,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"tR - 50 - Transit Server between Roach and Avalon / DW ,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"----------------"& _ 
+            "-----------------,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"sL - - - Special Lobby bot for scripting use and other power"& _ 
+            "s. (Dont put a space after the prefix here),"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"tK - - - The Space KotH Bot used b"& _ 
+            "y scripts to reset KotH,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"tC - - - The Crypt KotH Bot used by scripts to reset K"& _ 
+            "otH,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"tS - - - Transit Server for use with Tech Bot,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ss - - - Support server fo"& _ 
+            "r players the support the server,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"sw - - - Starwars theam server,")>  _
+        Public Property SectorDrop() As String
+            Get
+                Return CType(Me("SectorDrop"),String)
+            End Get
+            Set
+                Me("SectorDrop") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property SectorDropOpen() As Boolean
+            Get
+                Return CType(Me("SectorDropOpen"),Boolean)
+            End Get
+            Set
+                Me("SectorDropOpen") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

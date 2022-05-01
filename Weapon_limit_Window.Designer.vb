@@ -47,7 +47,7 @@ Partial Class Weapon_limit_Window
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.SiCommand.My.Resources.Resources.SI_Weapon_Limits
+        Me.BackgroundImage = Global.SiCommand.My.Resources.Resources.Si_weapon_Limits_Dark
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1205, 668)
         Me.Controls.Add(Me.Button1)

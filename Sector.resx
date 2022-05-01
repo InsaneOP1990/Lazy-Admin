@@ -117,11 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Si_Production_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Si Production_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Si_weapon_Limits_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Si weapon Limits_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>ALL - All servers except the lobby. Senior Staff / Admin Only,
+---------------------------------,
+PVE - Any server that is Avalon (Planets Space KotH's),
+PVP - Any server that is Dead Worlds (Planets Space KotH's),
+NPC - Both Roach servers,
+---------------------------------,
+tL - The Lobby server - Lobby Sector,
+---------------------------------,
+gS - Deep Space / General Sector or the everywhere else,
+aS - Avalon Space Sector,
+aS1 -Avalon Space Inner 1 Dover Space,
+aS2 - Avalon Space Inner 2 IK006 Space,
+aS3 - Avalon Space Inner 3 Pelmuth Space,
+wS - Waterloo Space Sector,
+,
+aDV - Avalon Dover Planet Sector,
+aIK  - Avalon IK006 Planet Sector,
+aPL - Avalon Pelmuth Planet Sector,
+wP - Waterloo Planet Sector,
+---------------------------------,
+dS - Dead Worlds Space Sector,
+dP - Dead Worlds Planets Sector,
+,
+dK - Dead Worlds Space KotH Sector,
+cK - Crypt KotH Sector,
+---------------------------------,
+rI - Roach Inner Sector,
+rO - Roach Outter Sector,
+---------------------------------,
+tR - Transit Server between Roach and Avalon / DW ,
+---------------------------------,
+sL - Special Lobby bot for scripting use and other powers. (Dont put a space after the prefix here),
+tK - The Space KotH Bot used by scripts to reset KotH,
+tC - The Crypt KotH Bot used by scripts to reset KotH,
+tS - Transit Server for use with Tech Bot ,</value>
   </data>
 </root>

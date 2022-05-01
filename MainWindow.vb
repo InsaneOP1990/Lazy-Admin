@@ -168,114 +168,133 @@
         End If
 
         'get sector
-        If Sector_ComboBox.Text = "" Then
-            Clear_Button.PerformClick()
-        Else
-            If Sector_ComboBox.Text = "ALL - All servers except the lobby. Senior Staff / Admin Only" Then
-                My.Settings.Sector = "ALL"
-                My.Settings.logserver = "!!ERROR!!!"
+        Try
+            Dim sectorlist As String = My.Settings.SectorDrop
+            Dim sectorlistarray() As String = Split(sectorlist, ",")
+            '-------------------------------------------
+            If My.Settings.SectorDropOpen = False Then
+                Sector_ComboBox.Items.Clear()
+                Sector_ComboBox.Items.AddRange(sectorlistarray.ToArray)
+            Else
             End If
-            If Sector_ComboBox.Text = "PVE - Any server that is Avalon (Planets Space KotH's)" Then
-                My.Settings.Sector = "PVE"
-                My.Settings.logserver = "!!ERROR!!!"
-            End If
-            If Sector_ComboBox.Text = "PVP - Any server that is Dead Worlds (Planets Space KotH's)" Then
-                My.Settings.Sector = "PVP"
-                My.Settings.logserver = "!!ERROR!!!"
-            End If
-            If Sector_ComboBox.Text = "NPC - Both Roach servers" Then
-                My.Settings.Sector = "NPC"
-                My.Settings.logserver = "!!ERROR!!!"
-            End If
-            If Sector_ComboBox.Text = "tL - The Lobby server - Lobby Sector." Then
-                My.Settings.Sector = "tL"
-                My.Settings.logserver = "1"
-            End If
-            If Sector_ComboBox.Text = "gS - Deep Space / General Sector or the everywhere else." Then
-                My.Settings.Sector = "gS"
-                My.Settings.logserver = "2"
-            End If
-            If Sector_ComboBox.Text = "aS - Avalon Space Sector" Then
-                My.Settings.Sector = "aS"
-                My.Settings.logserver = "10"
-            End If
-            If Sector_ComboBox.Text = "aS1 -Avalon Space Inner 1 Dover Space" Then
-                My.Settings.Sector = "aS1"
-                My.Settings.logserver = "12"
-            End If
-            If Sector_ComboBox.Text = "aS2 - Avalon Space Inner 2 IK006 Space" Then
-                My.Settings.Sector = "aS2"
-                My.Settings.logserver = "13"
-            End If
-            If Sector_ComboBox.Text = "aS3 - Avalon Space Inner 3 Pelmuth Space" Then
-                My.Settings.Sector = "aS3"
-                My.Settings.logserver = "14"
-            End If
-            If Sector_ComboBox.Text = "dS - Dead Worlds Space Sector" Then
-                My.Settings.Sector = "dS"
-                My.Settings.logserver = "20"
-            End If
-            If Sector_ComboBox.Text = "aDV - Avalon Dover Planet Sector" Then
-                My.Settings.Sector = "aDV"
-                My.Settings.logserver = "11"
-            End If
-            If Sector_ComboBox.Text = "aIK  - Avalon IK006 Planet Sector" Then
-                My.Settings.Sector = "aIK"
-                My.Settings.logserver = "15"
-            End If
-            If Sector_ComboBox.Text = "aPL - Avalon Pelmuth Planet Sector" Then
-                My.Settings.Sector = "aPL"
-                My.Settings.logserver = "17"
-            End If
-            If Sector_ComboBox.Text = "dP - Dead Worlds Planets Sector" Then
-                My.Settings.Sector = "dP"
-                My.Settings.logserver = "21"
-            End If
-            If Sector_ComboBox.Text = "dK - Dead Worlds Space KotH Sector" Then
-                My.Settings.Sector = "dK"
-                My.Settings.logserver = "22"
-            End If
-            If Sector_ComboBox.Text = "cK - Crypt KotH Sector" Then
-                My.Settings.Sector = "cK"
-                My.Settings.logserver = "23"
-            End If
-            If Sector_ComboBox.Text = "rI - Roach Inner Sector" Then
-                My.Settings.Sector = "rI"
-                My.Settings.logserver = "40"
-            End If
-            If Sector_ComboBox.Text = "rO - Roach Outter Sector" Then
-                My.Settings.Sector = "rO"
-                My.Settings.logserver = "41"
-            End If
-            If Sector_ComboBox.Text = "tR - Transit Server between Roach and Avalon / DW " Then
-                My.Settings.Sector = "tR"
-                My.Settings.logserver = "50"
-            End If
-            If Sector_ComboBox.Text = "wS - Waterloo Space Sector" Then
-                My.Settings.Sector = "wS"
-                My.Settings.logserver = "51"
-            End If
-            If Sector_ComboBox.Text = "wP - Waterloo Planet Sector" Then
-                My.Settings.Sector = "wP"
-                My.Settings.logserver = "52"
-            End If
-            If Sector_ComboBox.Text = "sL - Special Lobby bot for scripting use and other powers. (Dont put a space after the prefix here)" Then
-                My.Settings.Sector = "sL"
-                My.Settings.logserver = "!!ERROR!!!"
-            End If
-            If Sector_ComboBox.Text = "tK - The Space KotH Bot used by scripts to reset KotH" Then
-                My.Settings.Sector = "tK"
-                My.Settings.logserver = "!!ERROR!!!"
-            End If
-            If Sector_ComboBox.Text = "tC - The Crypt KotH Bot used by scripts to reset KotH" Then
-                My.Settings.Sector = "tC"
-                My.Settings.logserver = "!!ERROR!!!"
-            End If
-            If Sector_ComboBox.Text = "tS - Transit Server for use with Tech Bot " Then
-                My.Settings.Sector = "tS"
-                My.Settings.logserver = "!!ERROR!!!"
-            End If
-        End If
+            '-------------------------------------------
+            Dim sector As String = Sector_ComboBox.Text
+            Dim sectorArray() As String = Split(sector)
+            My.Settings.Sector = sectorArray.First
+            My.Settings.logserver = sectorArray(2)
+        Catch ex As Exception
+
+        End Try
+        'OLD WAY TO GET SECTOR
+
+        '  If Sector_ComboBox.Text = "" Then
+        '     Clear_Button.PerformClick()
+        ' Else
+        ' If Sector_ComboBox.Text = "ALL - All servers except the lobby. Senior Staff / Admin Only" Then
+        '      My.Settings.Sector = "ALL"
+        '     My.Settings.logserver = "!!ERROR!!!"
+        ' End If
+        ' If Sector_ComboBox.Text = "PVE - Any server that is Avalon (Planets Space KotH's)" Then
+        '    My.Settings.Sector = "PVE"
+        '     My.Settings.logserver = "!!ERROR!!!"
+        ' End If
+        ' If Sector_ComboBox.Text = "PVP - Any server that is Dead Worlds (Planets Space KotH's)" Then
+        '     My.Settings.Sector = "PVP"
+        '     My.Settings.logserver = "!!ERROR!!!"
+        '  End If
+        '  If Sector_ComboBox.Text = "NPC - Both Roach servers" Then
+        '      My.Settings.Sector = "NPC"
+        '      My.Settings.logserver = "!!ERROR!!!"
+        '  End If
+        ' If Sector_ComboBox.Text = "tL - The Lobby server - Lobby Sector." Then
+        '     My.Settings.Sector = "tL"
+        '    My.Settings.logserver = "1"
+        ' End If
+        'If Sector_ComboBox.Text = "gS - Deep Space / General Sector or the everywhere else." Then
+        '     My.Settings.Sector = "gS"
+        '     My.Settings.logserver = "2"
+        '  End If
+        ' If Sector_ComboBox.Text = "aS - Avalon Space Sector" Then
+        '     My.Settings.Sector = "aS"
+        '     My.Settings.logserver = "10"
+        ' End If
+        ' If Sector_ComboBox.Text = "aS1 -Avalon Space Inner 1 Dover Space" Then
+        '     My.Settings.Sector = "aS1"
+        '     My.Settings.logserver = "12"
+        ' End If
+        ' If Sector_ComboBox.Text = "aS2 - Avalon Space Inner 2 IK006 Space" Then
+        '     My.Settings.Sector = "aS2"
+        '     My.Settings.logserver = "13"
+        ' End If
+        ' If Sector_ComboBox.Text = "aS3 - Avalon Space Inner 3 Pelmuth Space" Then
+        '     My.Settings.Sector = "aS3"
+        '     My.Settings.logserver = "14"
+        '  End If
+        '  If Sector_ComboBox.Text = "dS - Dead Worlds Space Sector" Then
+        '      My.Settings.Sector = "dS"
+        '      My.Settings.logserver = "20"
+        '  End If
+        '  If Sector_ComboBox.Text = "aDV - Avalon Dover Planet Sector" Then
+        ' My.Settings.Sector = "aDV"
+        '      My.Settings.logserver = "11"
+        '  End If
+        '  If Sector_ComboBox.Text = "aIK  - Avalon IK006 Planet Sector" Then
+        '    My.Settings.Sector = "aIK"
+        '    My.Settings.logserver = "15"
+        ' End If
+        'If Sector_ComboBox.Text = "aPL - Avalon Pelmuth Planet Sector" Then
+        '     My.Settings.Sector = "aPL"
+        '      My.Settings.logserver = "17"
+        ' End If
+        ' If Sector_ComboBox.Text = "dP - Dead Worlds Planets Sector" Then
+        '     My.Settings.Sector = "dP"
+        '     My.Settings.logserver = "21"
+        ' End If
+        ' If Sector_ComboBox.Text = "dK - Dead Worlds Space KotH Sector" Then
+        '    My.Settings.Sector = "dK"
+        '    My.Settings.logserver = "22"
+        '  End If
+        ' If Sector_ComboBox.Text = "cK - Crypt KotH Sector" Then
+        '   My.Settings.Sector = "cK"
+        '  My.Settings.logserver = "23"
+        '  End If
+        '  If Sector_ComboBox.Text = "rI - Roach Inner Sector" Then
+        '     My.Settings.Sector = "rI"
+        '      My.Settings.logserver = "40"
+        ' End If
+        ' If Sector_ComboBox.Text = "rO - Roach Outter Sector" Then
+        '     My.Settings.Sector = "rO"
+        '   My.Settings.logserver = "41"
+        'End If
+        'If Sector_ComboBox.Text = "tR - Transit Server between Roach and Avalon / DW " Then
+        '  My.Settings.Sector = "tR"
+        '   My.Settings.logserver = "50"
+        'End If
+        ' If Sector_ComboBox.Text = "wS - Waterloo Space Sector" Then
+        '   My.Settings.Sector = "wS"
+        '    My.Settings.logserver = "51"
+        ' End If
+        '  If Sector_ComboBox.Text = "wP - Waterloo Planet Sector" Then
+        '      My.Settings.Sector = "wP"
+        '     My.Settings.logserver = "52"
+        '  End If
+        '  If Sector_ComboBox.Text = "sL - Special Lobby bot for scripting use and other powers. (Dont put a space after the prefix here)" Then
+        '      My.Settings.Sector = "sL"
+        '     My.Settings.logserver = "!!ERROR!!!"
+        '  End If
+        '  If Sector_ComboBox.Text = "tK - The Space KotH Bot used by scripts to reset KotH" Then
+        '      My.Settings.Sector = "tK"
+        '      My.Settings.logserver = "!!ERROR!!!"
+        ' End If
+        '  If Sector_ComboBox.Text = "tC - The Crypt KotH Bot used by scripts to reset KotH" Then
+        '     My.Settings.Sector = "tC"
+        '      My.Settings.logserver = "!!ERROR!!!"
+        '   End If
+        '   If Sector_ComboBox.Text = "tS - Transit Server for use with Tech Bot " Then
+        '       My.Settings.Sector = "tS"
+        '      My.Settings.logserver = "!!ERROR!!!"
+        '  End If
+        ' End If
 
         'Get Steam ID
         If Player_NameText.TextLength > 0 Then
@@ -1034,5 +1053,17 @@
             End If
             i += 1
         Loop
+    End Sub
+
+    Private Sub SectorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SectorToolStripMenuItem.Click
+        Sector.Show()
+    End Sub
+
+    Private Sub Sector_ComboBox_DropDownClosed(sender As Object, e As EventArgs) Handles Sector_ComboBox.DropDownClosed
+        My.Settings.SectorDropOpen = False
+    End Sub
+
+    Private Sub Sector_ComboBox_DropDown(sender As Object, e As EventArgs) Handles Sector_ComboBox.DropDown
+        My.Settings.SectorDropOpen = True
     End Sub
 End Class
