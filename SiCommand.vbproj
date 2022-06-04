@@ -121,6 +121,12 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DiscordWindow.Designer.vb">
+      <DependentUpon>DiscordWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DiscordWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +184,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscordWindow.resx">
+      <DependentUpon>DiscordWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sector.resx">
       <DependentUpon>Sector.vb</DependentUpon>

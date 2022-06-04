@@ -98,6 +98,8 @@ Partial Class MainWindow
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.ComponentAmount_TextBox = New System.Windows.Forms.TextBox()
+        Me.Send = New System.Windows.Forms.Button()
+        Me.messageField = New System.Windows.Forms.TextBox()
         Me.GiveItem_CopyButton = New System.Windows.Forms.Button()
         Me.GiveItem_TextBox = New System.Windows.Forms.TextBox()
         Me.Component_ComboBox = New System.Windows.Forms.ComboBox()
@@ -106,7 +108,7 @@ Partial Class MainWindow
         Me.CommonTextBox = New System.Windows.Forms.TextBox()
         Me.CommonComboBox = New System.Windows.Forms.ComboBox()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.SetRankButton = New System.Windows.Forms.Button()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.SetAdminTextBox = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -140,6 +142,7 @@ Partial Class MainWindow
         Me.TabPage11 = New System.Windows.Forms.TabPage()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Tab_MiscRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.profilePic = New System.Windows.Forms.PictureBox()
         Me.Tab_DiscordRichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Tab_BankRichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Tab_AleRichTextBox2 = New System.Windows.Forms.RichTextBox()
@@ -164,9 +167,14 @@ Partial Class MainWindow
         Me.ProductionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScripterTextToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SectorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DiscordWebHookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.webhookLink = New System.Windows.Forms.TextBox()
+        Me.username = New System.Windows.Forms.TextBox()
+        Me.profilePicLink = New System.Windows.Forms.TextBox()
+        Me.AutoSend = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -179,6 +187,7 @@ Partial Class MainWindow
         Me.TabPage9.SuspendLayout()
         Me.TabPage10.SuspendLayout()
         Me.TabPage11.SuspendLayout()
+        CType(Me.profilePic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.ContextMenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -682,6 +691,7 @@ Partial Class MainWindow
         '
         'PlayerEnameButton
         '
+        Me.PlayerEnameButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PlayerEnameButton.Location = New System.Drawing.Point(598, 107)
         Me.PlayerEnameButton.Name = "PlayerEnameButton"
         Me.PlayerEnameButton.Size = New System.Drawing.Size(95, 23)
@@ -855,6 +865,8 @@ Partial Class MainWindow
         Me.TabPage1.Controls.Add(Me.Label29)
         Me.TabPage1.Controls.Add(Me.Label28)
         Me.TabPage1.Controls.Add(Me.ComponentAmount_TextBox)
+        Me.TabPage1.Controls.Add(Me.Send)
+        Me.TabPage1.Controls.Add(Me.messageField)
         Me.TabPage1.Controls.Add(Me.GiveItem_CopyButton)
         Me.TabPage1.Controls.Add(Me.GiveItem_TextBox)
         Me.TabPage1.Controls.Add(Me.Component_ComboBox)
@@ -863,7 +875,7 @@ Partial Class MainWindow
         Me.TabPage1.Controls.Add(Me.CommonTextBox)
         Me.TabPage1.Controls.Add(Me.CommonComboBox)
         Me.TabPage1.Controls.Add(Me.Label26)
-        Me.TabPage1.Controls.Add(Me.Button5)
+        Me.TabPage1.Controls.Add(Me.SetRankButton)
         Me.TabPage1.Controls.Add(Me.Label25)
         Me.TabPage1.Controls.Add(Me.SetAdminTextBox)
         Me.TabPage1.Controls.Add(Me.Scriptertext_Button)
@@ -942,6 +954,22 @@ Partial Class MainWindow
         Me.ComponentAmount_TextBox.Text = "0"
         Me.ComponentAmount_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'Send
+        '
+        Me.Send.Location = New System.Drawing.Point(101, 267)
+        Me.Send.Name = "Send"
+        Me.Send.Size = New System.Drawing.Size(105, 23)
+        Me.Send.TabIndex = 130
+        Me.Send.Text = "Send to Discord"
+        Me.Send.UseVisualStyleBackColor = True
+        '
+        'messageField
+        '
+        Me.messageField.Location = New System.Drawing.Point(4, 239)
+        Me.messageField.Name = "messageField"
+        Me.messageField.Size = New System.Drawing.Size(304, 20)
+        Me.messageField.TabIndex = 131
+        '
         'GiveItem_CopyButton
         '
         Me.GiveItem_CopyButton.Location = New System.Drawing.Point(1041, 362)
@@ -1002,7 +1030,7 @@ Partial Class MainWindow
         'CommonComboBox
         '
         Me.CommonComboBox.FormattingEnabled = True
-        Me.CommonComboBox.Items.AddRange(New Object() {"Move Player", "whatsmyip", "help", "longhelp", "ver", "plugins", "onlineservers", "uptime", "fix physics 1 1", "fix physics 2 ", "fix physics 2 3", "profile grids", "admin playerlist", "admin mute", "Cleanup Void NPC", "Cleanup GiRR NPC", "Cleanup PRTH NPC", "Cleanup GKNT NPC", "Cleanup ECHO NPC", "Cleanup Bass NPC", "Cleanup Pirates"})
+        Me.CommonComboBox.Items.AddRange(New Object() {"Move Player", "whatsmyip", "help", "longhelp", "ver", "plugins", "onlineservers", "uptime", "fix physics 1 1", "fix physics 2", "fix physics 2 3", "profile grids", "admin playerlist", "admin mute", "Cleanup Void NPC", "Cleanup GiRR NPC", "Cleanup PRTH NPC", "Cleanup GKNT NPC", "Cleanup ECHO NPC", "Cleanup Bass NPC", "Cleanup Pirates"})
         Me.CommonComboBox.Location = New System.Drawing.Point(572, 272)
         Me.CommonComboBox.Name = "CommonComboBox"
         Me.CommonComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1019,14 +1047,14 @@ Partial Class MainWindow
         Me.Label26.TabIndex = 116
         Me.Label26.Text = "Common Commands"
         '
-        'Button5
+        'SetRankButton
         '
-        Me.Button5.Location = New System.Drawing.Point(233, 157)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 115
-        Me.Button5.Text = "Copy Text"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.SetRankButton.Location = New System.Drawing.Point(233, 157)
+        Me.SetRankButton.Name = "SetRankButton"
+        Me.SetRankButton.Size = New System.Drawing.Size(75, 23)
+        Me.SetRankButton.TabIndex = 115
+        Me.SetRankButton.Text = "Copy Text"
+        Me.SetRankButton.UseVisualStyleBackColor = True
         '
         'Label25
         '
@@ -1360,6 +1388,14 @@ Partial Class MainWindow
         Me.Tab_MiscRichTextBox.TabIndex = 0
         Me.Tab_MiscRichTextBox.Text = resources.GetString("Tab_MiscRichTextBox.Text")
         '
+        'profilePic
+        '
+        Me.profilePic.Location = New System.Drawing.Point(163, 80)
+        Me.profilePic.Name = "profilePic"
+        Me.profilePic.Size = New System.Drawing.Size(40, 37)
+        Me.profilePic.TabIndex = 131
+        Me.profilePic.TabStop = False
+        '
         'Tab_DiscordRichTextBox2
         '
         Me.Tab_DiscordRichTextBox2.Location = New System.Drawing.Point(15, 181)
@@ -1511,7 +1547,7 @@ Partial Class MainWindow
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LimitsToolStripMenuItem, Me.ScripterTextToolStripMenuItem, Me.SectorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LimitsToolStripMenuItem, Me.ScripterTextToolStripMenuItem, Me.SectorToolStripMenuItem, Me.DiscordWebHookToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1205, 24)
@@ -1555,6 +1591,12 @@ Partial Class MainWindow
         Me.SectorToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.SectorToolStripMenuItem.Text = "Sector"
         '
+        'DiscordWebHookToolStripMenuItem
+        '
+        Me.DiscordWebHookToolStripMenuItem.Name = "DiscordWebHookToolStripMenuItem"
+        Me.DiscordWebHookToolStripMenuItem.Size = New System.Drawing.Size(115, 20)
+        Me.DiscordWebHookToolStripMenuItem.Text = "Discord WebHook"
+        '
         'Panel1
         '
         Me.Panel1.Location = New System.Drawing.Point(416, 550)
@@ -1576,12 +1618,51 @@ Partial Class MainWindow
         'Timer2
         '
         '
+        'webhookLink
+        '
+        Me.webhookLink.Location = New System.Drawing.Point(15, 42)
+        Me.webhookLink.Name = "webhookLink"
+        Me.webhookLink.Size = New System.Drawing.Size(100, 20)
+        Me.webhookLink.TabIndex = 127
+        Me.webhookLink.Visible = False
+        '
+        'username
+        '
+        Me.username.Location = New System.Drawing.Point(15, 67)
+        Me.username.Name = "username"
+        Me.username.Size = New System.Drawing.Size(100, 20)
+        Me.username.TabIndex = 128
+        Me.username.Visible = False
+        '
+        'profilePicLink
+        '
+        Me.profilePicLink.Location = New System.Drawing.Point(15, 93)
+        Me.profilePicLink.Name = "profilePicLink"
+        Me.profilePicLink.Size = New System.Drawing.Size(100, 20)
+        Me.profilePicLink.TabIndex = 129
+        Me.profilePicLink.Visible = False
+        '
+        'AutoSend
+        '
+        Me.AutoSend.AutoSize = True
+        Me.AutoSend.Location = New System.Drawing.Point(123, 151)
+        Me.AutoSend.Name = "AutoSend"
+        Me.AutoSend.Size = New System.Drawing.Size(125, 17)
+        Me.AutoSend.TabIndex = 132
+        Me.AutoSend.Text = "Auto send to Discord"
+        Me.AutoSend.UseVisualStyleBackColor = True
+        '
         'MainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1205, 668)
+        Me.Controls.Add(Me.AutoSend)
+        Me.Controls.Add(Me.profilePic)
+        Me.Controls.Add(Me.profilePicLink)
+        Me.Controls.Add(Me.username)
+        Me.Controls.Add(Me.webhookLink)
         Me.Controls.Add(Me.WarningLabel)
         Me.Controls.Add(Me.SteamCheckBox)
         Me.Controls.Add(Me.RenameGridNewTextBox)
@@ -1651,6 +1732,7 @@ Partial Class MainWindow
         Me.TabPage10.PerformLayout()
         Me.TabPage11.ResumeLayout(False)
         Me.TabPage11.PerformLayout()
+        CType(Me.profilePic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ContextMenuStrip2.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
@@ -1774,7 +1856,7 @@ Partial Class MainWindow
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents WarningLabel As Label
-    Friend WithEvents Button5 As Button
+    Friend WithEvents SetRankButton As Button
     Friend WithEvents Label25 As Label
     Friend WithEvents SetAdminTextBox As TextBox
     Friend WithEvents Tab_MiscRichTextBox2 As RichTextBox
@@ -1803,4 +1885,12 @@ Partial Class MainWindow
     Friend WithEvents Label30 As Label
     Friend WithEvents Timer2 As Timer
     Friend WithEvents SectorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents webhookLink As TextBox
+    Friend WithEvents username As TextBox
+    Friend WithEvents profilePicLink As TextBox
+    Friend WithEvents Send As Button
+    Friend WithEvents profilePic As PictureBox
+    Friend WithEvents messageField As TextBox
+    Friend WithEvents DiscordWebHookToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AutoSend As CheckBox
 End Class

@@ -95,5 +95,17 @@ sw - - - Starwars theam server,</Value>
     <Setting Name="SectorDropOpen" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="WebHook" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WebUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">- SI Lazy Admin -</Value>
+    </Setting>
+    <Setting Name="WebProfilelink" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AutoSend" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

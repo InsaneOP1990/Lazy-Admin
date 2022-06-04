@@ -1,10 +1,42 @@
-﻿Public Class MainWindow
+﻿Imports System.Collections.Specialized
+Imports System.Net
+Imports System.IO
+Public Class MainWindow
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Settings.Sector = "PVE - Any server that is Avalon (Planets Space KotH's)"
+        My.Settings.ListGrid = ""
+        My.Settings.RestoreNumone = ""
+        My.Settings.RestoreNumtwo = ""
+        My.Settings.RestoreQ = ""
+        My.Settings.RestoreForce = ""
+        My.Settings.Hangar = ""
+        My.Settings.HangarRemove = ""
+        My.Settings.PlayerE = ""
+        My.Settings.GridE = ""
+        My.Settings.LogType = ""
+        Dim formattedDate As String = Date.Today.ToString("dd")
+        Dim formattedDate2 As String = Date.Today.ToString("MM")
+        Month_ComboBox.Text = formattedDate2
+        Day_ComboBox.Text = formattedDate
+        Timer1.Start()
+        AutoSend.Checked = My.Settings.AutoSend
+    End Sub
 
     Private Sub Copy_SteamID_Button_Click(sender As Object, e As EventArgs) Handles Copy_SteamID_Button.Click
         If GetSteamID_TextBox.TextLength > 0 Then Clipboard.SetText(GetSteamID_TextBox.Text)
+
+        Dim text As String
+        text = GetSteamID_TextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub Update_Button_Click(sender As Object, e As EventArgs) Handles Update_Button.Click, MyBase.Enter
+        'Autosend discord
+        My.Settings.AutoSend = AutoSend.Checked
         'start timmer
         If Timer1.Enabled = False Then
             Timer1.Enabled = True
@@ -30,7 +62,35 @@
             WarningLabel.Visible = False
         End If
 
-
+        If AutoSend.Checked = True Then
+            Copy_SteamID_Button.Text = "Send"
+            GiveScripterButton.Text = "Send"
+            PlayerEnameButton.Text = "Send"
+            GridEnameButton.Text = "Send"
+            RenameGridButton.Text = "Send"
+            Common_copyButton.Text = "Send"
+            ServerLogButton.Text = "Send"
+            ListGrid_PVE_NameButton.Text = "Send"
+            ListGridBackupNameButton.Text = "Send"
+            GridRestoreNameButton.Text = "Send"
+            GiveItem_CopyButton.Text = "Send"
+            HangarNameButton.Text = "Send"
+            SetRankButton.Text = "Send"
+        Else
+            Copy_SteamID_Button.Text = "Copy Text"
+            GiveScripterButton.Text = "Copy Text"
+            PlayerEnameButton.Text = "Copy Text"
+            GridEnameButton.Text = "Copy Text"
+            RenameGridButton.Text = "Copy Text"
+            Common_copyButton.Text = "Copy Text"
+            ServerLogButton.Text = "Copy Text"
+            ListGrid_PVE_NameButton.Text = "Copy Text"
+            ListGridBackupNameButton.Text = "Copy Text"
+            GridRestoreNameButton.Text = "Copy Text"
+            GiveItem_CopyButton.Text = "Copy Text"
+            HangarNameButton.Text = "Copy Text"
+            SetRankButton.Text = "Copy Text"
+        End If
 
 
 
@@ -45,6 +105,9 @@
         My.Settings.PlayerE = PlayerEComboBox.Text
         My.Settings.GridE = GridEComboBox.Text
         My.Settings.LogType = Log_TypeComboBox.Text
+        webhookLink.Text = My.Settings.WebHook
+        username.Text = My.Settings.WebUserName
+        profilePicLink.Text = My.Settings.WebProfilelink
 
         'discord tab
         If Player_NameText.TextLength > 0 Then
@@ -692,7 +755,7 @@
         End If
 
         If SteamID_Texbox.TextLength > 0 Then
-            SetAdminTextBox.Text = "tL admin setrank " & SteamID_Texbox.Text & " 1"
+            SetAdminTextBox.Text = My.Settings.Sector & " " & SteamID_Texbox.Text & " 1"
 
 
         End If
@@ -743,39 +806,41 @@
 
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        My.Settings.Sector = "PVE - Any server that is Avalon (Planets Space KotH's)"
-        My.Settings.ListGrid = ""
-        My.Settings.RestoreNumone = ""
-        My.Settings.RestoreNumtwo = ""
-        My.Settings.RestoreQ = ""
-        My.Settings.RestoreForce = ""
-        My.Settings.Hangar = ""
-        My.Settings.HangarRemove = ""
-        My.Settings.PlayerE = ""
-        My.Settings.GridE = ""
-        My.Settings.LogType = ""
-        Dim formattedDate As String = Date.Today.ToString("dd")
-        Dim formattedDate2 As String = Date.Today.ToString("MM")
-        Month_ComboBox.Text = formattedDate2
-        Day_ComboBox.Text = formattedDate
-        Timer1.Start()
-    End Sub
-
     Private Sub Scriptertext_Button_Click(sender As Object, e As EventArgs) Handles Scriptertext_Button.Click
         Clipboard.SetText(My.Settings.ScripterText)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles GiveScripterButton.Click
         If GiveScripterRole_TextBox.TextLength > 0 Then Clipboard.SetText(GiveScripterRole_TextBox.Text)
+        Dim text As String
+        text = GiveScripterRole_TextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub ListGrid_PVE_NameButton_Click(sender As Object, e As EventArgs) Handles ListGrid_PVE_NameButton.Click
         If ListGrid_PVE_NameTextBox.TextLength > 0 Then Clipboard.SetText(ListGrid_PVE_NameTextBox.Text)
+        Dim text As String
+        text = ListGrid_PVE_NameTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles ListGridBackupNameButton.Click
         If ListGridBackupNameTextBox.TextLength > 0 Then Clipboard.SetText(ListGridBackupNameTextBox.Text)
+        Dim text As String
+        text = ListGridBackupNameTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub MainWindow_TextChanged(sender As Object, e As EventArgs) Handles MyBase.TextChanged
@@ -785,27 +850,69 @@
 
     Private Sub HangarNameButton_Click(sender As Object, e As EventArgs) Handles HangarNameButton.Click
         If HangarNameTextBox.TextLength > 0 Then Clipboard.SetText(HangarNameTextBox.Text)
+        Dim text As String
+        text = HangarNameTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
 
     End Sub
 
     Private Sub PlayerEnameButton_Click(sender As Object, e As EventArgs) Handles PlayerEnameButton.Click
         If PlayerEnameTextBox.TextLength > 0 Then Clipboard.SetText(PlayerEnameTextBox.Text)
+        Dim text As String
+        text = PlayerEnameTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub GridEnameButton_Click(sender As Object, e As EventArgs) Handles GridEnameButton.Click
         If GridEnameTextBox.TextLength > 0 Then Clipboard.SetText(GridEnameTextBox.Text)
+        Dim text As String
+        text = GridEnameTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub RenameGridButton_Click(sender As Object, e As EventArgs) Handles RenameGridButton.Click
         If RenameGridTextBox.TextLength > 0 Then Clipboard.SetText(RenameGridTextBox.Text)
+        Dim text As String
+        text = RenameGridTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub ServerLogButton_Click(sender As Object, e As EventArgs) Handles ServerLogButton.Click
         If ServerLogTextBox.TextLength > 0 Then Clipboard.SetText(ServerLogTextBox.Text)
+        Dim text As String
+        text = ServerLogTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub GridRestoreNameButton_Click(sender As Object, e As EventArgs) Handles GridRestoreNameButton.Click
         If GridRestoreNameTextBox.TextLength > 0 Then Clipboard.SetText(GridRestoreNameTextBox.Text)
+        Dim text As String
+        text = GridRestoreNameTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub Clear_Button_Click(sender As Object, e As EventArgs) Handles Clear_Button.Click
@@ -1002,8 +1109,15 @@
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles SetRankButton.Click
         If SetAdminTextBox.TextLength > 0 Then Clipboard.SetText(SetAdminTextBox.Text)
+        Dim text As String
+        text = SetAdminTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub AboutMeToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles AboutMeToolStripMenuItem2.Click
@@ -1012,10 +1126,24 @@
 
     Private Sub Common_copyButton_Click(sender As Object, e As EventArgs) Handles Common_copyButton.Click
         If CommonTextBox.TextLength > 0 Then Clipboard.SetText(CommonTextBox.Text)
+        Dim text As String
+        text = CommonTextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub GiveItem_CopyButton_Click(sender As Object, e As EventArgs) Handles GiveItem_CopyButton.Click
         If GiveItem_TextBox.TextLength > 0 Then Clipboard.SetText(GiveItem_TextBox.Text)
+        Dim text As String
+        text = GiveItem_TextBox.Text
+
+        If AutoSend.Checked = True Then
+            messageField.Text = text
+            Send.PerformClick()
+        End If
     End Sub
 
     Private Sub WeaponsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WeaponsToolStripMenuItem.Click
@@ -1065,5 +1193,114 @@
 
     Private Sub Sector_ComboBox_DropDown(sender As Object, e As EventArgs) Handles Sector_ComboBox.DropDown
         My.Settings.SectorDropOpen = True
+    End Sub
+    '---------------------------------------------------------------------------------------------------
+    'discord webhook stuffs
+    '---------------------------------------------------------------------------------------------------
+
+    Public pfc As New Text.PrivateFontCollection
+    Private Sub ProfilePicLink_TextChanged(sender As Object, e As EventArgs) Handles profilePicLink.TextChanged
+        If profilePicLink.Text = "" Then
+            profilePic.SizeMode = ImageLayout.Zoom
+            Return
+        End If
+        Try
+            Dim tClient As WebClient = New WebClient
+            Dim tImage As Bitmap = Image.FromStream(New MemoryStream(tClient.DownloadData(profilePicLink.Text)))
+            profilePic.Image = tImage
+            profilePic.SizeMode = ImageLayout.Zoom
+        Catch
+            profilePic.SizeMode = ImageLayout.Zoom
+        End Try
+    End Sub
+
+    Private Sub Send_Click(sender As Object, e As EventArgs) Handles Send.Click
+        Dim dcWeb As dWebHook = New dWebHook
+        If username.Text = "Webhook" Then
+            dcWeb.UserName = ""
+        Else
+            dcWeb.UserName = username.Text
+        End If
+        dcWeb.WebHook = webhookLink.Text
+        dcWeb.ProfilePicture = profilePicLink.Text
+        dcWeb.SendMessage(messageField.Text)
+    End Sub
+
+    Private Sub Username_TextChanged(sender As Object, e As EventArgs) Handles username.TextChanged
+        If username.Text = "" Then
+            username.Text = "Webhook"
+        End If
+    End Sub
+
+    Private Sub DiscordWebHookToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiscordWebHookToolStripMenuItem.Click
+        DiscordWindow.Show()
+    End Sub
+
+    'Private Sub WebhookLink_TextChanged(sender As Object, e As EventArgs) Handles webhookLink.TextChanged
+    'If autoFetch.Checked = True Then
+    'fetchWHinfo(1, 1)
+    'End If
+    'End Sub
+    'Sub fetchWHinfo(uCheck As String, pCheck As String)
+    'Dim request As HttpWebRequest
+    'Dim response As HttpWebResponse = Nothing
+    'Dim reader As StreamReader
+    'Try
+    'request = DirectCast(WebRequest.Create(webhookLink.Text), HttpWebRequest)
+
+    'response = DirectCast(request.GetResponse(), HttpWebResponse)
+    'reader = New StreamReader(response.GetResponseStream())
+    'Dim rawresp As String = reader.ReadToEnd()
+    'Dim jss As New JavaScriptSerializer()
+    'Dim dict As Dictionary(Of String, String) = jss.Deserialize(Of Dictionary(Of String, String))(rawresp)
+    '
+    'If uCheck = 1 Then
+    'username.Text = dict("name")
+    'End If
+    'If pCheck = 1 Then
+    'profilePicLink.Text = "https://cdn.discordapp.com/avatars/" + dict("id") + "/" + dict("avatar") + ".png?size=128"
+    'End If
+    'Catch ex As Exception
+    'End Try
+    'End Sub
+End Class
+
+Public Class dWebHook
+    Implements IDisposable
+
+    Private ReadOnly client As WebClient
+    Private Shared discordValues As NameValueCollection = New NameValueCollection()
+    Public Property WebHook As String
+    Public Property UserName As String
+    Public Property ProfilePicture As String
+
+    Public Sub New()
+        client = New WebClient()
+    End Sub
+
+    Public Sub SendMessage(ByVal msgSend As String)
+        If msgSend = "" Or WebHook = "" Then
+            MsgBox("The webhook link and message are required!", vbCritical + vbOKOnly)
+            Return
+        End If
+        discordValues.Add("username", UserName)
+        discordValues.Add("avatar_url", ProfilePicture)
+        discordValues.Add("content", msgSend)
+        Try
+            client.UploadValues(WebHook, discordValues)
+        Catch
+            MsgBox("Unable to send message!" & vbNewLine & vbNewLine & "This issue can be caused by one or more of the following:" & vbNewLine & "- The webhook link is incorrect." & vbNewLine & "- There is no connection to the Internet." & vbNewLine & "- Another program or firewall is blocking this application's access to the Internet." & vbNewLine & "- Discord's servers are down." & vbNewLine & vbNewLine & "If you believe everything is in working order and this problem persists, please submit an issue on this program's Github page.", vbCritical + vbOKOnly, "Discord Webhook Announcer")
+        End Try
+        discordValues.Remove("username")
+        discordValues.Remove("avatar_url")
+        discordValues.Remove("content")
+    End Sub
+
+    Public Sub Dispose()
+        client.Dispose()
+    End Sub
+
+    Private Sub IDisposable_Dispose() Implements IDisposable.Dispose
+        DirectCast(client, IDisposable).Dispose()
     End Sub
 End Class

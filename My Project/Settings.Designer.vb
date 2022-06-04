@@ -287,6 +287,54 @@ Namespace My
                 Me("SectorDropOpen") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property WebHook() As String
+            Get
+                Return CType(Me("WebHook"),String)
+            End Get
+            Set
+                Me("WebHook") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("- SI Lazy Admin -")>  _
+        Public Property WebUserName() As String
+            Get
+                Return CType(Me("WebUserName"),String)
+            End Get
+            Set
+                Me("WebUserName") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property WebProfilelink() As String
+            Get
+                Return CType(Me("WebProfilelink"),String)
+            End Get
+            Set
+                Me("WebProfilelink") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property AutoSend() As Boolean
+            Get
+                Return CType(Me("AutoSend"),Boolean)
+            End Get
+            Set
+                Me("AutoSend") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
