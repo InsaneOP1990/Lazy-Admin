@@ -755,9 +755,7 @@ Public Class MainWindow
         End If
 
         If SteamID_Texbox.TextLength > 0 Then
-            SetAdminTextBox.Text = My.Settings.Sector & " " & SteamID_Texbox.Text & " 1"
-
-
+            SetAdminTextBox.Text = My.Settings.Sector & " admin setrank " & SteamID_Texbox.Text & " 1"
         End If
 
         'uh center textcent
