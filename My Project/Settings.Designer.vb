@@ -290,7 +290,8 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://discord.com/api/webhooks/982717178455412816/4JYCs5ruBKoDaNcbjD_Poq-iXlGgL"& _ 
+            "77EliSynZNVVKY8V8k4Kjq85HPN_HZyoeE9Sp8M")>  _
         Public Property WebHook() As String
             Get
                 Return CType(Me("WebHook"),String)
@@ -302,7 +303,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("- SI Lazy Admin -")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("-LazyAdmin-")>  _
         Public Property WebUserName() As String
             Get
                 Return CType(Me("WebUserName"),String)
@@ -333,6 +334,18 @@ Namespace My
             End Get
             Set
                 Me("AutoSend") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("InGameName")>  _
+        Public Property InGameName() As String
+            Get
+                Return CType(Me("InGameName"),String)
+            End Get
+            Set
+                Me("InGameName") = value
             End Set
         End Property
     End Class

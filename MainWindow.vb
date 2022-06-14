@@ -1,7 +1,44 @@
 ﻿Imports System.Collections.Specialized
 Imports System.Net
 Imports System.IO
+Imports System.Management
+
 Public Class MainWindow
+    Private Function CpuId() As String
+        Dim computer As String = "."
+        Dim wmi As Object = GetObject("winmgmts:" &
+        "{impersonationLevel=impersonate}!\\" &
+        computer & "\root\cimv2")
+        Dim processors As Object = wmi.ExecQuery("Select * from " &
+        "Win32_Processor")
+
+        Dim cpu_ids As String = ""
+        For Each cpu As Object In processors
+            cpu_ids = cpu_ids & ", " & cpu.ProcessorId
+        Next cpu
+        If cpu_ids.Length > 0 Then cpu_ids =
+        cpu_ids.Substring(2)
+
+        Return cpu_ids
+    End Function
+    Public Function GetDriveSerialNumber() As String
+        Dim DriveSerial As Long
+        Dim fso As Object, Drv As Object
+        'Create a FileSystemObject object
+        fso = CreateObject("Scripting.FileSystemObject")
+        Drv = fso.GetDrive(fso.GetDriveName(AppDomain.CurrentDomain.BaseDirectory))
+        With Drv
+            If .IsReady Then
+                DriveSerial = .SerialNumber
+            Else    '"Drive Not Ready!"
+                DriveSerial = -1
+            End If
+        End With
+        'Clean up
+        Drv = Nothing
+        fso = Nothing
+        GetDriveSerialNumber = Hex(DriveSerial)
+    End Function
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Settings.Sector = "PVE - Any server that is Avalon (Planets Space KotH's)"
         My.Settings.ListGrid = ""
@@ -92,9 +129,13 @@ Public Class MainWindow
             SetRankButton.Text = "Copy Text"
         End If
 
+        If My.Settings.InGameName = "InGameName" Then
 
+            ingamename.Show()
 
-        'Settings updates
+        End If
+
+        ' Settings updates
         My.Settings.ListGrid = ListGridBackupComboBox.Text
         My.Settings.RestoreNumone = RestoreNumoneComboBox.Text
         My.Settings.RestoreNumtwo = RestoreNumtwoComboBox.Text
@@ -106,7 +147,11 @@ Public Class MainWindow
         My.Settings.GridE = GridEComboBox.Text
         My.Settings.LogType = Log_TypeComboBox.Text
         webhookLink.Text = My.Settings.WebHook
-        username.Text = My.Settings.WebUserName
+        If username.TextLength < 80 Then
+            username.Text = My.Settings.WebUserName + GetDriveSerialNumber() + "-" + My.Settings.InGameName + "-"
+        Else
+            username.Text = GetDriveSerialNumber() + "-" + My.Settings.InGameName + "-"
+        End If
         profilePicLink.Text = My.Settings.WebProfilelink
 
         'discord tab
@@ -602,7 +647,12 @@ Public Class MainWindow
                 GridEnameTextBox.Text = My.Settings.Sector & " " & "fixshipmod" & " " & Chr(34) & Grid_NameText.Text & Chr(34)
             End If
         End If
-
+        'Grid Entities Transfer
+        If GridEComboBox.Text = "transfer" Then
+            If Grid_NameText.TextLength > 0 Then
+                GridEnameTextBox.Text = My.Settings.Sector & " " & "transfer" & " " & Chr(34) & Player_NameText.Text & Chr(34) & " " & Chr(34) & Grid_NameText.Text & Chr(34)
+            End If
+        End If
 
 
         'Common command - MovePlayer
@@ -1232,6 +1282,12 @@ Public Class MainWindow
 
     Private Sub DiscordWebHookToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiscordWebHookToolStripMenuItem.Click
         DiscordWindow.Show()
+    End Sub
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs)
+        MsgBox(GetDriveSerialNumber)
+        MsgBox(CpuId)
+
     End Sub
 
     'Private Sub WebhookLink_TextChanged(sender As Object, e As EventArgs) Handles webhookLink.TextChanged

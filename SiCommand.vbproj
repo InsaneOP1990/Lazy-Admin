@@ -94,6 +94,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -109,6 +111,7 @@
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Management.Instrumentation" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
@@ -125,6 +128,12 @@
       <DependentUpon>DiscordWindow.vb</DependentUpon>
     </Compile>
     <Compile Include="DiscordWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ingamename.Designer.vb">
+      <DependentUpon>ingamename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ingamename.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -187,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DiscordWindow.resx">
       <DependentUpon>DiscordWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ingamename.resx">
+      <DependentUpon>ingamename.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sector.resx">
       <DependentUpon>Sector.vb</DependentUpon>

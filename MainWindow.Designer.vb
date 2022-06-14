@@ -499,7 +499,7 @@ Partial Class MainWindow
         'GridEComboBox
         '
         Me.GridEComboBox.FormattingEnabled = True
-        Me.GridEComboBox.Items.AddRange(New Object() {"refresh", "stop", "delete", "poweroff", "poweron", "checkauthor", "admin makeship", "admin makestation", "fixshipmod"})
+        Me.GridEComboBox.Items.AddRange(New Object() {"refresh", "stop", "delete", "poweroff", "poweron", "checkauthor", "admin makeship", "admin makestation", "fixshipmod", "transfer"})
         Me.GridEComboBox.Location = New System.Drawing.Point(572, 141)
         Me.GridEComboBox.Name = "GridEComboBox"
         Me.GridEComboBox.Size = New System.Drawing.Size(121, 21)

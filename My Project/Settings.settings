@@ -96,16 +96,19 @@ sw - - - Starwars theam server,</Value>
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="WebHook" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">https://discord.com/api/webhooks/982717178455412816/4JYCs5ruBKoDaNcbjD_Poq-iXlGgL77EliSynZNVVKY8V8k4Kjq85HPN_HZyoeE9Sp8M</Value>
     </Setting>
     <Setting Name="WebUserName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">- SI Lazy Admin -</Value>
+      <Value Profile="(Default)">-LazyAdmin-</Value>
     </Setting>
     <Setting Name="WebProfilelink" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="AutoSend" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="InGameName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">InGameName</Value>
     </Setting>
   </Settings>
 </SettingsFile>
