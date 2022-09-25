@@ -359,9 +359,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.SiCommand.My.MySettings
+        Friend ReadOnly Property Settings() As Global.LazyAdmin.My.MySettings
             Get
-                Return Global.SiCommand.My.MySettings.Default
+                Return Global.LazyAdmin.My.MySettings.Default
             End Get
         End Property
     End Module

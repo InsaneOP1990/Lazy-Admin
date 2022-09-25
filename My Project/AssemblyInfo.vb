@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("SiCommand")>
-<Assembly: AssemblyDescription("Tired of using a notepad to edit commands? Fill in the inputs on the top of the app, let sicommand do the work for you.")>
+<Assembly: AssemblyTitle("Lazy Admin")>
+<Assembly: AssemblyDescription("Tired of using a notepad to edit commands? Fill in the inputs on the top of the app, let Lazy Admin do the work for you.")>
 <Assembly: AssemblyCompany("Run-Insane Innovations")>
-<Assembly: AssemblyProduct("SiCommand")>
+<Assembly: AssemblyProduct("Lazy Admin")>
 <Assembly: AssemblyCopyright("Copyright ©  2022")>
 <Assembly: AssemblyTrademark("")>
 

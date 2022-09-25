@@ -1290,6 +1290,10 @@ Public Class MainWindow
 
     End Sub
 
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
     'Private Sub WebhookLink_TextChanged(sender As Object, e As EventArgs) Handles webhookLink.TextChanged
     'If autoFetch.Checked = True Then
     'fetchWHinfo(1, 1)
