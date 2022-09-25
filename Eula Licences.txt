@@ -1,8 +1,8 @@
-﻿End-User License Agreement (EULA) of SiCommand
+﻿End-User License Agreement (EULA) of Lazy Admin
 
 This End-User License Agreement ("EULA") is a legal agreement between you and Run-Insane.com
 
-This EULA agreement governs your acquisition and use of our SiCommand software ("Lazy Admin") directly from Run-Insane.com or indirectly through a Run-Insane.com authorized reseller or distributor (a "Reseller").
+This EULA agreement governs your acquisition and use of our Lazy Admin software ("Lazy Admin") directly from Run-Insane.com or indirectly through a Run-Insane.com authorized reseller or distributor (a "Reseller").
 
 Please read this EULA agreement carefully before completing the installation process and using the Lazy Admin software. It provides a license to use the Lazy Admin software and contains warranty information and liability disclaimers.
 
