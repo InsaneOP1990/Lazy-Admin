@@ -110,5 +110,8 @@ sw - - - Starwars theam server,</Value>
     <Setting Name="InGameName" Type="System.String" Scope="User">
       <Value Profile="(Default)">InGameName</Value>
     </Setting>
+    <Setting Name="SaveLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

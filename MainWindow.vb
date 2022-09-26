@@ -40,6 +40,14 @@ Public Class MainWindow
         GetDriveSerialNumber = Hex(DriveSerial)
     End Function
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.InGameName = "toolazytologin" Then
+            My.Settings.AutoSend = "False"
+            AutoSend.Hide()
+            messageField.Visible = False
+            Send.Visible = False
+            DiscordWebHookToolStripMenuItem.Visible = False
+            My.Settings.WebHook = ""
+        End If
         My.Settings.Sector = "PVE - Any server that is Avalon (Planets Space KotH's)"
         My.Settings.ListGrid = ""
         My.Settings.RestoreNumone = ""
@@ -131,7 +139,7 @@ Public Class MainWindow
 
         If My.Settings.InGameName = "InGameName" Then
 
-            ingamename.Show()
+            Register.Show()
 
         End If
 
@@ -1292,6 +1300,20 @@ Public Class MainWindow
 
     Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
 
+    End Sub
+
+    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
+        My.Settings.InGameName = ""
+        Login.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub MainWindow_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If My.Settings.SaveLogin = "False" Then
+            My.Settings.InGameName = ""
+        Else
+            Me.Close()
+        End If
     End Sub
 
     'Private Sub WebhookLink_TextChanged(sender As Object, e As EventArgs) Handles webhookLink.TextChanged

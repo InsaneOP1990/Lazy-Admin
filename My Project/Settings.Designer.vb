@@ -348,6 +348,18 @@ Namespace My
                 Me("InGameName") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property SaveLogin() As String
+            Get
+                Return CType(Me("SaveLogin"),String)
+            End Get
+            Set
+                Me("SaveLogin") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

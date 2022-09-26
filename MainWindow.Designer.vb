@@ -168,6 +168,7 @@ Partial Class MainWindow
         Me.ScripterTextToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SectorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DiscordWebHookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -378,9 +379,9 @@ Partial Class MainWindow
         Me.ListGrid_PVE_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListGrid_PVE_Label.Location = New System.Drawing.Point(772, 61)
         Me.ListGrid_PVE_Label.Name = "ListGrid_PVE_Label"
-        Me.ListGrid_PVE_Label.Size = New System.Drawing.Size(106, 13)
+        Me.ListGrid_PVE_Label.Size = New System.Drawing.Size(94, 13)
         Me.ListGrid_PVE_Label.TabIndex = 21
-        Me.ListGrid_PVE_Label.Text = "List Grid backups"
+        Me.ListGrid_PVE_Label.Text = "List Grid Owner"
         '
         'DiscordID_TextBox
         '
@@ -1547,7 +1548,7 @@ Partial Class MainWindow
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LimitsToolStripMenuItem, Me.ScripterTextToolStripMenuItem, Me.SectorToolStripMenuItem, Me.DiscordWebHookToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LimitsToolStripMenuItem, Me.ScripterTextToolStripMenuItem, Me.SectorToolStripMenuItem, Me.DiscordWebHookToolStripMenuItem, Me.LogOutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1205, 24)
@@ -1596,6 +1597,14 @@ Partial Class MainWindow
         Me.DiscordWebHookToolStripMenuItem.Name = "DiscordWebHookToolStripMenuItem"
         Me.DiscordWebHookToolStripMenuItem.Size = New System.Drawing.Size(115, 20)
         Me.DiscordWebHookToolStripMenuItem.Text = "Discord WebHook"
+        '
+        'LogOutToolStripMenuItem
+        '
+        Me.LogOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
+        Me.LogOutToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.LogOutToolStripMenuItem.Text = "Log Out"
         '
         'Panel1
         '
@@ -1647,9 +1656,9 @@ Partial Class MainWindow
         Me.AutoSend.AutoSize = True
         Me.AutoSend.Location = New System.Drawing.Point(123, 151)
         Me.AutoSend.Name = "AutoSend"
-        Me.AutoSend.Size = New System.Drawing.Size(125, 17)
+        Me.AutoSend.Size = New System.Drawing.Size(108, 17)
         Me.AutoSend.TabIndex = 132
-        Me.AutoSend.Text = "Auto send to Discord"
+        Me.AutoSend.Text = "Send to Discord?"
         Me.AutoSend.UseVisualStyleBackColor = True
         '
         'MainWindow
@@ -1893,4 +1902,5 @@ Partial Class MainWindow
     Friend WithEvents messageField As TextBox
     Friend WithEvents DiscordWebHookToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AutoSend As CheckBox
+    Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
 End Class

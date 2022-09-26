@@ -32,6 +32,8 @@ Partial Class Sector
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -44,7 +46,7 @@ Partial Class Sector
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(223, 61)
+        Me.TextBox1.Location = New System.Drawing.Point(80, 51)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(67, 20)
         Me.TextBox1.TabIndex = 1
@@ -66,7 +68,7 @@ Partial Class Sector
         Me.Sector_ComboBox.IntegralHeight = False
         Me.Sector_ComboBox.Items.AddRange(New Object() {"ALL - - - All servers except the lobby. Senior Staff / Admin Only", "---------------------------------", "PVE - - - Any server that is Avalon (Planets Space KotH's)", "PVP - - - Any server that is Dead Worlds (Planets Space KotH's)", "NPC - - - Both Roach servers,", "---------------------------------", "tL - 1 - The Lobby server - Lobby Sector", "---------------------------------", "gS - 2 - Deep Space / General Sector or the everywhere else", "aS - 10 - Avalon Space Sector", "aS1 -12 - Avalon Space Inner 1 Dover Space", "aS2 - 13 - Avalon Space Inner 2 IK006 Space", "aS3 - 14 - Avalon Space Inner 3 Pelmuth Space", "wS - 51 - Waterloo Space Sector", "", "aDV - 11 - Avalon Dover Planet Sector", "aIK  - 15 - Avalon IK006 Planet Sector", "aPL - 17 - Avalon Pelmuth Planet Sector", "wP - 52 - Waterloo Planet Sector", "---------------------------------", "dS - 20 - Dead Worlds Space Sector", "dP - 21 - Dead Worlds Planets Sector", "", "dK - 22 - Dead Worlds Space KotH Sector", "cK - 23 - Crypt KotH Sector", "---------------------------------", "rI - 40 - Roach Inner Sector", "rO - 41 - Roach Outter Sector", "---------------------------------", "tR - 50 - Transit Server between Roach and Avalon / DW ", "---------------------------------", "sL - - - Special Lobby bot for scripting use and other powers. (Dont put a space " &
                 "after the prefix here)", "tK --- The Space KotH Bot used by scripts to reset KotH", "tC --- The Crypt KotH Bot used by scripts to reset KotH", "tS --- Transit Server for use with Tech Bot"})
-        Me.Sector_ComboBox.Location = New System.Drawing.Point(152, 2)
+        Me.Sector_ComboBox.Location = New System.Drawing.Point(10, 6)
         Me.Sector_ComboBox.MaxDropDownItems = 21
         Me.Sector_ComboBox.Name = "Sector_ComboBox"
         Me.Sector_ComboBox.Size = New System.Drawing.Size(307, 21)
@@ -75,7 +77,7 @@ Partial Class Sector
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(309, 61)
+        Me.TextBox2.Location = New System.Drawing.Point(166, 51)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(62, 20)
         Me.TextBox2.TabIndex = 5
@@ -86,9 +88,9 @@ Partial Class Sector
         Me.Label1.ForeColor = System.Drawing.Color.Red
         Me.Label1.Location = New System.Drawing.Point(220, 119)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 13)
+        Me.Label1.Size = New System.Drawing.Size(191, 13)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Sector - SeverID - description "","""
+        Me.Label1.Text = "Server Prefix - SeverID - description "","""
         '
         'Label2
         '
@@ -102,7 +104,7 @@ Partial Class Sector
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(223, 42)
+        Me.Label3.Location = New System.Drawing.Point(80, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 13)
         Me.Label3.TabIndex = 10
@@ -111,28 +113,39 @@ Partial Class Sector
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(306, 42)
+        Me.Label4.Location = New System.Drawing.Point(163, 32)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(52, 13)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Server ID"
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Sector_ComboBox)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Location = New System.Drawing.Point(143, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(321, 75)
+        Me.Panel1.TabIndex = 12
         '
         'Sector
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 686)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Sector_ComboBox)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Name = "Sector"
         Me.Text = "Sector"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -147,4 +160,5 @@ Partial Class Sector
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Panel1 As Panel
 End Class
