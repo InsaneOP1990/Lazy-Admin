@@ -94,7 +94,7 @@ Partial Class MainWindow
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SteamCheckBox = New System.Windows.Forms.CheckBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Common = New System.Windows.Forms.TabPage()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.ComponentAmount_TextBox = New System.Windows.Forms.TextBox()
@@ -111,7 +111,7 @@ Partial Class MainWindow
         Me.SetRankButton = New System.Windows.Forms.Button()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.SetAdminTextBox = New System.Windows.Forms.TextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Discord = New System.Windows.Forms.TabPage()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Tab_DiscordRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -121,6 +121,7 @@ Partial Class MainWindow
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Tab_AleRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Tab_NexusRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
@@ -162,13 +163,11 @@ Partial Class MainWindow
         Me.AboutMeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AboutMeToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LimitsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WeaponsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ScripterTextToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SectorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DiscordWebHookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CommandSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SectorSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyTextButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -176,9 +175,12 @@ Partial Class MainWindow
         Me.username = New System.Windows.Forms.TextBox()
         Me.profilePicLink = New System.Windows.Forms.TextBox()
         Me.AutoSend = New System.Windows.Forms.CheckBox()
+        Me.Tab_NexusRichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Tab_HangarRichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.BackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
+        Me.Common.SuspendLayout()
+        Me.Discord.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
@@ -278,7 +280,6 @@ Partial Class MainWindow
         Me.Sector_ComboBox.Name = "Sector_ComboBox"
         Me.Sector_ComboBox.Size = New System.Drawing.Size(307, 21)
         Me.Sector_ComboBox.TabIndex = 3
-        Me.Sector_ComboBox.Text = "tL - 1 - The Lobby server - Lobby Sector"
         '
         'Sector_Label
         '
@@ -357,9 +358,9 @@ Partial Class MainWindow
         '
         'ListGrid_PVE_NameButton
         '
-        Me.ListGrid_PVE_NameButton.Location = New System.Drawing.Point(1007, 83)
+        Me.ListGrid_PVE_NameButton.Location = New System.Drawing.Point(1094, 120)
         Me.ListGrid_PVE_NameButton.Name = "ListGrid_PVE_NameButton"
-        Me.ListGrid_PVE_NameButton.Size = New System.Drawing.Size(95, 23)
+        Me.ListGrid_PVE_NameButton.Size = New System.Drawing.Size(75, 23)
         Me.ListGrid_PVE_NameButton.TabIndex = 23
         Me.ListGrid_PVE_NameButton.Text = "Copy Text"
         Me.ListGrid_PVE_NameButton.UseVisualStyleBackColor = True
@@ -367,9 +368,9 @@ Partial Class MainWindow
         'ListGrid_PVE_NameTextBox
         '
         Me.ListGrid_PVE_NameTextBox.BackColor = System.Drawing.Color.Silver
-        Me.ListGrid_PVE_NameTextBox.Location = New System.Drawing.Point(778, 83)
+        Me.ListGrid_PVE_NameTextBox.Location = New System.Drawing.Point(831, 122)
         Me.ListGrid_PVE_NameTextBox.Name = "ListGrid_PVE_NameTextBox"
-        Me.ListGrid_PVE_NameTextBox.Size = New System.Drawing.Size(223, 20)
+        Me.ListGrid_PVE_NameTextBox.Size = New System.Drawing.Size(257, 20)
         Me.ListGrid_PVE_NameTextBox.TabIndex = 22
         Me.ListGrid_PVE_NameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -377,7 +378,7 @@ Partial Class MainWindow
         '
         Me.ListGrid_PVE_Label.AutoSize = True
         Me.ListGrid_PVE_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListGrid_PVE_Label.Location = New System.Drawing.Point(772, 61)
+        Me.ListGrid_PVE_Label.Location = New System.Drawing.Point(828, 106)
         Me.ListGrid_PVE_Label.Name = "ListGrid_PVE_Label"
         Me.ListGrid_PVE_Label.Size = New System.Drawing.Size(94, 13)
         Me.ListGrid_PVE_Label.TabIndex = 21
@@ -433,7 +434,7 @@ Partial Class MainWindow
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(363, 4)
+        Me.Label3.Location = New System.Drawing.Point(404, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(112, 13)
         Me.Label3.TabIndex = 51
@@ -441,9 +442,9 @@ Partial Class MainWindow
         '
         'ListGridBackupNameButton
         '
-        Me.ListGridBackupNameButton.Location = New System.Drawing.Point(1007, 136)
+        Me.ListGridBackupNameButton.Location = New System.Drawing.Point(1094, 173)
         Me.ListGridBackupNameButton.Name = "ListGridBackupNameButton"
-        Me.ListGridBackupNameButton.Size = New System.Drawing.Size(95, 23)
+        Me.ListGridBackupNameButton.Size = New System.Drawing.Size(75, 23)
         Me.ListGridBackupNameButton.TabIndex = 59
         Me.ListGridBackupNameButton.Text = "Copy Text"
         Me.ListGridBackupNameButton.UseVisualStyleBackColor = True
@@ -451,9 +452,9 @@ Partial Class MainWindow
         'ListGridBackupNameTextBox
         '
         Me.ListGridBackupNameTextBox.BackColor = System.Drawing.Color.Silver
-        Me.ListGridBackupNameTextBox.Location = New System.Drawing.Point(778, 136)
+        Me.ListGridBackupNameTextBox.Location = New System.Drawing.Point(831, 175)
         Me.ListGridBackupNameTextBox.Name = "ListGridBackupNameTextBox"
-        Me.ListGridBackupNameTextBox.Size = New System.Drawing.Size(223, 20)
+        Me.ListGridBackupNameTextBox.Size = New System.Drawing.Size(257, 20)
         Me.ListGridBackupNameTextBox.TabIndex = 58
         Me.ListGridBackupNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -461,7 +462,7 @@ Partial Class MainWindow
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(775, 117)
+        Me.Label7.Location = New System.Drawing.Point(828, 159)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(122, 13)
         Me.Label7.TabIndex = 57
@@ -471,7 +472,7 @@ Partial Class MainWindow
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(363, 87)
+        Me.Label1.Location = New System.Drawing.Point(404, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(152, 13)
         Me.Label1.TabIndex = 62
@@ -481,37 +482,34 @@ Partial Class MainWindow
         '
         Me.HangarComboBox.FormattingEnabled = True
         Me.HangarComboBox.Items.AddRange(New Object() {"list", "save", "remove", "info", "load", "saveall"})
-        Me.HangarComboBox.Location = New System.Drawing.Point(529, 6)
+        Me.HangarComboBox.Location = New System.Drawing.Point(570, 11)
         Me.HangarComboBox.Name = "HangarComboBox"
         Me.HangarComboBox.Size = New System.Drawing.Size(121, 21)
         Me.HangarComboBox.TabIndex = 65
-        Me.HangarComboBox.Text = "list"
         '
         'PlayerEComboBox
         '
         Me.PlayerEComboBox.FormattingEnabled = True
         Me.PlayerEComboBox.Items.AddRange(New Object() {"eject", "kill"})
-        Me.PlayerEComboBox.Location = New System.Drawing.Point(572, 84)
+        Me.PlayerEComboBox.Location = New System.Drawing.Point(613, 64)
         Me.PlayerEComboBox.Name = "PlayerEComboBox"
         Me.PlayerEComboBox.Size = New System.Drawing.Size(121, 21)
         Me.PlayerEComboBox.TabIndex = 66
-        Me.PlayerEComboBox.Text = "eject"
         '
         'GridEComboBox
         '
         Me.GridEComboBox.FormattingEnabled = True
         Me.GridEComboBox.Items.AddRange(New Object() {"refresh", "stop", "delete", "poweroff", "poweron", "checkauthor", "admin makeship", "admin makestation", "fixshipmod", "transfer"})
-        Me.GridEComboBox.Location = New System.Drawing.Point(572, 141)
+        Me.GridEComboBox.Location = New System.Drawing.Point(613, 121)
         Me.GridEComboBox.Name = "GridEComboBox"
         Me.GridEComboBox.Size = New System.Drawing.Size(121, 21)
         Me.GridEComboBox.TabIndex = 70
-        Me.GridEComboBox.Text = "stop"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(363, 141)
+        Me.Label2.Location = New System.Drawing.Point(404, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(140, 13)
         Me.Label2.TabIndex = 67
@@ -540,18 +538,17 @@ Partial Class MainWindow
         '
         Me.Log_TypeComboBox.FormattingEnabled = True
         Me.Log_TypeComboBox.Items.AddRange(New Object() {"keen", "torch", "ownerships", "deleted", "blocklimiter"})
-        Me.Log_TypeComboBox.Location = New System.Drawing.Point(981, 4)
+        Me.Log_TypeComboBox.Location = New System.Drawing.Point(1034, 9)
         Me.Log_TypeComboBox.Name = "Log_TypeComboBox"
         Me.Log_TypeComboBox.Size = New System.Drawing.Size(121, 21)
         Me.Log_TypeComboBox.TabIndex = 74
-        Me.Log_TypeComboBox.Text = "ownerships"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.ForestGreen
-        Me.Label8.Location = New System.Drawing.Point(772, 2)
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(825, 7)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(75, 13)
         Me.Label8.TabIndex = 73
@@ -561,16 +558,16 @@ Partial Class MainWindow
         '
         Me.ListGridBackupComboBox.FormattingEnabled = True
         Me.ListGridBackupComboBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
-        Me.ListGridBackupComboBox.Location = New System.Drawing.Point(903, 114)
+        Me.ListGridBackupComboBox.Location = New System.Drawing.Point(956, 153)
         Me.ListGridBackupComboBox.Name = "ListGridBackupComboBox"
         Me.ListGridBackupComboBox.Size = New System.Drawing.Size(37, 21)
         Me.ListGridBackupComboBox.TabIndex = 75
         '
         'ServerLogButton
         '
-        Me.ServerLogButton.Location = New System.Drawing.Point(1007, 29)
+        Me.ServerLogButton.Location = New System.Drawing.Point(1094, 32)
         Me.ServerLogButton.Name = "ServerLogButton"
-        Me.ServerLogButton.Size = New System.Drawing.Size(95, 23)
+        Me.ServerLogButton.Size = New System.Drawing.Size(75, 23)
         Me.ServerLogButton.TabIndex = 79
         Me.ServerLogButton.Text = "Copy Text"
         Me.ServerLogButton.UseVisualStyleBackColor = True
@@ -578,9 +575,9 @@ Partial Class MainWindow
         'ServerLogTextBox
         '
         Me.ServerLogTextBox.BackColor = System.Drawing.Color.Silver
-        Me.ServerLogTextBox.Location = New System.Drawing.Point(778, 29)
+        Me.ServerLogTextBox.Location = New System.Drawing.Point(831, 34)
         Me.ServerLogTextBox.Name = "ServerLogTextBox"
-        Me.ServerLogTextBox.Size = New System.Drawing.Size(223, 20)
+        Me.ServerLogTextBox.Size = New System.Drawing.Size(257, 20)
         Me.ServerLogTextBox.TabIndex = 78
         Me.ServerLogTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -597,7 +594,7 @@ Partial Class MainWindow
         '
         Me.RestoreNumoneComboBox.FormattingEnabled = True
         Me.RestoreNumoneComboBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
-        Me.RestoreNumoneComboBox.Location = New System.Drawing.Point(894, 213)
+        Me.RestoreNumoneComboBox.Location = New System.Drawing.Point(947, 216)
         Me.RestoreNumoneComboBox.Name = "RestoreNumoneComboBox"
         Me.RestoreNumoneComboBox.Size = New System.Drawing.Size(37, 21)
         Me.RestoreNumoneComboBox.TabIndex = 86
@@ -605,9 +602,9 @@ Partial Class MainWindow
         '
         'GridRestoreNameButton
         '
-        Me.GridRestoreNameButton.Location = New System.Drawing.Point(1007, 237)
+        Me.GridRestoreNameButton.Location = New System.Drawing.Point(1094, 237)
         Me.GridRestoreNameButton.Name = "GridRestoreNameButton"
-        Me.GridRestoreNameButton.Size = New System.Drawing.Size(95, 23)
+        Me.GridRestoreNameButton.Size = New System.Drawing.Size(75, 23)
         Me.GridRestoreNameButton.TabIndex = 83
         Me.GridRestoreNameButton.Text = "Copy Text"
         Me.GridRestoreNameButton.UseVisualStyleBackColor = True
@@ -615,9 +612,9 @@ Partial Class MainWindow
         'GridRestoreNameTextBox
         '
         Me.GridRestoreNameTextBox.BackColor = System.Drawing.Color.Silver
-        Me.GridRestoreNameTextBox.Location = New System.Drawing.Point(778, 237)
+        Me.GridRestoreNameTextBox.Location = New System.Drawing.Point(831, 240)
         Me.GridRestoreNameTextBox.Name = "GridRestoreNameTextBox"
-        Me.GridRestoreNameTextBox.Size = New System.Drawing.Size(223, 20)
+        Me.GridRestoreNameTextBox.Size = New System.Drawing.Size(257, 20)
         Me.GridRestoreNameTextBox.TabIndex = 82
         Me.GridRestoreNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -626,7 +623,7 @@ Partial Class MainWindow
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(775, 218)
+        Me.Label9.Location = New System.Drawing.Point(828, 221)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(82, 13)
         Me.Label9.TabIndex = 81
@@ -636,7 +633,7 @@ Partial Class MainWindow
         '
         Me.RestoreNumtwoComboBox.FormattingEnabled = True
         Me.RestoreNumtwoComboBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
-        Me.RestoreNumtwoComboBox.Location = New System.Drawing.Point(937, 213)
+        Me.RestoreNumtwoComboBox.Location = New System.Drawing.Point(990, 216)
         Me.RestoreNumtwoComboBox.Name = "RestoreNumtwoComboBox"
         Me.RestoreNumtwoComboBox.Size = New System.Drawing.Size(37, 21)
         Me.RestoreNumtwoComboBox.TabIndex = 87
@@ -646,7 +643,7 @@ Partial Class MainWindow
         '
         Me.RestoreQComboBox.FormattingEnabled = True
         Me.RestoreQComboBox.Items.AddRange(New Object() {"true", "false"})
-        Me.RestoreQComboBox.Location = New System.Drawing.Point(980, 214)
+        Me.RestoreQComboBox.Location = New System.Drawing.Point(1033, 217)
         Me.RestoreQComboBox.Name = "RestoreQComboBox"
         Me.RestoreQComboBox.Size = New System.Drawing.Size(58, 21)
         Me.RestoreQComboBox.TabIndex = 88
@@ -666,7 +663,7 @@ Partial Class MainWindow
         '
         Me.RestoreForceComboBox.FormattingEnabled = True
         Me.RestoreForceComboBox.Items.AddRange(New Object() {"true", "false"})
-        Me.RestoreForceComboBox.Location = New System.Drawing.Point(1044, 213)
+        Me.RestoreForceComboBox.Location = New System.Drawing.Point(1097, 216)
         Me.RestoreForceComboBox.Name = "RestoreForceComboBox"
         Me.RestoreForceComboBox.Size = New System.Drawing.Size(58, 21)
         Me.RestoreForceComboBox.TabIndex = 91
@@ -674,7 +671,7 @@ Partial Class MainWindow
         '
         'HangarNameButton
         '
-        Me.HangarNameButton.Location = New System.Drawing.Point(598, 29)
+        Me.HangarNameButton.Location = New System.Drawing.Point(639, 34)
         Me.HangarNameButton.Name = "HangarNameButton"
         Me.HangarNameButton.Size = New System.Drawing.Size(95, 23)
         Me.HangarNameButton.TabIndex = 93
@@ -684,7 +681,7 @@ Partial Class MainWindow
         'HangarNameTextBox
         '
         Me.HangarNameTextBox.BackColor = System.Drawing.Color.Silver
-        Me.HangarNameTextBox.Location = New System.Drawing.Point(369, 29)
+        Me.HangarNameTextBox.Location = New System.Drawing.Point(410, 34)
         Me.HangarNameTextBox.Name = "HangarNameTextBox"
         Me.HangarNameTextBox.Size = New System.Drawing.Size(223, 20)
         Me.HangarNameTextBox.TabIndex = 92
@@ -693,7 +690,7 @@ Partial Class MainWindow
         'PlayerEnameButton
         '
         Me.PlayerEnameButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PlayerEnameButton.Location = New System.Drawing.Point(598, 107)
+        Me.PlayerEnameButton.Location = New System.Drawing.Point(639, 87)
         Me.PlayerEnameButton.Name = "PlayerEnameButton"
         Me.PlayerEnameButton.Size = New System.Drawing.Size(95, 23)
         Me.PlayerEnameButton.TabIndex = 97
@@ -703,7 +700,7 @@ Partial Class MainWindow
         'PlayerEnameTextBox
         '
         Me.PlayerEnameTextBox.BackColor = System.Drawing.Color.Silver
-        Me.PlayerEnameTextBox.Location = New System.Drawing.Point(369, 107)
+        Me.PlayerEnameTextBox.Location = New System.Drawing.Point(410, 87)
         Me.PlayerEnameTextBox.Name = "PlayerEnameTextBox"
         Me.PlayerEnameTextBox.Size = New System.Drawing.Size(223, 20)
         Me.PlayerEnameTextBox.TabIndex = 96
@@ -711,7 +708,7 @@ Partial Class MainWindow
         '
         'GridEnameButton
         '
-        Me.GridEnameButton.Location = New System.Drawing.Point(598, 166)
+        Me.GridEnameButton.Location = New System.Drawing.Point(639, 146)
         Me.GridEnameButton.Name = "GridEnameButton"
         Me.GridEnameButton.Size = New System.Drawing.Size(95, 23)
         Me.GridEnameButton.TabIndex = 101
@@ -721,7 +718,7 @@ Partial Class MainWindow
         'GridEnameTextBox
         '
         Me.GridEnameTextBox.BackColor = System.Drawing.Color.Silver
-        Me.GridEnameTextBox.Location = New System.Drawing.Point(369, 166)
+        Me.GridEnameTextBox.Location = New System.Drawing.Point(410, 146)
         Me.GridEnameTextBox.Name = "GridEnameTextBox"
         Me.GridEnameTextBox.Size = New System.Drawing.Size(223, 20)
         Me.GridEnameTextBox.TabIndex = 100
@@ -730,7 +727,7 @@ Partial Class MainWindow
         'RestoreQLabel
         '
         Me.RestoreQLabel.AutoSize = True
-        Me.RestoreQLabel.Location = New System.Drawing.Point(985, 198)
+        Me.RestoreQLabel.Location = New System.Drawing.Point(1038, 201)
         Me.RestoreQLabel.Name = "RestoreQLabel"
         Me.RestoreQLabel.Size = New System.Drawing.Size(50, 13)
         Me.RestoreQLabel.TabIndex = 104
@@ -739,7 +736,7 @@ Partial Class MainWindow
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(1051, 198)
+        Me.Label12.Location = New System.Drawing.Point(1104, 201)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(40, 13)
         Me.Label12.TabIndex = 105
@@ -776,16 +773,17 @@ Partial Class MainWindow
         '
         Me.HangarRemoveComboBox.FormattingEnabled = True
         Me.HangarRemoveComboBox.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
-        Me.HangarRemoveComboBox.Location = New System.Drawing.Point(656, 6)
+        Me.HangarRemoveComboBox.Location = New System.Drawing.Point(697, 11)
         Me.HangarRemoveComboBox.Name = "HangarRemoveComboBox"
         Me.HangarRemoveComboBox.Size = New System.Drawing.Size(37, 21)
         Me.HangarRemoveComboBox.TabIndex = 109
+        Me.HangarRemoveComboBox.Text = "1"
         '
         'RenameGridButton
         '
-        Me.RenameGridButton.Location = New System.Drawing.Point(598, 211)
+        Me.RenameGridButton.Location = New System.Drawing.Point(233, 210)
         Me.RenameGridButton.Name = "RenameGridButton"
-        Me.RenameGridButton.Size = New System.Drawing.Size(95, 23)
+        Me.RenameGridButton.Size = New System.Drawing.Size(75, 23)
         Me.RenameGridButton.TabIndex = 112
         Me.RenameGridButton.Text = "Copy Text"
         Me.RenameGridButton.UseVisualStyleBackColor = True
@@ -793,7 +791,7 @@ Partial Class MainWindow
         'RenameGridTextBox
         '
         Me.RenameGridTextBox.BackColor = System.Drawing.Color.Silver
-        Me.RenameGridTextBox.Location = New System.Drawing.Point(369, 211)
+        Me.RenameGridTextBox.Location = New System.Drawing.Point(4, 210)
         Me.RenameGridTextBox.Name = "RenameGridTextBox"
         Me.RenameGridTextBox.Size = New System.Drawing.Size(223, 20)
         Me.RenameGridTextBox.TabIndex = 111
@@ -803,7 +801,7 @@ Partial Class MainWindow
         '
         Me.RenameLabel.AutoSize = True
         Me.RenameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RenameLabel.Location = New System.Drawing.Point(363, 189)
+        Me.RenameLabel.Location = New System.Drawing.Point(-2, 188)
         Me.RenameLabel.Name = "RenameLabel"
         Me.RenameLabel.Size = New System.Drawing.Size(76, 13)
         Me.RenameLabel.TabIndex = 110
@@ -843,8 +841,8 @@ Partial Class MainWindow
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.Common)
+        Me.TabControl1.Controls.Add(Me.Discord)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
@@ -860,78 +858,78 @@ Partial Class MainWindow
         Me.TabControl1.Size = New System.Drawing.Size(1181, 461)
         Me.TabControl1.TabIndex = 116
         '
-        'TabPage1
+        'Common
         '
-        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage1.Controls.Add(Me.Label29)
-        Me.TabPage1.Controls.Add(Me.Label28)
-        Me.TabPage1.Controls.Add(Me.ComponentAmount_TextBox)
-        Me.TabPage1.Controls.Add(Me.Send)
-        Me.TabPage1.Controls.Add(Me.messageField)
-        Me.TabPage1.Controls.Add(Me.GiveItem_CopyButton)
-        Me.TabPage1.Controls.Add(Me.GiveItem_TextBox)
-        Me.TabPage1.Controls.Add(Me.Component_ComboBox)
-        Me.TabPage1.Controls.Add(Me.Label27)
-        Me.TabPage1.Controls.Add(Me.Common_copyButton)
-        Me.TabPage1.Controls.Add(Me.CommonTextBox)
-        Me.TabPage1.Controls.Add(Me.CommonComboBox)
-        Me.TabPage1.Controls.Add(Me.Label26)
-        Me.TabPage1.Controls.Add(Me.SetRankButton)
-        Me.TabPage1.Controls.Add(Me.Label25)
-        Me.TabPage1.Controls.Add(Me.SetAdminTextBox)
-        Me.TabPage1.Controls.Add(Me.Scriptertext_Button)
-        Me.TabPage1.Controls.Add(Me.GiveScripterButton)
-        Me.TabPage1.Controls.Add(Me.GetSteamID_Label)
-        Me.TabPage1.Controls.Add(Me.GetSteamID_TextBox)
-        Me.TabPage1.Controls.Add(Me.RenameGridButton)
-        Me.TabPage1.Controls.Add(Me.Copy_SteamID_Button)
-        Me.TabPage1.Controls.Add(Me.RenameGridTextBox)
-        Me.TabPage1.Controls.Add(Me.GiveScripter_Label)
-        Me.TabPage1.Controls.Add(Me.RenameLabel)
-        Me.TabPage1.Controls.Add(Me.GiveScripterRole_TextBox)
-        Me.TabPage1.Controls.Add(Me.HangarRemoveComboBox)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.GridEnameButton)
-        Me.TabPage1.Controls.Add(Me.Label12)
-        Me.TabPage1.Controls.Add(Me.GridEnameTextBox)
-        Me.TabPage1.Controls.Add(Me.HangarComboBox)
-        Me.TabPage1.Controls.Add(Me.ServerLogButton)
-        Me.TabPage1.Controls.Add(Me.RestoreQLabel)
-        Me.TabPage1.Controls.Add(Me.ServerLogTextBox)
-        Me.TabPage1.Controls.Add(Me.Log_TypeComboBox)
-        Me.TabPage1.Controls.Add(Me.PlayerEnameButton)
-        Me.TabPage1.Controls.Add(Me.Label8)
-        Me.TabPage1.Controls.Add(Me.HangarNameTextBox)
-        Me.TabPage1.Controls.Add(Me.PlayerEnameTextBox)
-        Me.TabPage1.Controls.Add(Me.HangarNameButton)
-        Me.TabPage1.Controls.Add(Me.GridEComboBox)
-        Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.ListGrid_PVE_Label)
-        Me.TabPage1.Controls.Add(Me.ListGrid_PVE_NameTextBox)
-        Me.TabPage1.Controls.Add(Me.ListGrid_PVE_NameButton)
-        Me.TabPage1.Controls.Add(Me.RestoreForceComboBox)
-        Me.TabPage1.Controls.Add(Me.RestoreQComboBox)
-        Me.TabPage1.Controls.Add(Me.Label7)
-        Me.TabPage1.Controls.Add(Me.PlayerEComboBox)
-        Me.TabPage1.Controls.Add(Me.RestoreNumtwoComboBox)
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.ListGridBackupNameTextBox)
-        Me.TabPage1.Controls.Add(Me.RestoreNumoneComboBox)
-        Me.TabPage1.Controls.Add(Me.ListGridBackupNameButton)
-        Me.TabPage1.Controls.Add(Me.GridRestoreNameButton)
-        Me.TabPage1.Controls.Add(Me.ListGridBackupComboBox)
-        Me.TabPage1.Controls.Add(Me.GridRestoreNameTextBox)
-        Me.TabPage1.Controls.Add(Me.Label9)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(1173, 435)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Common"
+        Me.Common.BackColor = System.Drawing.SystemColors.Control
+        Me.Common.Controls.Add(Me.Label29)
+        Me.Common.Controls.Add(Me.Label28)
+        Me.Common.Controls.Add(Me.ComponentAmount_TextBox)
+        Me.Common.Controls.Add(Me.Send)
+        Me.Common.Controls.Add(Me.messageField)
+        Me.Common.Controls.Add(Me.GiveItem_CopyButton)
+        Me.Common.Controls.Add(Me.GiveItem_TextBox)
+        Me.Common.Controls.Add(Me.Component_ComboBox)
+        Me.Common.Controls.Add(Me.Label27)
+        Me.Common.Controls.Add(Me.Common_copyButton)
+        Me.Common.Controls.Add(Me.CommonTextBox)
+        Me.Common.Controls.Add(Me.CommonComboBox)
+        Me.Common.Controls.Add(Me.Label26)
+        Me.Common.Controls.Add(Me.SetRankButton)
+        Me.Common.Controls.Add(Me.Label25)
+        Me.Common.Controls.Add(Me.SetAdminTextBox)
+        Me.Common.Controls.Add(Me.Scriptertext_Button)
+        Me.Common.Controls.Add(Me.GiveScripterButton)
+        Me.Common.Controls.Add(Me.GetSteamID_Label)
+        Me.Common.Controls.Add(Me.GetSteamID_TextBox)
+        Me.Common.Controls.Add(Me.RenameGridButton)
+        Me.Common.Controls.Add(Me.Copy_SteamID_Button)
+        Me.Common.Controls.Add(Me.RenameGridTextBox)
+        Me.Common.Controls.Add(Me.GiveScripter_Label)
+        Me.Common.Controls.Add(Me.RenameLabel)
+        Me.Common.Controls.Add(Me.GiveScripterRole_TextBox)
+        Me.Common.Controls.Add(Me.HangarRemoveComboBox)
+        Me.Common.Controls.Add(Me.Label3)
+        Me.Common.Controls.Add(Me.GridEnameButton)
+        Me.Common.Controls.Add(Me.Label12)
+        Me.Common.Controls.Add(Me.GridEnameTextBox)
+        Me.Common.Controls.Add(Me.HangarComboBox)
+        Me.Common.Controls.Add(Me.ServerLogButton)
+        Me.Common.Controls.Add(Me.RestoreQLabel)
+        Me.Common.Controls.Add(Me.ServerLogTextBox)
+        Me.Common.Controls.Add(Me.Log_TypeComboBox)
+        Me.Common.Controls.Add(Me.PlayerEnameButton)
+        Me.Common.Controls.Add(Me.Label8)
+        Me.Common.Controls.Add(Me.HangarNameTextBox)
+        Me.Common.Controls.Add(Me.PlayerEnameTextBox)
+        Me.Common.Controls.Add(Me.HangarNameButton)
+        Me.Common.Controls.Add(Me.GridEComboBox)
+        Me.Common.Controls.Add(Me.Label2)
+        Me.Common.Controls.Add(Me.ListGrid_PVE_Label)
+        Me.Common.Controls.Add(Me.ListGrid_PVE_NameTextBox)
+        Me.Common.Controls.Add(Me.ListGrid_PVE_NameButton)
+        Me.Common.Controls.Add(Me.RestoreForceComboBox)
+        Me.Common.Controls.Add(Me.RestoreQComboBox)
+        Me.Common.Controls.Add(Me.Label7)
+        Me.Common.Controls.Add(Me.PlayerEComboBox)
+        Me.Common.Controls.Add(Me.RestoreNumtwoComboBox)
+        Me.Common.Controls.Add(Me.Label1)
+        Me.Common.Controls.Add(Me.ListGridBackupNameTextBox)
+        Me.Common.Controls.Add(Me.RestoreNumoneComboBox)
+        Me.Common.Controls.Add(Me.ListGridBackupNameButton)
+        Me.Common.Controls.Add(Me.GridRestoreNameButton)
+        Me.Common.Controls.Add(Me.ListGridBackupComboBox)
+        Me.Common.Controls.Add(Me.GridRestoreNameTextBox)
+        Me.Common.Controls.Add(Me.Label9)
+        Me.Common.Location = New System.Drawing.Point(4, 22)
+        Me.Common.Name = "Common"
+        Me.Common.Size = New System.Drawing.Size(1173, 435)
+        Me.Common.TabIndex = 0
+        Me.Common.Text = "Common"
         '
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(1046, 318)
+        Me.Label29.Location = New System.Drawing.Point(1095, 329)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(49, 13)
         Me.Label29.TabIndex = 127
@@ -940,7 +938,7 @@ Partial Class MainWindow
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(934, 318)
+        Me.Label28.Location = New System.Drawing.Point(983, 329)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(67, 13)
         Me.Label28.TabIndex = 126
@@ -948,7 +946,7 @@ Partial Class MainWindow
         '
         'ComponentAmount_TextBox
         '
-        Me.ComponentAmount_TextBox.Location = New System.Drawing.Point(1046, 332)
+        Me.ComponentAmount_TextBox.Location = New System.Drawing.Point(1095, 343)
         Me.ComponentAmount_TextBox.Name = "ComponentAmount_TextBox"
         Me.ComponentAmount_TextBox.Size = New System.Drawing.Size(70, 20)
         Me.ComponentAmount_TextBox.TabIndex = 125
@@ -957,7 +955,7 @@ Partial Class MainWindow
         '
         'Send
         '
-        Me.Send.Location = New System.Drawing.Point(101, 267)
+        Me.Send.Location = New System.Drawing.Point(101, 404)
         Me.Send.Name = "Send"
         Me.Send.Size = New System.Drawing.Size(105, 23)
         Me.Send.TabIndex = 130
@@ -966,14 +964,14 @@ Partial Class MainWindow
         '
         'messageField
         '
-        Me.messageField.Location = New System.Drawing.Point(4, 239)
+        Me.messageField.Location = New System.Drawing.Point(4, 376)
         Me.messageField.Name = "messageField"
         Me.messageField.Size = New System.Drawing.Size(304, 20)
         Me.messageField.TabIndex = 131
         '
         'GiveItem_CopyButton
         '
-        Me.GiveItem_CopyButton.Location = New System.Drawing.Point(1041, 362)
+        Me.GiveItem_CopyButton.Location = New System.Drawing.Point(1094, 367)
         Me.GiveItem_CopyButton.Name = "GiveItem_CopyButton"
         Me.GiveItem_CopyButton.Size = New System.Drawing.Size(75, 23)
         Me.GiveItem_CopyButton.TabIndex = 123
@@ -983,7 +981,7 @@ Partial Class MainWindow
         'GiveItem_TextBox
         '
         Me.GiveItem_TextBox.BackColor = System.Drawing.Color.Silver
-        Me.GiveItem_TextBox.Location = New System.Drawing.Point(778, 362)
+        Me.GiveItem_TextBox.Location = New System.Drawing.Point(831, 367)
         Me.GiveItem_TextBox.Name = "GiveItem_TextBox"
         Me.GiveItem_TextBox.Size = New System.Drawing.Size(257, 20)
         Me.GiveItem_TextBox.TabIndex = 122
@@ -993,7 +991,7 @@ Partial Class MainWindow
         '
         Me.Component_ComboBox.FormattingEnabled = True
         Me.Component_ComboBox.Items.AddRange(New Object() {"Tech2x", "Tech4x", "Tech8x", "", "ABShell40mm", "AdaptiveDynoCapacitor", "AngleGrinder4Item", "AngleGrinderItem", "APShell406mm", "AryxLynxon_FusionComponent", "AutomaticRifleGun_Mag_20rd", "BasicHandHeldLauncherItem", "BulletproofGlass", "C100mmAmmo", "C100ShellCasing", "C300AmmoAP", "C300AmmoG", "C300AmmoHE", "C30Ammo", "C30DUammo ", "C400AmmoCluster", "C500AmmoCasaba", "C500AmmoHE", "Canvas", "Computer", "Construction", "CRAM30mmAmmo", "Datapad", "DestroyerMissileMk1", "DestroyerMissileX", "Detector", "Display", "ElitePistolItem", "Energy", "Explosives", "FullAutoPistolItem", "FullAutoPistolMagazine", "GammaMeshRefractor", "Girder", "GraphineGrid", "GravityGenerator", "H203Ammo", "H203AmmoAP", "HandDrill2Item", "HandDrill3Item", "HandDrill4Item", "HandDrillItem", "HEShell240mm", "HEShell330mm", "HEShell355mm", "HEShell381mm", "HEShell406mm", "HEShell420mm", "HEShell460mm", "HEShell88mm", "HydrogenBottle", "InteriorPlate", "LargeTube", "LeapTube", "MA_150mm", "MA_30mm", "MA_Missile", "Medical", "MetalGrid", "Missile200mm", "Motor", "MXA_ArcherPods_Ammo", "MXA_ArcherPods_KineticAmmo", "MXA_BreakWater_APAmmo", "MXA_BreakWater_GAmmo", "MXA_BreakWater_HEAmmo", "MXA_Coil155HEAmmo", "MXA_Coil270Ammo", "MXA_Coil270HEAmmo", "MXA_Coil305Ammo", "MXA_Coil305GAmmo", "MXA_Coil305HEAmmo", "MXA_CoilgunPD_Ammo", "MXA_M58ArcherPods_Ammo", "MXA_M58ArcherPods_KineticAmmo", "MXA_MACL_Ammo", "MXA_MACL_S_Ammo", "MXA_Moray_Ammo", "MXA_Sabre_Coilgun_Ammo", "MXA_Shiva_Ammo", "MXA_SMAC_Ammo", "NATO_20x102mm", "NATO_25x184mm", "NATO_5p56x45mm", "OxygenBottle", "PowerCell", "PreciseAutomaticRifleItem", "QuantumCoProcessor", "R150ammo", "R250ammo", "R75ammo", "RadioCommunication", "RapidFireAutomaticRifleGun_Mag_50rd", "RapidFireAutomaticRifleItem", "Reactor", "SemiAutoPistolItem", "SemiAutoPistolMagazine", "ShieldComponent", "SmallTube", "SolarCell", "SteelPlate", "Superconductor", "SwarmMissile50mm", "Thrust", "TorpedoMk1", "UltimateAutomaticRifleGun_Mag_30rd", "UltimateAutomaticRifleItem", "Welder2Item", "Welder4Item", "WelderItem", "WolfSlug40mm", "ZoneChip"})
-        Me.Component_ComboBox.Location = New System.Drawing.Point(919, 331)
+        Me.Component_ComboBox.Location = New System.Drawing.Point(968, 342)
         Me.Component_ComboBox.Name = "Component_ComboBox"
         Me.Component_ComboBox.Size = New System.Drawing.Size(124, 21)
         Me.Component_ComboBox.TabIndex = 121
@@ -1002,17 +1000,17 @@ Partial Class MainWindow
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.Red
-        Me.Label27.Location = New System.Drawing.Point(770, 335)
+        Me.Label27.Location = New System.Drawing.Point(833, 340)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(152, 13)
+        Me.Label27.Size = New System.Drawing.Size(95, 20)
         Me.Label27.TabIndex = 120
-        Me.Label27.Text = "Give Items/Koth Rewards"
+        Me.Label27.Text = "Give Items"
         '
         'Common_copyButton
         '
-        Me.Common_copyButton.Location = New System.Drawing.Point(598, 296)
+        Me.Common_copyButton.Location = New System.Drawing.Point(639, 205)
         Me.Common_copyButton.Name = "Common_copyButton"
         Me.Common_copyButton.Size = New System.Drawing.Size(95, 23)
         Me.Common_copyButton.TabIndex = 119
@@ -1022,7 +1020,7 @@ Partial Class MainWindow
         'CommonTextBox
         '
         Me.CommonTextBox.BackColor = System.Drawing.Color.Silver
-        Me.CommonTextBox.Location = New System.Drawing.Point(369, 296)
+        Me.CommonTextBox.Location = New System.Drawing.Point(410, 205)
         Me.CommonTextBox.Name = "CommonTextBox"
         Me.CommonTextBox.Size = New System.Drawing.Size(223, 20)
         Me.CommonTextBox.TabIndex = 118
@@ -1031,18 +1029,16 @@ Partial Class MainWindow
         'CommonComboBox
         '
         Me.CommonComboBox.FormattingEnabled = True
-        Me.CommonComboBox.Items.AddRange(New Object() {"Move Player", "whatsmyip", "help", "longhelp", "ver", "plugins", "onlineservers", "uptime", "fix physics 1 1", "fix physics 2", "fix physics 2 3", "profile grids", "admin playerlist", "admin mute", "Cleanup Void NPC", "Cleanup GiRR NPC", "Cleanup PRTH NPC", "Cleanup GKNT NPC", "Cleanup ECHO NPC", "Cleanup Bass NPC", "Cleanup Pirates"})
-        Me.CommonComboBox.Location = New System.Drawing.Point(572, 272)
+        Me.CommonComboBox.Location = New System.Drawing.Point(613, 181)
         Me.CommonComboBox.Name = "CommonComboBox"
         Me.CommonComboBox.Size = New System.Drawing.Size(121, 21)
         Me.CommonComboBox.TabIndex = 117
-        Me.CommonComboBox.Text = "Move Player"
         '
         'Label26
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(365, 272)
+        Me.Label26.Location = New System.Drawing.Point(406, 181)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(118, 13)
         Me.Label26.TabIndex = 116
@@ -1076,18 +1072,18 @@ Partial Class MainWindow
         Me.SetAdminTextBox.TabIndex = 114
         Me.SetAdminTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TabPage2
+        'Discord
         '
-        Me.TabPage2.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.TabPage2.Controls.Add(Me.Label13)
-        Me.TabPage2.Controls.Add(Me.Tab_DiscordRichTextBox)
-        Me.TabPage2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1173, 435)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Discord"
+        Me.Discord.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Discord.Controls.Add(Me.Label13)
+        Me.Discord.Controls.Add(Me.Tab_DiscordRichTextBox)
+        Me.Discord.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Discord.Location = New System.Drawing.Point(4, 22)
+        Me.Discord.Name = "Discord"
+        Me.Discord.Padding = New System.Windows.Forms.Padding(3)
+        Me.Discord.Size = New System.Drawing.Size(1173, 435)
+        Me.Discord.TabIndex = 1
+        Me.Discord.Text = "Discord"
         '
         'Label13
         '
@@ -1106,7 +1102,7 @@ Partial Class MainWindow
         Me.Tab_DiscordRichTextBox.Name = "Tab_DiscordRichTextBox"
         Me.Tab_DiscordRichTextBox.Size = New System.Drawing.Size(1161, 388)
         Me.Tab_DiscordRichTextBox.TabIndex = 0
-        Me.Tab_DiscordRichTextBox.Text = "MUTING ON DISCORD" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & ".mute <discordID> 1h Reason" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "The time is adjustable. (5m, 3h e" &
+        Me.Tab_DiscordRichTextBox.Text = "MUTING ON DISCORD" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & ".mute <DiscordID> 1h Reason" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "The time is adjustable. (5m, 3h e" &
     "tc.) The bot will log the mute in infractions. "
         '
         'TabPage3
@@ -1173,6 +1169,7 @@ Partial Class MainWindow
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.TabPage5.Controls.Add(Me.RichTextBox2)
         Me.TabPage5.Controls.Add(Me.Label16)
         Me.TabPage5.Controls.Add(Me.Tab_NexusRichTextBox)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
@@ -1180,6 +1177,14 @@ Partial Class MainWindow
         Me.TabPage5.Size = New System.Drawing.Size(1173, 435)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Nexus"
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Location = New System.Drawing.Point(39, -81)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(10, 17)
+        Me.RichTextBox2.TabIndex = 3
+        Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
         '
         'Label16
         '
@@ -1403,8 +1408,8 @@ Partial Class MainWindow
         Me.Tab_DiscordRichTextBox2.Name = "Tab_DiscordRichTextBox2"
         Me.Tab_DiscordRichTextBox2.Size = New System.Drawing.Size(15, 17)
         Me.Tab_DiscordRichTextBox2.TabIndex = 1
-        Me.Tab_DiscordRichTextBox2.Text = "MUTING ON DISCORD" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & ".mute <discordID> 1h Reason" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "The time is adjustable. (5m, 3h e" &
-    "tc.) The bot will log the mute in infractions. " & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Tab_DiscordRichTextBox2.Text = "MUTING ON DISCORD" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & ".mute <DiscordID> 1h Reason" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "The time is adjustable. (5m, 3h e" &
+    "tc.) The bot will log the mute in infractions. "
         Me.Tab_DiscordRichTextBox2.Visible = False
         '
         'Tab_BankRichTextBox2
@@ -1445,7 +1450,7 @@ Partial Class MainWindow
         '
         'Tab_CleanRichTextBox2
         '
-        Me.Tab_CleanRichTextBox2.Location = New System.Drawing.Point(70, 174)
+        Me.Tab_CleanRichTextBox2.Location = New System.Drawing.Point(70, 169)
         Me.Tab_CleanRichTextBox2.Name = "Tab_CleanRichTextBox2"
         Me.Tab_CleanRichTextBox2.Size = New System.Drawing.Size(20, 24)
         Me.Tab_CleanRichTextBox2.TabIndex = 2
@@ -1514,7 +1519,7 @@ Partial Class MainWindow
         '
         'Tab_MiscRichTextBox2
         '
-        Me.Tab_MiscRichTextBox2.Location = New System.Drawing.Point(179, 174)
+        Me.Tab_MiscRichTextBox2.Location = New System.Drawing.Point(188, 174)
         Me.Tab_MiscRichTextBox2.Name = "Tab_MiscRichTextBox2"
         Me.Tab_MiscRichTextBox2.Size = New System.Drawing.Size(24, 24)
         Me.Tab_MiscRichTextBox2.TabIndex = 3
@@ -1548,7 +1553,7 @@ Partial Class MainWindow
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LimitsToolStripMenuItem, Me.ScripterTextToolStripMenuItem, Me.SectorToolStripMenuItem, Me.DiscordWebHookToolStripMenuItem, Me.LogOutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMeToolStripMenuItem2, Me.LogOutToolStripMenuItem, Me.SettingsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1205, 24)
@@ -1561,43 +1566,6 @@ Partial Class MainWindow
         Me.AboutMeToolStripMenuItem2.Size = New System.Drawing.Size(24, 20)
         Me.AboutMeToolStripMenuItem2.Text = "?"
         '
-        'LimitsToolStripMenuItem
-        '
-        Me.LimitsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WeaponsToolStripMenuItem, Me.ProductionToolStripMenuItem})
-        Me.LimitsToolStripMenuItem.Name = "LimitsToolStripMenuItem"
-        Me.LimitsToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
-        Me.LimitsToolStripMenuItem.Text = "Limits"
-        '
-        'WeaponsToolStripMenuItem
-        '
-        Me.WeaponsToolStripMenuItem.Name = "WeaponsToolStripMenuItem"
-        Me.WeaponsToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
-        Me.WeaponsToolStripMenuItem.Text = "Weapons"
-        '
-        'ProductionToolStripMenuItem
-        '
-        Me.ProductionToolStripMenuItem.Name = "ProductionToolStripMenuItem"
-        Me.ProductionToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
-        Me.ProductionToolStripMenuItem.Text = "Production"
-        '
-        'ScripterTextToolStripMenuItem
-        '
-        Me.ScripterTextToolStripMenuItem.Name = "ScripterTextToolStripMenuItem"
-        Me.ScripterTextToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
-        Me.ScripterTextToolStripMenuItem.Text = "Scripter Text"
-        '
-        'SectorToolStripMenuItem
-        '
-        Me.SectorToolStripMenuItem.Name = "SectorToolStripMenuItem"
-        Me.SectorToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.SectorToolStripMenuItem.Text = "Sector"
-        '
-        'DiscordWebHookToolStripMenuItem
-        '
-        Me.DiscordWebHookToolStripMenuItem.Name = "DiscordWebHookToolStripMenuItem"
-        Me.DiscordWebHookToolStripMenuItem.Size = New System.Drawing.Size(115, 20)
-        Me.DiscordWebHookToolStripMenuItem.Text = "Discord WebHook"
-        '
         'LogOutToolStripMenuItem
         '
         Me.LogOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
@@ -1605,6 +1573,31 @@ Partial Class MainWindow
         Me.LogOutToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.LogOutToolStripMenuItem.Text = "Log Out"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CommandSettingsToolStripMenuItem, Me.SectorSettingsToolStripMenuItem, Me.CopyTextButtonToolStripMenuItem, Me.BackToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
+        'CommandSettingsToolStripMenuItem
+        '
+        Me.CommandSettingsToolStripMenuItem.Name = "CommandSettingsToolStripMenuItem"
+        Me.CommandSettingsToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.CommandSettingsToolStripMenuItem.Text = "Command Settings"
+        '
+        'SectorSettingsToolStripMenuItem
+        '
+        Me.SectorSettingsToolStripMenuItem.Name = "SectorSettingsToolStripMenuItem"
+        Me.SectorSettingsToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SectorSettingsToolStripMenuItem.Text = "Sector Settings"
+        '
+        'CopyTextButtonToolStripMenuItem
+        '
+        Me.CopyTextButtonToolStripMenuItem.Name = "CopyTextButtonToolStripMenuItem"
+        Me.CopyTextButtonToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.CopyTextButtonToolStripMenuItem.Text = "Copy text Button"
         '
         'Panel1
         '
@@ -1661,12 +1654,38 @@ Partial Class MainWindow
         Me.AutoSend.Text = "Send to Discord?"
         Me.AutoSend.UseVisualStyleBackColor = True
         '
+        'Tab_NexusRichTextBox2
+        '
+        Me.Tab_NexusRichTextBox2.Location = New System.Drawing.Point(70, 141)
+        Me.Tab_NexusRichTextBox2.Name = "Tab_NexusRichTextBox2"
+        Me.Tab_NexusRichTextBox2.Size = New System.Drawing.Size(28, 21)
+        Me.Tab_NexusRichTextBox2.TabIndex = 4
+        Me.Tab_NexusRichTextBox2.Text = resources.GetString("Tab_NexusRichTextBox2.Text")
+        Me.Tab_NexusRichTextBox2.Visible = False
+        '
+        'Tab_HangarRichTextBox2
+        '
+        Me.Tab_HangarRichTextBox2.Location = New System.Drawing.Point(102, 130)
+        Me.Tab_HangarRichTextBox2.Name = "Tab_HangarRichTextBox2"
+        Me.Tab_HangarRichTextBox2.Size = New System.Drawing.Size(15, 32)
+        Me.Tab_HangarRichTextBox2.TabIndex = 3
+        Me.Tab_HangarRichTextBox2.Text = resources.GetString("Tab_HangarRichTextBox2.Text")
+        Me.Tab_HangarRichTextBox2.Visible = False
+        '
+        'BackToolStripMenuItem
+        '
+        Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
+        Me.BackToolStripMenuItem.Text = "Change BackGround Color"
+        '
         'MainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1205, 668)
+        Me.Controls.Add(Me.Tab_HangarRichTextBox2)
+        Me.Controls.Add(Me.Tab_NexusRichTextBox2)
         Me.Controls.Add(Me.AutoSend)
         Me.Controls.Add(Me.profilePic)
         Me.Controls.Add(Me.profilePicLink)
@@ -1717,12 +1736,13 @@ Partial Class MainWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainWindow"
-        Me.Text = "North's Lazy SI Admin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "North's Lazy Admin"
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
+        Me.Common.ResumeLayout(False)
+        Me.Common.PerformLayout()
+        Me.Discord.ResumeLayout(False)
+        Me.Discord.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
@@ -1821,8 +1841,8 @@ Partial Class MainWindow
     Friend WithEvents Timer1 As Timer
     Friend WithEvents SteamCheckBox As CheckBox
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Common As TabPage
+    Friend WithEvents Discord As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
@@ -1875,9 +1895,6 @@ Partial Class MainWindow
     Friend WithEvents AboutMeToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AboutMeToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents LimitsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents WeaponsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Common_copyButton As Button
     Friend WithEvents CommonTextBox As TextBox
     Friend WithEvents CommonComboBox As ComboBox
@@ -1890,17 +1907,22 @@ Partial Class MainWindow
     Friend WithEvents Component_ComboBox As ComboBox
     Friend WithEvents Label27 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ScripterTextToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label30 As Label
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents SectorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents webhookLink As TextBox
     Friend WithEvents username As TextBox
     Friend WithEvents profilePicLink As TextBox
     Friend WithEvents Send As Button
     Friend WithEvents profilePic As PictureBox
     Friend WithEvents messageField As TextBox
-    Friend WithEvents DiscordWebHookToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AutoSend As CheckBox
     Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CommandSettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SectorSettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents Tab_NexusRichTextBox2 As RichTextBox
+    Friend WithEvents Tab_HangarRichTextBox2 As RichTextBox
+    Friend WithEvents CopyTextButtonToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BackToolStripMenuItem As ToolStripMenuItem
 End Class

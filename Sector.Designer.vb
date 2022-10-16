@@ -142,6 +142,7 @@ Partial Class Sector
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Sector"
         Me.Text = "Sector"
         Me.Panel1.ResumeLayout(False)

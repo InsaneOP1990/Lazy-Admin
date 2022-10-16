@@ -23,6 +23,7 @@ Partial Class Weapon_limit_Window
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Weapon_limit_Window))
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -52,6 +53,7 @@ Partial Class Weapon_limit_Window
         Me.ClientSize = New System.Drawing.Size(1205, 668)
         Me.Controls.Add(Me.Button1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Weapon_limit_Window"
         Me.Text = "Weapon limit Window"
         Me.ResumeLayout(False)

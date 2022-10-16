@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.LazyAdmin.Login
+            Me.MainForm = Global.LazyAdmin.Splash
         End Sub
     End Class
 End Namespace

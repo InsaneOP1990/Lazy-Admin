@@ -63,6 +63,7 @@ Partial Class Scripter_Text
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Scripter_Text_RichTextBox)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Scripter_Text"
         Me.Text = "Scripter Text"
         Me.ResumeLayout(False)

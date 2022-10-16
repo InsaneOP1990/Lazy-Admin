@@ -123,16 +123,16 @@
   <data name="Tab_BankRichTextBox.Text" xml:space="preserve">
     <value>SI BANK COMMANDS
 
-s!techadm give 100 &lt;discordID&gt;
+s!techadm give 100 &lt;DiscordID&gt;
 
 This command is for depositing tech directly to a players bank. They must read through tech-drop-info to set it up and use tech-drop to claim. If you botch a number and give more than the intended amount, simply run the command with - before the number. 
 
-s!techadm give -100 &lt;discordID&gt;
+s!techadm give -100 &lt;DiscordID&gt;
 
 KOTH REWARDS
 
 Example ~giveitem TwistedGrim Component Tech8x 10000 true
-North's Example:&lt;sec&gt; giveitem "&lt;playername&gt;" Component Tech8x 20000 true
+North's Example:&lt;sec&gt; giveitem "&lt;PlayerName&gt;" Component Tech8x 20000 true
 
 In-Game Admin
 Occasionally there are instances where a staff member needs to go in-game and use admin powers. 
@@ -142,7 +142,7 @@ These times are not super common but it does happen. This should not be used by 
 To turn on the admin abilities, get your steamid and type:
 
 
-tL admin setrank &lt;steamid&gt; 4 //Helping with ticket #1234
+tL admin setrank &lt;SteamID&gt; 4 //Helping with ticket #1234
 
 
 
@@ -152,8 +152,7 @@ You should always include a reason for using admin abilities.
 Immediately after finishing in-game, type:
 
 
-tL admin setrank &lt;steamid&gt; 1
-
+tL admin setrank &lt;SteamID&gt; 1
 
 
 </value>
@@ -187,6 +186,62 @@ Similar to !fixship &lt;shipname&gt; but it is better with handling naming confl
 &lt;sec&gt; transferowner "&lt;PlayerName&gt;" - Transfers only block ownership of the grid you are looking at over to the player.
 
 &lt;sec&gt; transferowner "&lt;PlayerName&gt;" "&lt;GridName&gt;"  -  Transfers only block ownership of the named grid to the player. </value>
+  </data>
+  <data name="RichTextBox2.Text" xml:space="preserve">
+    <value>NEXUS DISCORD COMMANDS
+
+/nexus getserverid [NameOrSteamID]
+/nexus version
+/nexus onlineservers
+/nexus uptime 
+
+Moves Player to Different Sector
+/nexus setserverid [NameOrSteamID] [ServerId]
+* Commonly used to send player to Lobby
+
+(follow is faction chat command)
+/factionchat link [onetimecode]
+
+Nexus Specific Admin Commands
+!nexus factionchat breaklink [FactionTag] (removes any connected servers for this faction)
+!nexus factionchat addwhitelist [FactionTag] (adds a faction tag to the whitelist)
+!nexus factionchat removewhitelist [FactionTag] (Removes faction tag from whitelist)
+
+New Log retrieving Commands:
+/nexus log [serverID] [LogName] [DateInput: MM/DD/YY]
+
+Examples:
+/nexus log 20 keen 02/23 
+/nexus log 20 torch 02/23
+/nexus log 20 ownerships 02/23
+/nexus log 20 deleted 02/23
+/nexus log 20 blocklimiter 02/23
+Date format is month/day. This is for US date format.
+
+FULL LIST OF SECTORS &amp; IDS FOR LOGS
+
+ID    Prefix   Port     Sector
+1     tL       27016    Lobby
+2     gS       27002    Deep Space
+10    aS       27010    Avalon Space
+11    aDV      27011    Dover Planet
+12    aS1      27012    Dover Space
+13    aS2      27013    IK006 Space
+14    aS       27014    Pelmuth Space
+15    aI       27015    IK006 Planet
+17    aPL      27017    Pelmuth Planet
+20    dS       27020    Deadworlds Space
+21    dP       27021    Deadworlds Planet
+22    dK       27022    KOTH
+23    cK       27023    Crypt
+39    eV       27039    Event
+40    rI       27040    Roach Inner
+41    rO       27041    Roach Outer
+50    tR       27050    Transit
+51    wS       27051    Waterloo Space
+52    wP       27052    Waterloo Planet 
+ 
+Useful for determining possible causes for server crash, gathering context/information regarding ticket issues (such as PVP raids/PVP grid restores), and more! </value>
   </data>
   <data name="Tab_NexusRichTextBox.Text" xml:space="preserve">
     <value>NEXUS DISCORD COMMANDS
@@ -1108,16 +1163,16 @@ Issues submissions to a specified player or faction
   <data name="Tab_BankRichTextBox2.Text" xml:space="preserve">
     <value>SI BANK COMMANDS
 
-s!techadm give 100 &lt;discordID&gt;
+s!techadm give 100 &lt;DiscordID&gt;
 
 This command is for depositing tech directly to a players bank. They must read through tech-drop-info to set it up and use tech-drop to claim. If you botch a number and give more than the intended amount, simply run the command with - before the number. 
 
-s!techadm give -100 &lt;discordID&gt;
+s!techadm give -100 &lt;DiscordID&gt;
 
 KOTH REWARDS
 
 Example ~giveitem TwistedGrim Component Tech8x 10000 true
-North's Example:&lt;sec&gt; giveitem "&lt;playername&gt;" Component Tech8x 20000 true
+North's Example:&lt;sec&gt; giveitem "&lt;PlayerName&gt;" Component Tech8x 20000 true
 
 In-Game Admin
 Occasionally there are instances where a staff member needs to go in-game and use admin powers. 
@@ -1127,7 +1182,7 @@ These times are not super common but it does happen. This should not be used by 
 To turn on the admin abilities, get your steamid and type:
 
 
-tL admin setrank &lt;steamid&gt; 4 //Helping with ticket #1234
+tL admin setrank &lt;SteamID&gt; 4 //Helping with ticket #1234
 
 
 
@@ -1137,8 +1192,7 @@ You should always include a reason for using admin abilities.
 Immediately after finishing in-game, type:
 
 
-tL admin setrank &lt;steamid&gt; 1
-
+tL admin setrank &lt;SteamID&gt; 1
 
 
 </value>
@@ -1946,6 +2000,103 @@ Issues submissions to a specified player or faction
   <metadata name="Timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>535, 17</value>
   </metadata>
+  <data name="Tab_NexusRichTextBox2.Text" xml:space="preserve">
+    <value>NEXUS DISCORD COMMANDS
+
+/nexus getserverid [NameOrSteamID]
+/nexus version
+/nexus onlineservers
+/nexus uptime 
+
+Moves Player to Different Sector
+/nexus setserverid [NameOrSteamID] [ServerId]
+* Commonly used to send player to Lobby
+
+(follow is faction chat command)
+/factionchat link [onetimecode]
+
+Nexus Specific Admin Commands
+!nexus factionchat breaklink [FactionTag] (removes any connected servers for this faction)
+!nexus factionchat addwhitelist [FactionTag] (adds a faction tag to the whitelist)
+!nexus factionchat removewhitelist [FactionTag] (Removes faction tag from whitelist)
+
+New Log retrieving Commands:
+/nexus log [serverID] [LogName] [DateInput: MM/DD/YY]
+
+Examples:
+/nexus log 20 keen 02/23 
+/nexus log 20 torch 02/23
+/nexus log 20 ownerships 02/23
+/nexus log 20 deleted 02/23
+/nexus log 20 blocklimiter 02/23
+Date format is month/day. This is for US date format.
+
+FULL LIST OF SECTORS &amp; IDS FOR LOGS
+
+ID    Prefix   Port     Sector
+1     tL       27016    Lobby
+2     gS       27002    Deep Space
+10    aS       27010    Avalon Space
+11    aDV      27011    Dover Planet
+12    aS1      27012    Dover Space
+13    aS2      27013    IK006 Space
+14    aS       27014    Pelmuth Space
+15    aI       27015    IK006 Planet
+17    aPL      27017    Pelmuth Planet
+20    dS       27020    Deadworlds Space
+21    dP       27021    Deadworlds Planet
+22    dK       27022    KOTH
+23    cK       27023    Crypt
+39    eV       27039    Event
+40    rI       27040    Roach Inner
+41    rO       27041    Roach Outer
+50    tR       27050    Transit
+51    wS       27051    Waterloo Space
+52    wP       27052    Waterloo Planet 
+ 
+Useful for determining possible causes for server crash, gathering context/information regarding ticket issues (such as PVP raids/PVP grid restores), and more! </value>
+  </data>
+  <data name="Tab_HangarRichTextBox2.Text" xml:space="preserve">
+    <value>Player Commands: 
+(can be shortened to just !h)
+!hangar save - (Attempts to save grid you are looking at)
+
+!hangar load - [Name or ID number] (Attempts to load specified grid)
+
+!hangar list - (Lists all active ships and their pcu values that are in your hangar)
+
+!hangar remove - [Name or ID number] Remove grid from your hangar. Enter 0 to delete all grids
+
+!hangar info - [Name or ID number] lists information about the grid
+
+!hanger help - Shows help
+
+Admin Commands: 
+(can be shortened to just !hm)
+!hangarmod save (Saves grid you are looking at to owners hangar. Ignores Checks)
+
+!hangarmod save [GridName] - (Saves grid you are looking at to owners hangar. Ignores Checks)
+
+!hangarmod load [PlayerName or ID] [Grid Name or Number] - (Loads grid in from players hangar and ignores limits)
+
+!hangarmod list [PlayerName or ID] - (Lists grids under specified players' hangar)
+
+!hangarmod info [PlayerName or ID] - [Grid Name or Number] (Provides info of the grid)
+
+!hangarmod sync [PlayerName or ID] - will refresh a player's hangar with was is on disk!hangarmod info [PlayerName or ID] 
+[Grid Name or Number] (Provides info of the grid)
+
+!hangarmod syncall - will refresh a player's hangar with what is on disk
+
+GRID BACKUP PLUGIN
+This plugin is one of the most used that we have at our disposal.
+
+!gridbackup list "playername" - will give a list of all grid backups for the player on the server (note the number of the grid in the list)
+
+!gridbackup restore &lt;player&gt; &lt;gridnumber&gt; &lt;backupnumber&gt; true false
+
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>59</value>
   </metadata>
