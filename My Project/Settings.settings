@@ -54,43 +54,25 @@ If scripts you are running repeatedly overheat causing them to turn off, become 
 Once you are done reading please let us know to gain scripting access through the programmable block. </Value>
     </Setting>
     <Setting Name="SectorDrop" Type="System.String" Scope="User">
-      <Value Profile="(Default)">tL - 1 - The Lobby server - Lobby Sector,
+      <Value Profile="(Default)">GL - 1 - The Lobby server - Lobby Sector,
 ---------------------------------,
-ALL - - - All servers except the lobby. Senior Staff / Admin Only,
+ALL - - - All servers not including the lobby,
 ---------------------------------,
-PVE - - - Any server that is Avalon (Planets Space KotH's),
-PVP - - - Any server that is Dead Worlds (Planets Space KotH's),
-NPC - - - Both Roach servers,
----------------------------------,
-gS - 2 - Deep Space / General Sector or the everywhere else,
-aS - 10 - Avalon Space Sector,
-aS1 -12 - Avalon Space Inner 1 Dover Space,
-aS2 - 13 - Avalon Space Inner 2 IK006 Space,
-aS3 - 14 - Avalon Space Inner 3 Pelmuth Space,
-wS - 51 - Waterloo Space Sector,
+DS - 2 - Deep Space / General Sector or the everywhere else,
+AP - 3 - Arepo Space,
+JS - 4 - Jormun Space (Hel),
+VS - 5 - Vermilion Space (Glacies),
+MP - 6 - Miasma Planet,
+RS - 7 - Rasa Space,
 ,
-aDV - 11 - Avalon Dover Planet Sector,
-aIK  - 15 - Avalon IK006 Planet Sector,
-aPL - 17 - Avalon Pelmuth Planet Sector,
-wP - 52 - Waterloo Planet Sector,
+AP - 8 - Arepo Planet,
+JP  - 9 - Jormun Planet,
+VP - 10 - Vermilion Planet,
+ES - 11 - Ero Space,
 ---------------------------------,
-dS - 20 - Dead Worlds Space Sector,
-dP - 21 - Dead Worlds Planets Sector,
-,
-dK - 22 - Dead Worlds Space KotH Sector,
-cK - 23 - Crypt KotH Sector,
----------------------------------,
-rI - 40 - Roach Inner Sector,
-rO - 41 - Roach Outter Sector,
----------------------------------,
-tR - 50 - Transit Server between Roach and Avalon / DW ,
----------------------------------,
-sL - - - Special Lobby bot for scripting use and other powers. (Dont put a space after the prefix here),
-tK - - - The Space KotH Bot used by scripts to reset KotH,
-tC - - - The Crypt KotH Bot used by scripts to reset KotH,
-tS - - - Transit Server for use with Tech Bot,
-ss - - - Support server for players the support the server,
-sw - - - Starwars theam server,</Value>
+! - - - Creative World,
+$ - - - Event Server,
+</Value>
     </Setting>
     <Setting Name="SectorDropOpen" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -141,7 +123,7 @@ sw - - - Starwars theam server,</Value>
       <Value Profile="(Default)">Server Logs</Value>
     </Setting>
     <Setting Name="Bar1Com_Text" Type="System.String" Scope="User">
-      <Value Profile="(Default)">tL getsteamid "&lt;PlayerName&gt;"</Value>
+      <Value Profile="(Default)">GL getsteamid "&lt;PlayerName&gt;"</Value>
     </Setting>
     <Setting Name="Bar2Com_Text" Type="System.String" Scope="User">
       <Value Profile="(Default)">s!addscripter &lt;DiscordID&gt; &lt;SteamID&gt;</Value>

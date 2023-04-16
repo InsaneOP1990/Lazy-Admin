@@ -1406,9 +1406,9 @@ opps:
     Private Sub Send_Click(sender As Object, e As EventArgs) Handles Send.Click
         Dim dcWeb As dWebHook = New dWebHook
         If username.Text = "Webhook" Then
-            dcWeb.UserName = ""
+            dcWeb.UserName = "test"
         Else
-            dcWeb.UserName = username.Text
+            dcWeb.UserName = My.Settings.InGameName
         End If
         dcWeb.WebHook = webhookLink.Text
         dcWeb.ProfilePicture = profilePicLink.Text
